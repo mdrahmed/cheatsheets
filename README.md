@@ -1,2 +1,4 @@
 # My cheatsheets
 
+tmux
+vim
