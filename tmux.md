@@ -16,7 +16,7 @@
 `ctrl+bp` Previous window<br/>
 
 ## Windows II
-`ctrl+d` Kill window without Y/N
+`ctrl+d` Kill window without Y/N<br/>
 `ctrl+bf` Find window<br/>
 `ctrl+b,` Name window<br/>
 `ctrl+b&` Kill window<br/>
