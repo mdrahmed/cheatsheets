@@ -1,38 +1,43 @@
 ## Prompt I
-`tmux` Start new session from prompt
-`tmux new -s name` Start new session with name 'name' from prompt
-`tmux a` Attach session from prompt
-`tmux ls` List session from prompt
+`tmux` Start new session from prompt<br/>
+`tmux new -s name` Start new session with name 'name' from prompt<br/>
+`tmux a` Attach session from prompt<br/>
+`tmux ls` List session from prompt<br/>
 
 ## Sessions I
-`ctrl+bs` List sessions
-`ctrl+b$` Name session
-`ctrl+b: new` New session
+`ctrl+bs` List sessions<br/>
+`ctrl+b$` Name session<br/>
+`ctrl+b: new` New session<br/>
 
 ## Windows I
-`ctrl+bc` Create window
-`ctrl+bw` List windows
-`ctrl+bn` Next window
-`ctrl+bp` Previous window
+`ctrl+bc` Create window<br/>
+`ctrl+bw` List windows<br/>
+`ctrl+bn` Next window<br/>
+`ctrl+bp` Previous window<br/>
+
 ## Windows II
-`ctrl+bf` Find window
-`ctrl+b,` Name window
-`ctrl+b&` Kill window
+`ctrl+d` Kill window without Y/N
+`ctrl+bf` Find window<br/>
+`ctrl+b,` Name window<br/>
+`ctrl+b&` Kill window<br/>
+
 ## Panes I
-`ctrl+b%` Vertical split
-`ctrl+b"` Horizontal split
-ctrl+boSwap panes
-ctrl+bqShow pane numbers
-ctrl+bxKill pane
-Panes II
-ctrl+bToggle between layouts (space)
-ctrl+b{Move current pane left
-ctrl+b}Move current pane right
-ctrl+bzToggle pane zoom
-Misc I
-tmux a -t nameAttach session to named 'name' from prompt
-tmux kill-session -t nameKill session named 'name' from prompt
-ctrl+bdDetach
-ctrl+btBig clock
-ctrl+b?List shortcuts
-ctrl+b:Prompt
+`ctrl+b%` Vertical split<br/>
+`ctrl+b"` Horizontal split<br/>
+`ctrl+bo` Swap panes<br/>
+`ctrl+bq` Show pane numbers<br/>
+`ctrl+bx` Kill pane<br/>
+
+## Panes II
+`ctrl+b` Toggle between layouts (space)<br/>
+`ctrl+b{` Move current pane left<br/>
+`ctrl+b}` Move current pane right<br/>
+`ctrl+bz`Toggle pane zoom<br/>
+
+## Misc I
+`tmux a -t name` Attach session to named 'name' from prompt<br/>
+`tmux kill-session -t name` Kill session named 'name' from prompt<br/>
+`ctrl+bd` Detach<br/>
+`ctrl+bt` Big clock<br/>
+`ctrl+b?` List shortcuts<br/>
+`ctrl+b:` Prompt<br/>
