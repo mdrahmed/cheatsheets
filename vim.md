@@ -26,3 +26,7 @@ Or, you can also use the "windows command mode" with navigation keys to change a
 `Ctrl w + H` - Move the current window to the "far left" <br/>
 `Ctrl w + J` - Move the current window to the "very bottom" <br/>
 `Ctrl w + K` - Move the current window to the "very top" <br/>
+
+### References:
+[vimsheet](https://vimsheet.com/)
+[shortcutfoo](https://www.shortcutfoo.com/app/dojos/vim/cheatsheet)
