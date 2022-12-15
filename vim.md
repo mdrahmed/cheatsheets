@@ -16,7 +16,7 @@ or,  <br/>
 `Ctrl-w |` To increase a window to its maximum width <br/>
 `Ctrl+W +/-` Increase/decrease height (ex. 20<C-w>+) <br/>
 `Ctrl+W >/<` Icrease/decrease width (ex. 30<C-w><) <br/>
-                                                    
+
 ## To rotate window panes
 `Ctrl w + R` - To rotate windows up/left. <br/>
 `Ctrl w + r` - To rotate windows down/right. <br/>
