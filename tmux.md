@@ -41,3 +41,8 @@
 `ctrl+bt` Big clock<br/>
 `ctrl+b?` List shortcuts<br/>
 `ctrl+b:` Prompt<br/>
+
+
+### References
+[shortcutfoo](https://www.shortcutfoo.com/app/dojos/tmux/cheatsheet)
+
