@@ -21,7 +21,7 @@ or,  <br/>
 `Ctrl w + R` - To rotate windows up/left. <br/>
 `Ctrl w + r` - To rotate windows down/right. <br/>
                                                    
-You can also use the "windows command mode" with navigation keys to change a window's position: <br/>
+Or, you can also use the "windows command mode" with navigation keys to change a window's position: <br/>
 `Ctrl w + L` - Move the current window to the "far right" <br/>
 `Ctrl w + H` - Move the current window to the "far left" <br/>
 `Ctrl w + J` - Move the current window to the "very bottom" <br/>
