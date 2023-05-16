@@ -48,7 +48,7 @@ for graph in list_of_600_graphs:
 # now merged_graph contains all the nodes and edges from the 600 graphs
 ```
 
-**xx__Merge graphviz graphs:__**
+**__Merge graphviz graphs:__**
 ```
 gvpack -u graph1.dot graph2.dot graph3.dot > merged_graph.dot
 ```
@@ -62,6 +62,8 @@ This cmd for vgr and hbw to run gspan with the code,
 ```
 python3 -m gspan_mining -s 5000 -d True -p True vgr.data
 ```
+![image](https://github.com/mdrahmed/cheatsheets/assets/26908164/37300f3a-607f-4283-ab22-27a5b8f5ec24)
+
 
 This error is gone when I used neato like following,
 ```
