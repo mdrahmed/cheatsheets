@@ -6,7 +6,7 @@ To find subsets in an array,
 		subsets = [[]]
 		subsets += [subset + [num] for subset in subsets]
 ```
-	This is exactly like following,
+This is exactly like following,
 ```
 		subsets = [[]]
 		new_subset = []
