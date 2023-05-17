@@ -2,18 +2,18 @@
 
 ## Subsets:
 To find subsets in an array,
-	```
+```
 		subsets = [[]]
 		subsets += [subset + [num] for subset in subsets]
-	```
+```
 	This is exactly like following,
-	```
+```
 		subsets = [[]]
 		new_subset = []
 		for subset in subsets:
 			new_subset.append(subset + [num]) //It will add subset for the current num
 		subsets.extend(new_subsets) // It will add all those findings to the list of subsets
-	```
+```
 
 ## Binary Tree: 
 In the array representation, if a node is at index i, 
