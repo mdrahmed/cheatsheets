@@ -29,4 +29,4 @@ class TreeNode:
         self.left = left
         self.right = right
 ```
-**Don't forget to use self if a function is defined in python.**
+**Don't forget to use `self` if a function is defined in python.**
