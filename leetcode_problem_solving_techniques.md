@@ -1,6 +1,7 @@
 # Top 100 liked questions
 
 ## Subsets:
+[78 subsets]: https://leetcode.com/problems/subsets/
 To find subsets in an array,
 ```
 		subsets = [[]]
@@ -16,11 +17,13 @@ This is exactly like following,
 ```
 
 ## Binary Tree: 
+[226. Invert Binary Tree]: https://leetcode.com/problems/invert-binary-tree/
 In the array representation, if a node is at index i, 
 	its left child will be at index `2*i+1`, and 
 	its right child will be at index `2*i+2`. 
 	Conversely, for a given node at index i, its parent will be at index `(i-1)//2`.
 
+[^note]
 Binary tree is a structure that is generally defined like following,
 ```
 class TreeNode:
@@ -30,3 +33,7 @@ class TreeNode:
         self.right = right
 ```
 **Don't forget to use `self` if a function is defined in python.**
+[^note]
+
+[104. Maximum Depth of Binary Tree]:https://leetcode.com/problems/maximum-depth-of-binary-tree/
+
