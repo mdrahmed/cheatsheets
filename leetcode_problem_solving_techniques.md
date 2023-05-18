@@ -25,7 +25,7 @@ In the array representation, if a node is at index i,
 	its right child will be at index `2*i+2`. 
 	Conversely, for a given node at index i, its parent will be at index `(i-1)//2`.
 
-***
+---
 Binary tree is a structure that is generally defined like following,
 ```
 class TreeNode:
