@@ -25,7 +25,7 @@ In the array representation, if a node is at index i,
 	its right child will be at index `2*i+2`. 
 	Conversely, for a given node at index i, its parent will be at index `(i-1)//2`.
 
-[^note]
+***
 Binary tree is a structure that is generally defined like following,
 ```
 class TreeNode:
@@ -35,7 +35,6 @@ class TreeNode:
         self.right = right
 ```
 **Don't forget to use `self` if a function is defined in python.**
-[^note]
 
 [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
