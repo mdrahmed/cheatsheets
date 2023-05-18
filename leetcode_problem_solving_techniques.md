@@ -36,7 +36,7 @@ class TreeNode:
 ```
 **Don't forget to use `self` if a function is defined in python.**
 
-***
+---
 
 [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
