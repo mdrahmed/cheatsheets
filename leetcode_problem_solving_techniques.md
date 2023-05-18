@@ -18,8 +18,8 @@ This is exactly like following,
 		subsets = [[]]
 		new_subset = []
 		for subset in subsets:
-			new_subset.append(subset + [num]) [//]:#(It will add subset for the current num)
-		subsets.extend(new_subsets) <!-- It will add all those findings to the list of subsets -->
+			new_subset.append(subset + [num]) # It will add subset for the current num
+		subsets.extend(new_subsets)  # It will add all those findings to the list of subsets 
 ```
 ***
 If I add 2 list then it will concatenate,
