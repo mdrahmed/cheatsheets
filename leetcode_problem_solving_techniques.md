@@ -1,5 +1,10 @@
 # Top 100 liked questions
 
+## Permutation/Combinatorials:
+[46. Permutations](https://leetcode.com/problems/permutations/description/)
+
+Need to use backtrack to find the permutations, which is a recursive algorithm, this recursive algorithm must have a base case. 
+
 ## Subsets:
 [78 subsets](https://leetcode.com/problems/subsets/)
 
@@ -13,9 +18,15 @@ This is exactly like following,
 		subsets = [[]]
 		new_subset = []
 		for subset in subsets:
-			new_subset.append(subset + [num]) //It will add subset for the current num
-		subsets.extend(new_subsets) // It will add all those findings to the list of subsets
+			new_subset.append(subset + [num]) <!-- It will add subset for the current num -->
+		subsets.extend(new_subsets) <!-- It will add all those findings to the list of subsets -->
 ```
+***
+If I add 2 list then it will concatenate,
+	`[] + [1] = [1]`, it concatenates.
+	`[1] + [2] = [1,2]
+***
+
 
 ## Binary Tree: 
 [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
