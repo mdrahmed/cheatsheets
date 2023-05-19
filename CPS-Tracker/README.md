@@ -55,6 +55,8 @@ Function: _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
 Function: _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
 Called from: _ZNSt11this_thread9sleep_forIxSt5ratioILx1ELx1000EEEEvRKNSt6chrono8durationIT_T0_EE _ZNSt6chronoleIxSt5ratioILx1ELx1000EExS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE callInst_values: 0
 ```
+![FID detection](https://github.com/mdrahmed/cheatsheets/assets/26908164/a50fa093-26e2-4882-a712-51e92ecbd9f5)
+
 
 See the function is called first and then inside the condition the value is `false`.
 ```
