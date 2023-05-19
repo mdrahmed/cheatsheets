@@ -102,7 +102,7 @@ Or,
 ```
 
 
-If we do that then we will not see the Function call, so according to that we or, the administrator can tell that's an attack. 
+**If we do that then we will not see the Function call, so according to that we or, the administrator can tell that's an attack.** 
 ```
 Function: _ZN2ft24TxtDeliveryPickupStation6is_DINEv
 ```
