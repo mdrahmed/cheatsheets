@@ -65,7 +65,7 @@ Called from: _ZN2ft21TxtVacuumGripperRobot7fsmStepEv _ZN2ft24TxtDeliveryPickupSt
 ```
 
 
-**False Data Injection: To perform this attack, we will insert malicious data inside the code. Which will trigger [this particular code](https://github.com/fischertechnik/txt_training_factory/blob/master/TxtSmartFactoryLib/src/TxtVacuumGripperRobotRun.cpp#L194) or, we will directly [call this case](https://github.com/fischertechnik/txt_training_factory/blob/master/TxtSmartFactoryLib/src/TxtVacuumGripperRobotRun.cpp#L350)**
+**False Data Injection: To perform this attack, we will insert malicious data inside the code. Which will trigger [this particular code](https://github.com/fischertechnik/txt_training_factory/blob/master/TxtSmartFactoryLib/src/TxtVacuumGripperRobotRun.cpp#L194) or, we will directly [call this case](https://github.com/fischertechnik/txt_training_factory/blob/master/TxtSmartFactoryLib/src/TxtVacuumGripperRobotRun.cpp#L350),**
 ```
 	FSM_TRANSITION( START_DELIVERY, color=blue, label='dsi' );
 ```
