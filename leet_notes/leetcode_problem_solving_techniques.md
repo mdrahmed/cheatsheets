@@ -58,6 +58,7 @@ To count the path, do following,
 
 [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)
 Inorder traversal: left, root, right
+![in-pre-post order](pics/in-pre-post order.png)
 ```
 ans.extend(root.left)
 ans.append(root.val)
