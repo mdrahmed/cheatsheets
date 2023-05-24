@@ -27,3 +27,17 @@ du -sh grpc/
 
 **Search to see if this pkg is present in ubuntu repo**
 `apt search python3`
+
+**Install python3 version > 3.7**
+In ubuntu 18.04, tried to install python 3.9 but didn't find the pkg, so, tried using this `ppa`,
+```
+sudo add-apt-repository ppa:deadsnakes/ppa
+```
+Now, do following,
+```
+sudo apt-get update
+sudo apt-get install python3.9
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1  ## update the default
+```
+
+
