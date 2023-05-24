@@ -18,8 +18,12 @@ I installed it and copied it inside the `/usr/local/bin` dir but then figured th
 sudo ln -s /usr/local/bin/cmake /usr/bin/cmake
 ```
 
-### To find size of a dir, do this `du -sh <folder name>`,
+### Useful cmd's
+**To find size of a dir, do this `du -sh <folder name>`**
 ```
 du -sh grpc/
 ```
 ![Screenshot from 2023-05-24 15-10-24](https://github.com/mdrahmed/cheatsheets/assets/26908164/d8bd9244-6af4-44fc-a26d-d0d20dd99bd8)
+
+**Search to see if this pkg is present in ubuntu repo**
+`apt search python3`
