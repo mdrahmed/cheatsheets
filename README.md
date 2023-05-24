@@ -22,3 +22,4 @@ sudo ln -s /usr/local/bin/cmake /usr/bin/cmake
 ```
 du -sh grpc/
 ```
+![Screenshot from 2023-05-24 15-10-24](https://github.com/mdrahmed/cheatsheets/assets/26908164/d8bd9244-6af4-44fc-a26d-d0d20dd99bd8)
