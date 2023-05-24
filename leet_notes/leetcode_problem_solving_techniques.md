@@ -50,4 +50,21 @@ class TreeNode:
 ---
 
 [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+Length of the longest path from the root node to any leaf node in the tree. 
+To count the path, do following,
+* If root is none, then return 0. 
+* Traverse left and right subtree.
+* Then add 1 to the max of left and right
+
+[94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)
+Inorder traversal: left, root, right
+
+![in-pre-post_order](pics/in-pre-post order.png "orders")
+
+```
+ans.extend(root.left)
+ans.append(root.val)
+ans.extend(root.right)
+```
+`extend` adds elements of the subtree but `append` adds the whole subtree into the list. In this case, if the root is none then I will return an empty list. 
 
