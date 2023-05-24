@@ -106,3 +106,8 @@ If we do that then we will not see the Function call, so according to that we or
 ```
 Function: _ZN2ft24TxtDeliveryPickupStation6is_DINEv
 ```
+
+**To replace the sensor data:**
+Write script to intercept the data stream, modify the sensor data, and send the altered data to the system using python.
+Intercept the MQTT messages passing through the middleware and modify the relevant data fields before forwarding them to the system. I can use wireshark/python for this. 
+
