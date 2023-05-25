@@ -28,6 +28,13 @@ du -sh grpc/
 **Search to see if this pkg is present in ubuntu repo**
 `apt search python3`
 
+**Find a file in a dir and it's sub-dirs**
+```
+find . -name "ProtobufConfig.cmake"
+```
+
+
+### Install grpc
 **Install python3 version > 3.7**
 In ubuntu 18.04, tried to install python 3.9 but didn't find the pkg, so, tried using this `ppa`,
 ```
@@ -50,4 +57,51 @@ sudo rm /var/cache/apt/*.bin
 sudo apt-get update && sudo apt-get upgrade
 ```
 
+**Install bazel, which is required for protobuf, which is required for grpc**
+if `sudo apt-get install g++ git bazel` doesn't work, then just `curl` it and copy to local bin,
+```
+curl -Lo bazelisk https://github.com/bazelbuild/bazelisk/releases/latest/download/bazelisk-linux-amd64
+chmod +x bazelisk
+sudo mv bazelisk /usr/local/bin/bazel
+```
+
+**Installing protobuf**
+If `sudo apt  install protobuf-compiler` doesn't install the necessary pkg's like still getting this error for grpc,
+```
+CMake Error at /home/raihan/grpc/examples/cpp/cmake/common.cmake:99 (find_package):
+  Could not find a package configuration file provided by "Protobuf" with any
+  of the following names:
+
+    ProtobufConfig.cmake
+    protobuf-config.cmake
+
+  Add the installation prefix of "Protobuf" to CMAKE_PREFIX_PATH or set
+  "Protobuf_DIR" to a directory containing one of the above files.  If
+  "Protobuf" provides a separate development package or SDK, be sure it has
+  been installed.
+Call Stack (most recent call first):
+  CMakeLists.txt:24 (include)
+```
+Then install the protobuf in following way,
+```
+git clone https://github.com/protocolbuffers/protobuf.git
+cd protobuf
+git submodule update --init --recursive
+bazel build :protoc :protobuf
+cp bazel-bin/protoc /usr/local/bin ## check if it's required to copy it
+```
+But this will not solve that problem because it will not find the `ProtobufConfig.cmake file or, `protobuf-config.cmake`.  But inside the protobuf dir there will be a cmake dir. That will look like following, the pic is taken after I run the cmd's,
+
+
+Run these cmd's,
+```
+cd ~/protobuf/cmake/
+mkdir build
+cd build
+cmake ../..
+make
+sudo make install
+```
+
+ 
 
