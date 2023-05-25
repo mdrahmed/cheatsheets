@@ -91,7 +91,7 @@ bazel build :protoc :protobuf
 cp bazel-bin/protoc /usr/local/bin ## check if it's required to copy it
 ```
 But this will not solve that problem because it will not find the `ProtobufConfig.cmake file or, `protobuf-config.cmake`.  But inside the protobuf dir there will be a cmake dir. That will look like following, the pic is taken after I run the cmd's,
-[probuf-cmake](https://github.com/mdrahmed/cheatsheets/blob/main/pics/protobuf-cmake.png)
+![probuf-cmake](https://github.com/mdrahmed/cheatsheets/blob/main/pics/protobuf-cmake.png)
 
 Run these cmd's,
 ```
