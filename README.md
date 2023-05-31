@@ -19,6 +19,12 @@ sudo ln -s /usr/local/bin/cmake /usr/bin/cmake
 ```
 
 ### Useful cmd's
+**Vim hangs or stops**
+```
+ps auxw | grep vim
+pkill -9 vim
+```
+
 **To find size of a dir, do this `du -sh <folder name>`**
 ```
 du -sh grpc/
@@ -31,6 +37,16 @@ du -sh grpc/
 **Find a file in a dir and it's sub-dirs**
 ```
 find . -name "ProtobufConfig.cmake"
+```
+
+If I am using `python3.7` then I should install `python3.7-dev`,
+```
+sudo apt-get install libpython3.7-dev
+```
+
+Then the `netfilterqueue` will be installed,
+```
+pip3 install netfilterqueue
 ```
 
 
@@ -103,5 +119,7 @@ make
 sudo make install
 ```
 
- 
+[Follow these guidlines](https://grpc.io/docs/languages/cpp/quickstart/)
+And don't forget to run the `make` and `make install` for grpc after installing the protobuf. The protobuf will also need the grpc to install.
+**The `arm-toolchain.cmake` is the file that is required for arm64 bit compilation, it uses the toolchain that comes with the testbed.** 
 
