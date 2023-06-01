@@ -96,3 +96,7 @@ The XOR operation returns 1 if the corresponding bits of the two operands are di
 
 To find the single number, you can perform XOR on all the elements in the array. Since the duplicate numbers will cancel each other out (XORing them will result in 0), the remaining number will be the one that appears only once.
 
+
+## BST (Binary Search Tree)
+A BST, or Binary Search Tree, is a type of binary tree data structure that follows a specific ordering property. In a BST, for any given node, all the values in its left subtree are smaller than its value, and all the values in its right subtree are greater than its value.
+Using the inorder traversal, I can visit the nodes in ascending order.

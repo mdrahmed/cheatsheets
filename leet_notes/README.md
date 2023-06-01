@@ -243,3 +243,64 @@ Alternative:
 ```
 _1 more_
 
+[230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)
+```
+        self.count = 0
+        self.result = None
+
+        def inorder(node):
+            if node is None or self.count >= k:
+                return
+            
+            inorder(node.left)
+            self.count += 1
+            if self.count == k:
+                self.result = node.val
+                return
+            inorder(node.right)
+
+        inorder(root)
+        return self.result
+```
+
+[39. Combination Sum](https://leetcode.com/problems/combination-sum/description/)
+```
+	result = []
+        def backtrack(start, path, current_sum):
+            if current_sum == target:
+                result.append(path[:])
+                return
+            if current_sum > target:
+                return
+            
+            for i in range(start, len(candidates)):
+                path.append(candidates[i])
+                backtrack(i, path, current_sum + candidates[i])
+                path.pop()
+        
+        backtrack(0, [], 0)
+        return result
+```
+TC: `O(2^n * n)`
+
+Alternate Approach (DP):
+```
+        dp = [[] for _ in range(target + 1)]
+    
+        # Base case: there is one way to make 0, which is an empty combination
+        dp[0].append([])
+        
+        # Iterate through all candidates
+        for candidate in candidates:
+            # For each candidate, iterate from the candidate value up to the target
+            for i in range(candidate, target + 1):
+                # For each sum i, iterate through all combinations that can lead to this sum
+                for combination in dp[i - candidate]:
+                    # Append the current candidate to each combination to form new combinations
+                    new_combination = combination + [candidate]
+                    dp[i].append(new_combination)
+        
+        return dp[target]
+```
+TC: `O(target * n * m)`
+
