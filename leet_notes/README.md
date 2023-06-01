@@ -157,6 +157,23 @@ Alternative:
             
         return triangle
 ```
+#### Similar question to `118. Pascal's Triangle`
+[119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/description/)
+**Done by me**
+```
+        triangle = []
+        for i in range(rowIndex+1):
+            row = []
+            for j in range(i+1):
+                if j==0 or j==i:
+                    row.append(1)
+                else:
+                    row.append(triangle[i-1][j-1] + triangle[i-1][j])
+            triangle.append(row)
+        return row
+```
+*1 More*
+
 
 [136. Single Number](https://leetcode.com/problems/single-number/description/)
 ```
@@ -165,4 +182,61 @@ Alternative:
             result ^= num
         return result
 ```
+#### Similar questions to `136. Single Number`
+
+[137. Single Number II](https://leetcode.com/problems/single-number-ii/description/)
+**Done by me**
+```
+        hp = {}
+        for num in nums:
+            if num in hp:
+                hp[num] += 1
+            else:
+                hp[num] = 1
+            
+        for k in hp:
+            if hp[k] == 1:
+                ans = k
+        
+        return ans
+```
+[260. Single Number III](https://leetcode.com/problems/single-number-iii/description/)
+```
+        hp = {}
+        for num in nums:
+            if num in hp:
+                hp[num] += 1
+            else:
+                hp[num] = 1
+        ans = []
+        for k in hp:
+            if hp[k] == 1:
+                ans.append(k)
+        return ans
+```
+[268. Missing Number](https://leetcode.com/problems/missing-number/description/)
+```
+        n = len(nums)
+        summ = (n * (n+1))//2
+        missing_sum = 0
+        for num in nums:
+            missing_sum += num
+        print(summ)
+        print(missing_sum)
+        return summ-missing_sum
+```
+[287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/)
+```
+        hp = {}
+        for num in nums:
+            if num in hp:
+                hp[num] += 1
+            else:
+                hp[num] = 1
+            
+        for key in hp:
+            if hp[key] > 1:
+                return key
+```
+_1 more_
 
