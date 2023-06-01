@@ -1,5 +1,25 @@
 # Top 100 liked questions
 
+## Python tricky & important codes,
+
+#### Hashmap
+Get the keys,
+```
+hashmap = {'a': 1, 'b': 2, 'c': 3}
+# Iterate over the hashmap keys
+for key in hashmap:
+    print(key)
+    # I get the value of this key with this hashmap[key]
+```
+Get the keys and value,
+```
+hashmap = {'a': 1, 'b': 2, 'c': 3}
+# Iterate over the hashmap keys and values
+for key, value in hashmap.items():
+    print(key, value)
+```
+
+
 ## Permutation/Combinatorials:
 [46. Permutations](https://leetcode.com/problems/permutations/description/)
 

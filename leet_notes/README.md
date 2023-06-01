@@ -158,7 +158,7 @@ Alternative:
         return triangle
 ```
 #### Similar question to `118. Pascal's Triangle`
-[119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/description/)
+-[119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/description/)
 **Done by me**
 ```
         triangle = []
@@ -184,7 +184,7 @@ Alternative:
 ```
 #### Similar questions to `136. Single Number`
 
-[137. Single Number II](https://leetcode.com/problems/single-number-ii/description/)
+-[137. Single Number II](https://leetcode.com/problems/single-number-ii/description/)
 **Done by me**
 ```
         hp = {}
@@ -200,7 +200,8 @@ Alternative:
         
         return ans
 ```
-[260. Single Number III](https://leetcode.com/problems/single-number-iii/description/)
+-[260. Single Number III](https://leetcode.com/problems/single-number-iii/description/)
+**Done by me**
 ```
         hp = {}
         for num in nums:
@@ -214,7 +215,8 @@ Alternative:
                 ans.append(k)
         return ans
 ```
-[268. Missing Number](https://leetcode.com/problems/missing-number/description/)
+-[268. Missing Number](https://leetcode.com/problems/missing-number/description/)
+**Done by me**
 ```
         n = len(nums)
         summ = (n * (n+1))//2
@@ -225,7 +227,8 @@ Alternative:
         print(missing_sum)
         return summ-missing_sum
 ```
-[287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/)
+-[287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/)
+**Done by me**
 ```
         hp = {}
         for num in nums:
