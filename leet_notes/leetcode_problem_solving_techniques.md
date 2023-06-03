@@ -21,6 +21,14 @@ for key, value in hashmap.items():
 
 
 ## Permutation/Combinatorials:
+For combinatorial problems or, recursive structure problems it's better to use backtracking or recursive solution. 
+**If the problem size is relatively small and the time complexity requirement is not strict, backtracking can be a straightforward and intuitive approach. However, for larger problem sizes, backtracking might become inefficient. So, I have to use alternative approaches like dynamic programming or optimized iterative algorithms.**
+
+#### Diff between loops and recursion
+Recursion involves defining a function that calls itself, creating a recursive chain of function calls. 
+On the other hand, a for loop is a loop construct that iterates over a sequence of values or **performs a fixed number of iterations.**
+
+
 [46. Permutations](https://leetcode.com/problems/permutations/description/)
 
 Need to use backtrack to find the permutations, which is a recursive algorithm, this recursive algorithm must have a base case. 
