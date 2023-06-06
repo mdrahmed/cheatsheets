@@ -19,6 +19,27 @@ for key, value in hashmap.items():
     print(key, value)
 ```
 
+#### defaultdict vs dict
+`defaultdict` is a class from the collections module in the Python standard library. It is a subclass of the built-in `dict` type. **The main difference between a `defaultdict` and a regular `dict` is how it handles missing keys. When you access a key that does not exist in a regular `dict`, it raises a `KeyError` exception. However, a `defaultdict` allows you to specify a default value type for keys that do not exist, eliminating the need to handle `KeyError` exceptions.**
+```
+	# define it like following
+	groups = defaultdict(list)
+	
+	# append words into it
+	groups.append(word)
+		
+	# print keys
+	groups.keys()
+
+	# print values
+	groups.values()
+```
+
+#### sort a word in python
+```
+sorted_word = ''.join(sorted(word))
+```
+
 ## Recursion
 To make a recursive call, I need to have 3 things,
 * Base case: When it will end calling or return something

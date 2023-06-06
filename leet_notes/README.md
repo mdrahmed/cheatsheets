@@ -316,3 +316,34 @@ Alternate Approach (DP):
 ```
 TC: `O(target * n * m)`, where n is the number of candidates and m is the average length of the combinations. 
 
+[49. Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)
+```
+        groups = defaultdict(list)
+
+        for word in strs:
+            sorted_word = ''.join(sorted(word))
+            groups[sorted_word].append(word)
+        
+        return groups.values()
+```
+TC: O(n * m * log m)
+1. Iterating through the strs list: O(n)
+2. Sorting each word: O(m * log m)
+3. Accessing and appending to the groups dictionary: O(1)
+
+The time complexity of sorting a word is O(m * log m) because sorting a string of length m requires comparing and rearranging the characters, which has a complexity of O(m * log m) using efficient sorting algorithms like Timsort (used by Python's `sorted` function)
+
+Alternate approach (using regular python dict):
+```
+        groups = {}
+
+        for word in strs:
+            sorted_word = ''.join(sorted(word))
+            if sorted_word in groups.keys():
+                groups[sorted_word].append(word)
+            else:
+                groups[sorted_word] = [word]
+            
+        return groups.values()
+```
+TC: O(n * m * log m)
