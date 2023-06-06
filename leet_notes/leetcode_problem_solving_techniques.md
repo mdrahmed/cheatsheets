@@ -22,6 +22,8 @@ for key, value in hashmap.items():
 #### defaultdict vs dict
 `defaultdict` is a class from the collections module in the Python standard library. It is a subclass of the built-in `dict` type. **The main difference between a `defaultdict` and a regular `dict` is how it handles missing keys. When you access a key that does not exist in a regular `dict`, it raises a `KeyError` exception. However, a `defaultdict` allows you to specify a default value type for keys that do not exist, eliminating the need to handle `KeyError` exceptions.**
 ```
+# To use defaultdict, I have to import it first
+from collections import defaultdict
 	# define it like following
 	groups = defaultdict(list)
 	

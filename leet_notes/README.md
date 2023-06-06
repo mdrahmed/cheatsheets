@@ -347,3 +347,15 @@ __Alternate approach (using regular python dict):__
         return groups.values()
 ```
 TC: O(n * m * log m)
+
+**Similar question to `49. Group Anagrams`**
+[2273. Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/)
+```
+        def isAnagram(word1, word2):
+            return sorted(word1) == sorted(word2)
+        result = []
+        for word in words:
+            if len(result) == 0 or not isAnagram(word, result[-1]):
+                result.append(word)
+        return result
+```
