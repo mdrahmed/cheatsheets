@@ -295,7 +295,7 @@ _1 more_
 ```
 TC: `O(2^n * n)`
 
-Alternate Approach (DP):
+__Alternate Approach (DP):__
 ```
         dp = [[] for _ in range(target + 1)]
     
@@ -333,7 +333,7 @@ TC: O(n * m * log m)
 
 The time complexity of sorting a word is O(m * log m) because sorting a string of length m requires comparing and rearranging the characters, which has a complexity of O(m * log m) using efficient sorting algorithms like Timsort (used by Python's `sorted` function)
 
-Alternate approach (using regular python dict):
+__Alternate approach (using regular python dict):__
 ```
         groups = {}
 
