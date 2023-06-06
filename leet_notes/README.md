@@ -1,7 +1,12 @@
-# Find the Company wise interview questions
-[All interview question Leetcode](https://leetcode.com/discuss/interview-question?currentPage=1&orderBy=hot&query=)
+# Using leet effectively
+* [Solve Leet 100 like questions](https://leetcode.com/problem-list/top-100-liked-questions/?sorting=W3sic29ydE9yZGVyIjoiREVTQ0VORElORyIsIm9yZGVyQnkiOiJBQ19SQVRFIn1d)
+* [Solve Blind 75]
+* If there is a interview to attend then just [find company wise questions and solve those](https://github.com/mdrahmed/cheatsheets/blob/main/leet_notes/README.md#find-the-company-wise-interview-questions).
+* Otherwise, find problems from google list(given from 1st google interview) and solve those
 
-[Here is all google OA questions](https://leetcode.com/discuss/interview-question?currentPage=1&orderBy=most_relevant&query=google)
+# Find the Company wise interview questions
+* [All interview question Leetcode](https://leetcode.com/discuss/interview-question?currentPage=1&orderBy=hot&query=)
+* [Here is all google OA questions](https://leetcode.com/discuss/interview-question?currentPage=1&orderBy=most_relevant&query=google)
 
 # Leet 100 like questions solutions
 
