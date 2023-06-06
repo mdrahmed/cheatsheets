@@ -359,3 +359,48 @@ TC: O(n * m * log m)
                 result.append(word)
         return result
 ```
+
+[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
+__Algorithm used: quickselect__
+```
+import random
+        def partition(left, right, pivot_idx):
+            pivot = nums[pivot_idx]
+            # Move pivot to the rightmost position
+            nums[pivot_idx], nums[right] = nums[right], nums[pivot_idx]
+            # Perform partitioning
+            store_idx = left
+            for i in range(left, right):
+                if nums[i] < pivot:
+                    nums[i], nums[store_idx] = nums[store_idx], nums[i]
+                    store_idx += 1
+            # Move pivot back to its sorted position
+            nums[store_idx], nums[right] = nums[right], nums[store_idx]
+            return store_idx
+
+        def quickselect(left, right, k_smallest):
+            if left == right:
+                return nums[left]
+            
+            # Choose a random pivot index
+            pivot_idx = random.randint(left, right)
+            
+            # Perform partitioning and get the updated pivot index
+            pivot_idx = partition(left, right, pivot_idx)
+            
+            # If the pivot is the k-th largest element, return it
+            if k_smallest == pivot_idx:
+                return nums[k_smallest]
+            # If the k-th largest element is in the left subarray, recursively call quickselect on the left subarray
+            elif k_smallest < pivot_idx:
+                return quickselect(left, pivot_idx - 1, k_smallest)
+            # If the k-th largest element is in the right subarray, recursively call quickselect on the right subarray
+            else:
+                return quickselect(pivot_idx + 1, right, k_smallest)
+
+        # Convert k to the k-th smallest index
+        k_smallest = len(nums) - k
+        
+        # Call quickselect to find the k-th largest element
+        return quickselect(0, len(nums) - 1, k_smallest)
+```
