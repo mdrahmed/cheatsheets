@@ -19,14 +19,32 @@ for key, value in hashmap.items():
     print(key, value)
 ```
 
+## Recursion
+To make a recursive call, I need to have 3 things,
+* Base case: When it will end calling or return something
+```
+            if(len(path) == len(nums)):
+                result.append(path.copy())
+                return result
+```
 
-## Permutation/Combinatorials:
-For combinatorial problems or, recursive structure problems it's better to use backtracking or recursive solution. 
-**If the problem size is relatively small and the time complexity requirement is not strict, backtracking can be a straightforward and intuitive approach. However, for larger problem sizes, backtracking might become inefficient. So, I have to use alternative approaches like dynamic programming or optimized iterative algorithms.**
+* If the base case is an array then how I am appending and popping from the array
+```
+            for num in nums:
+                if num not in path:
+                    path.append(num)
+                    backtrack(nums, path, result)
+                    path.pop()
+```
 
 #### Diff between loops and recursion
 Recursion involves defining a function that calls itself, creating a recursive chain of function calls. 
 On the other hand, a for loop is a loop construct that iterates over a sequence of values or **performs a fixed number of iterations.**
+
+
+## Permutation/Combinatorials:
+For combinatorial problems or, recursive structure problems it's better to use backtracking or recursive solution. 
+**If the problem size is relatively small and the time complexity requirement is not strict, backtracking can be a straightforward and intuitive approach. However, for larger problem sizes, backtracking might become inefficient. So, I have to use alternative approaches like dynamic programming or optimized iterative algorithms.**
 
 
 [46. Permutations](https://leetcode.com/problems/permutations/description/)
