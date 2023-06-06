@@ -348,8 +348,7 @@ __Alternate approach (using regular python dict):__
 ```
 TC: O(n * m * log m)
 
-**Similar question to `49. Group Anagrams`**
-
+#### Similar question to `49. Group Anagrams`
 [2273. Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/)
 ```
         def isAnagram(word1, word2):
