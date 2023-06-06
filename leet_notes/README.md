@@ -302,5 +302,5 @@ Alternate Approach (DP):
         
         return dp[target]
 ```
-TC: `O(target * n * m)`
+TC: `O(target * n * m)`, where n is the number of candidates and m is the average length of the combinations. 
 
