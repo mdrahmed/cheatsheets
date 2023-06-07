@@ -93,7 +93,7 @@ This is exactly like following,
 ***
 If I add 2 list then it will concatenate,
 	`[] + [1] = [1]`, it concatenates.
-	`[1] + [2] = [1,2]
+	`[1] + [2] = [1,2]`
 ***
 
 
