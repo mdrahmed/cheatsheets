@@ -10,7 +10,7 @@
 
 # Leet 100 like questions solutions
 
-[763. Partition Labels](https://leetcode.com/problems/partition-labels/)
+__[763. Partition Labels](https://leetcode.com/problems/partition-labels/)__
 The code is finding the lengths of contiguous substrings in s that contain unique characters. It uses the technique of maintaining a last dictionary to store the last occurrence index of each character encountered. By iterating over s and updating the end index to the maximum last occurrence index, it identifies the end of each unique substring. When the current index matches the end index, it calculates the length of the substring and appends it to the ans list. Finally, it returns the list of substring lengths.
 ```
 	ans = []
