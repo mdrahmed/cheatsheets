@@ -11,6 +11,7 @@
 # Leet 100 like questions solutions
 
 [763. Partition Labels](https://leetcode.com/problems/partition-labels/)
+The code is finding the lengths of contiguous substrings in s that contain unique characters. It uses the technique of maintaining a last dictionary to store the last occurrence index of each character encountered. By iterating over s and updating the end index to the maximum last occurrence index, it identifies the end of each unique substring. When the current index matches the end index, it calculates the length of the substring and appends it to the ans list. Finally, it returns the list of substring lengths.
 ```
 	ans = []
         last = {c: i for i, c in enumerate(s)}
@@ -24,6 +25,7 @@
 ```
 
 [46. Permutations](https://leetcode.com/problems/permutations/description/)
+The code uses the backtracking technique to generate all possible permutations of the given nums array. It starts with an empty path and gradually adds elements to it, ensuring that each element is unique within the current path. When the path length reaches the length of nums, it adds a copy of the path to the result list. By recursively exploring all possible choices at each step, it generates all permutations. Looping is used to iterate over the elements of nums and check if an element is already present in the path before adding it.
 ```
         def backtrack(nums, path, result):
             if(len(path) == len(nums)):
@@ -62,6 +64,7 @@ Alternative:
 ```
 
 [78. Subsets](https://leetcode.com/problems/subsets/)
+The code generates all possible subsets of the given nums array using the iterative approach. It initializes subsets with an empty subset and then iteratively generates new subsets by adding the current number to each existing subset. By utilizing list comprehension, it creates new subsets by appending the current number to each existing subset, and then extends the subsets list with these new subsets.
 ```
         def find_subsets(nums):
             subsets = [[]]
