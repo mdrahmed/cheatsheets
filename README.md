@@ -8,6 +8,18 @@ If there is any difficult piece of code then draw a **TRACE TABLE**
 
 ## General guidelines
 
+### Git readme
+Create a collapsible section
+```
+<details open>
+
+  <summary>click to collapse</summary>
+
+  this one starts expanded because of the "open"
+
+</details>
+```
+
 ### Under Linux, the version of the system-wide `cmake` can often be too old.
 
 Install more recent version from the cmake releases,
