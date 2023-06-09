@@ -12,6 +12,7 @@
 
 ### [763. Partition Labels](https://leetcode.com/problems/partition-labels/)
 The code is finding the lengths of contiguous substrings in s that contain unique characters. It uses the technique of maintaining a last dictionary to store the last occurrence index of each character encountered. By iterating over s and updating the end index to the maximum last occurrence index, it identifies the end of each unique substring. When the current index matches the end index, it calculates the length of the substring and appends it to the ans list. Finally, it returns the list of substring lengths.
+**Keep track of last char**
 ```
 	ans = []
         last = {c: i for i, c in enumerate(s)}
@@ -24,8 +25,9 @@ The code is finding the lengths of contiguous substrings in s that contain uniqu
         return ans
 ```
 
-[46. Permutations](https://leetcode.com/problems/permutations/description/)
+### [46. Permutations](https://leetcode.com/problems/permutations/description/)
 The code uses the backtracking technique to generate all possible permutations of the given nums array. It starts with an empty path and gradually adds elements to it, ensuring that each element is unique within the current path. When the path length reaches the length of nums, it adds a copy of the path to the result list. By recursively exploring all possible choices at each step, it generates all permutations. Looping is used to iterate over the elements of nums and check if an element is already present in the path before adding it.
+**backtrack pop append**
 ```
         def backtrack(nums, path, result):
             if(len(path) == len(nums)):
@@ -63,8 +65,9 @@ Alternative:
         return ans
 ```
 
-[78. Subsets](https://leetcode.com/problems/subsets/)
+### [78. Subsets](https://leetcode.com/problems/subsets/)
 The code generates all possible subsets of the given nums array using the iterative approach. It initializes subsets with an empty subset and then iteratively generates new subsets by adding the current number to each existing subset. By utilizing list comprehension, it creates new subsets by appending the current number to each existing subset, and then extends the subsets list with these new subsets.
+**loop + 2 di-array**
 ```
         def find_subsets(nums):
             subsets = [[]]
@@ -81,7 +84,8 @@ The code generates all possible subsets of the given nums array using the iterat
         return result
 ```
 
-[226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+### [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+__left, right to right, left__
 ```
         if root is None:
             return None
@@ -94,7 +98,8 @@ The code generates all possible subsets of the given nums array using the iterat
         return root
 ```
 
-[104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+### [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+**left then right, max+1**
 ```
         if root is None:
             return 0
@@ -112,7 +117,8 @@ Alternative:
         return 1+max(self.maxDepth(root.left),self.maxDepth(root.right))
 ```
 
-[94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)
+### [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)
+__left,root,right__
 ```
         ans = []
 
@@ -126,7 +132,8 @@ Alternative:
         return ans
 ```
 
-[22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+### [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+**backtrack, open then close**
 ```
         def backtrack(ans, curr, open_count, close_count):
             if len(curr) == 2 * n:  # Base case: the current combination is complete
@@ -144,7 +151,8 @@ Alternative:
         return result
 ```
 
-[48. Rotate Image](https://leetcode.com/problems/rotate-image/)
+### [48. Rotate Image](https://leetcode.com/problems/rotate-image/)
+__i,j to j,i and then rotate [i][::-1]__
 ```
         n = len(matrix)
 
@@ -156,7 +164,8 @@ Alternative:
             matrix[i] = matrix[i][::-1]
 ```
 
-[118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/description/)
+### [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/description/)
+__[i-1][j-1] + [i-1][j]__
 ```
         triangle = []
         for i in range(numRows):
@@ -188,7 +197,8 @@ Alternative:
 *1 More*
 
 
-[136. Single Number](https://leetcode.com/problems/single-number/description/)
+### [136. Single Number](https://leetcode.com/problems/single-number/description/)
+**XOR returns 1 if corresponding 2 bits are different. XOR a number with itself it will return 0**
 ```
         result = 0
         for num in nums:
@@ -256,7 +266,8 @@ Alternative:
 ```
 _1 more_
 
-[230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)
+### [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)
+__The elements are sorted in inorder traversal in BST.__Do inorder and count to k
 ```
         self.count = 0
         self.result = None
@@ -278,7 +289,8 @@ _1 more_
 [Note: In here, I am using `self.count` and `self.result` because I am trying to modify this within another function. And as it is a local variable and not a mutable object like list, dict, set, bytearrays. If it's a mutable object then I could use it e.g., if it was a list then I will only be accessing and appending the values into it, so, at that time it's possible to call it without making it nonlocal or `self`. I can't modify it without making it nonlocal. I can make it nonlocal using the keyword `nonlocal count, result` inside `inorder` function or just simply use the `self` to access and modify this]
 ```
 
-[39. Combination Sum](https://leetcode.com/problems/combination-sum/description/)
+### [39. Combination Sum](https://leetcode.com/problems/combination-sum/description/)
+**backtrack => determine base case, append and pop**
 ```
 	result = []
         def backtrack(start, path, current_sum):
@@ -299,6 +311,7 @@ _1 more_
 TC: `O(2^n * n)`
 
 __Alternate Approach (DP):__
+__dp is all about storing all the values in their array after specific calculation__
 ```
         dp = [[] for _ in range(target + 1)]
     
@@ -319,7 +332,8 @@ __Alternate Approach (DP):__
 ```
 TC: `O(target * n * m)`, where n is the number of candidates and m is the average length of the combinations. 
 
-[49. Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)
+### [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)
+__sort the word => ''.join(sorted(word)). Use defaultdict because that will initiate 0 if that value is not defined before__
 ```
         groups = defaultdict(list)
 
@@ -352,7 +366,7 @@ __Alternate approach (using regular python dict):__
 TC: O(n * m * log m)
 
 #### Similar question to `49. Group Anagrams`
-[2273. Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/)
+-[2273. Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/)
 ```
         def isAnagram(word1, word2):
             return sorted(word1) == sorted(word2)
@@ -363,7 +377,7 @@ TC: O(n * m * log m)
         return result
 ```
 
-[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
+### [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
 __Algorithm used: quickselect__
 ```
 import random
