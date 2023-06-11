@@ -379,6 +379,13 @@ TC: O(n * m * log m)
 
 ### [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
 __Algorithm used: quickselect__
+* Choose a pivot element from the array. This pivot element will be used to partition the array.
+* Partition the array into two parts: elements greater than or equal to the pivot on one side, and elements less than the pivot on the other side.
+* If the pivot index is equal to k-1, return the pivot element as the kth largest element.
+* If the pivot index is less than k-1, continue the partitioning process on the right subarray.
+* If the pivot index is greater than k-1, continue the partitioning process on the left subarray.
+By selectively partitioning the array, you can find the kth largest element without sorting the entire array. This approach allows you to achieve a time complexity of O(n) on average.
+
 ```
 import random
         def partition(left, right, pivot_idx):
@@ -420,4 +427,22 @@ import random
         
         # Call quickselect to find the k-th largest element
         return quickselect(0, len(nums) - 1, k_smallest)
+```
+
+
+### [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/description/)
+Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature.
+**stack-based approach: This solution iterates through the temperatures array once, maintaining a stack of indices. For each temperature, it checks if it is greater than the temperature corresponding to the top index in the stack. If so, it updates the answer for that index and continues this process until a warmer temperature is found or the stack is empty.**
+
+```
+        stack = []
+        ans = [0] * len(temperatures)
+
+        for i in range(len(temperatures)):
+            while stack and temperatures[i] > temperatures[stack[-1]]:
+                prev_index = stack.pop()
+                ans[prev_index] = i - prev_index
+            stack.append(i)
+
+        return ans
 ```
