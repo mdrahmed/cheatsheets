@@ -198,7 +198,7 @@ __[i-1][j-1] + [i-1][j]__
 
 
 ### [136. Single Number](https://leetcode.com/problems/single-number/description/)
-**XOR returns 1 if corresponding 2 bits are different. XOR a number with itself it will return 0**
+**XOR returns 1 if corresponding 2 bits are different. XOR a number with itself it will return 0, so, XOR cancels same number.**
 ```
         result = 0
         for num in nums:
