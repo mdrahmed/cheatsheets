@@ -267,7 +267,7 @@ __[i-1][j-1] + [i-1][j]__
 _1 more_
 
 ### [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)
-__The elements are sorted in inorder traversal in BST.__Do inorder and count to k
+**The elements are sorted in inorder traversal in BST.** Do inorder and count to k
 ```
         self.count = 0
         self.result = None
