@@ -198,7 +198,7 @@ __[i-1][j-1] + [i-1][j]__
 
 
 ### [136. Single Number](https://leetcode.com/problems/single-number/description/)
-**XOR returns 1 if corresponding 2 bits are different. XOR a number with itself it will return 0, so, XOR cancels same number.**
+**XOR returns 1 if corresponding 2 bits are different. XOR a number with itself it will return 0**
 ```
         result = 0
         for num in nums:
@@ -267,7 +267,7 @@ __[i-1][j-1] + [i-1][j]__
 _1 more_
 
 ### [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)
-**The elements are sorted in inorder traversal in BST.** Do inorder and count to k
+__The elements are sorted in inorder traversal in BST.__Do inorder and count to k
 ```
         self.count = 0
         self.result = None
@@ -446,29 +446,4 @@ Given an array of integers temperatures represents the daily temperatures, retur
             stack.append(i)
 
         return ans
-```
-
-### [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/description/?envType=featured-list&envId=top-100-liked-questions)
-**Use backtracking**
-```
-        result = []
-        current = []
-
-        def is_palindrome(string):
-            return string == string[::-1]
-
-        def backtrack(start):
-            if start >= len(s):
-                result.append(list(current))
-                return
-            
-            for end in range(start, len(s)):
-                substring = s[start:end+1]
-                if is_palindrome(substring):
-                    current.append(substring)
-                    backtrack(end + 1)
-                    current.pop()
-
-        backtrack(0)
-        return result
 ```
