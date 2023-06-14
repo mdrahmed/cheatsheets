@@ -446,3 +446,28 @@ Given an array of integers temperatures represents the daily temperatures, retur
 
         return ans
 ```
+
+### [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/description/?envType=featured-list&envId=top-100-liked-questions)
+**Use backtracking**
+```
+        result = []
+        current = []
+
+        def is_palindrome(string):
+            return string == string[::-1]
+
+        def backtrack(start):
+            if start >= len(s):
+                result.append(list(current))
+                return
+            
+            for end in range(start, len(s)):
+                substring = s[start:end+1]
+                if is_palindrome(substring):
+                    current.append(substring)
+                    backtrack(end + 1)
+                    current.pop()
+
+        backtrack(0)
+        return result
+```
