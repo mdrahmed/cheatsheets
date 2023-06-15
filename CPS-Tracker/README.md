@@ -92,7 +92,7 @@ frontend, the WhyThis app, for typical consumers.
 3. Fake sensor attack on VGR - similar to Fake alarm attack
    Sol: We don't see the nfc read, write and type of data
 
-We don't anything similar to the unlock door attack. But we have similar attack
+We don't have anything similar to the unlock door attack. But we have similar attack
 
 ## APT attacks
 An Advanced Persistent Threat (APT) attack refers to a prolonged, targeted cyber attack that is carried out by a sophisticated adversary with specific objectives. **APT attacks typically involve a combination of various techniques and tools to gain unauthorized access, maintain persistence, and exfiltrate sensitive data over an extended period of time.**
