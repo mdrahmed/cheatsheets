@@ -12,7 +12,7 @@
 
 ### [763. Partition Labels](https://leetcode.com/problems/partition-labels/)
 The code is finding the lengths of contiguous substrings in s that contain unique characters. It uses the technique of maintaining a last dictionary to store the last occurrence index of each character encountered. By iterating over s and updating the end index to the maximum last occurrence index, it identifies the end of each unique substring. When the current index matches the end index, it calculates the length of the substring and appends it to the ans list. Finally, it returns the list of substring lengths.
-**Keep track of last char**
+**hashmap: Keep track of last char**
 ```
 	ans = []
         last = {c: i for i, c in enumerate(s)}
@@ -27,7 +27,7 @@ The code is finding the lengths of contiguous substrings in s that contain uniqu
 
 ### [46. Permutations](https://leetcode.com/problems/permutations/description/)
 The code uses the backtracking technique to generate all possible permutations of the given nums array. It starts with an empty path and gradually adds elements to it, ensuring that each element is unique within the current path. When the path length reaches the length of nums, it adds a copy of the path to the result list. By recursively exploring all possible choices at each step, it generates all permutations. Looping is used to iterate over the elements of nums and check if an element is already present in the path before adding it.
-**backtrack pop append**
+**backtrack: base, append, pop**
 ```
         def backtrack(nums, path, result):
             if(len(path) == len(nums)):
@@ -85,7 +85,7 @@ The code generates all possible subsets of the given nums array using the iterat
 ```
 
 ### [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
-__left, right to right, left__
+__left, right = right, left__
 ```
         if root is None:
             return None
@@ -133,7 +133,7 @@ __left,root,right__
 ```
 
 ### [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
-**backtrack, open then close**
+**backtrack, open then close; it's not append and pop**
 ```
         def backtrack(ans, curr, open_count, close_count):
             if len(curr) == 2 * n:  # Base case: the current combination is complete
@@ -198,7 +198,7 @@ __[i-1][j-1] + [i-1][j]__
 
 
 ### [136. Single Number](https://leetcode.com/problems/single-number/description/)
-**XOR returns 1 if corresponding 2 bits are different. XOR a number with itself it will return 0, so, XOR cancels same number.**
+**XOR returns 1 if corresponding 2 bits are different. XOR a number with itself it will return 0, so, XORing same number cancels each other.**
 ```
         result = 0
         for num in nums:
@@ -472,3 +472,83 @@ Given an array of integers temperatures represents the daily temperatures, retur
         backtrack(0)
         return result
 ```
+
+### [51. N-Queens](https://leetcode.com/problems/n-queens/?envType=featured-list&envId=top-100-liked-questions)
+**Backtrack: This code uses a recursive backtracking algorithm to explore all possible placements of queens on the chessboard. The backtrack function is called recursively for each row, and it checks if a queen can be placed in a particular column. It also maintains sets of occupied columns, diagonals, and anti-diagonals to ensure that no two queens attack each other.**
+```
+        def backtrack(row, cols, diagonals, anti_diagonals, board, result):
+            if row == n:
+                result.append([''.join(row) for row in board])
+                return
+            
+            for col in range(n):
+                diagonal = row - col
+                anti_diagonal = row + col
+                
+                if col in cols or diagonal in diagonals or anti_diagonal in anti_diagonals:
+                    continue
+                
+                board[row][col] = 'Q'
+                cols.add(col)
+                diagonals.add(diagonal)
+                anti_diagonals.add(anti_diagonal)
+                
+                backtrack(row + 1, cols, diagonals, anti_diagonals, board, result)
+                
+                board[row][col] = '.'
+                cols.remove(col)
+                diagonals.remove(diagonal)
+                anti_diagonals.remove(anti_diagonal)
+        
+        result = []
+        board = [['.' for _ in range(n)] for _ in range(n)]
+        cols = set()
+        diagonals = set()
+        anti_diagonals = set()
+        
+        backtrack(0, cols, diagonals, anti_diagonals, board, result)
+        
+        return result
+```
+TO: `O(N!)`, where N represents the size of the chessboard.
+Since each row has N choices (columns) to place a queen, and for each row, we need to check if the position is under attack, the number of recursive calls made by the backtracking algorithm is on the order of N * N-1 * N-2 * ... * 1, which is N!.
+
+### [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/description/?envType=featured-list&envId=top-100-liked-questions)
+**BFS can be used to find level-order**. To perform a level order traversal of a binary tree, you can use the Breadth-First Search (BFS) algorithm with the help of a queue. Here's an algorithm to achieve the level order traversal:
+1. Create an empty queue and enqueue the root node.
+2. Create an empty list to store the level order traversal result.
+3. While the queue is not empty:
+4.  Dequeue a node from the front of the queue.
+5.  Add the value of the dequeued node to the level order traversal result list.
+6.  Enqueue the left and right children of the dequeued node, if they exist.
+7. Return the level order traversal result list.
+
+```
+from collections import deque
+        if not root:
+            return []
+        
+        result = []
+        queue = deque()
+        queue.append(root)
+        
+        while queue:
+            level_size = len(queue)
+            current_level = []
+            
+            for _ in range(level_size):
+                node = queue.popleft()
+                current_level.append(node.val)
+                
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            
+            result.append(current_level)
+        
+        return result
+```
+TO: `O(n)`, where n is the number of nodes in the binary tree.
+
+
