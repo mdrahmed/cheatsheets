@@ -35,9 +35,9 @@ I am not sure if we did the trackVarAssign and trackSink. With my minimal knowle
 
 For the motivation, as we discussed if we log only the function calls and the global variables then we can't see the attack. But I think still it's possible to identify the attack because in our model we are generating the table and the events with the function calls and from global variables. I am not sure how to make a good motivation in the paper.
 
-**The attacks and solution:**
+#### The attacks and solution
 
-The dynamic method(attack) invocation can solved by the testbed model as well. As they say,
+1. The dynamic method(attack) invocation can solved by the testbed model as well. As they say,
 Unlock door: The attack function in
 LockItWhenILeave , on the other hand, was triggered by a
 timer that was set while handling a mode change event that
