@@ -474,7 +474,8 @@ Given an array of integers temperatures represents the daily temperatures, retur
 ```
 
 ### [51. N-Queens](https://leetcode.com/problems/n-queens/?envType=featured-list&envId=top-100-liked-questions)
-**Backtrack: This code uses a recursive backtracking algorithm to explore all possible placements of queens on the chessboard. The backtrack function is called recursively for each row, and it checks if a queen can be placed in a particular column. It also maintains sets of occupied columns, diagonals, and anti-diagonals to ensure that no two queens attack each other.**
+**Backtrack:** This code uses a recursive backtracking algorithm to explore all possible placements of queens on the chessboard. The backtrack function is called recursively for each row, and it checks if a queen can be placed in a particular column. It also maintains sets of occupied columns, diagonals, and anti-diagonals to ensure that no two queens attack each other.
+**If in recursion, I am using list, then I have to `append` and then `pop` but if I use `set()` then I need to `add` and then `remove`.**
 ```
         def backtrack(row, cols, diagonals, anti_diagonals, board, result):
             if row == n:
@@ -512,6 +513,42 @@ Given an array of integers temperatures represents the daily temperatures, retur
 ```
 TO: `O(N!)`, where N represents the size of the chessboard.
 Since each row has N choices (columns) to place a queen, and for each row, we need to check if the position is under attack, the number of recursive calls made by the backtracking algorithm is on the order of N * N-1 * N-2 * ... * 1, which is N!.
+
+**Done by me**
+```
+        board = [['.' for _ in range(n)] for _ in range(n)]
+        rows = []
+        cols = []
+        d1s = []
+        d2s = []    
+        result = []
+
+        def b(row, rows, cols, d1s, d2s, board):
+            # global rows
+            if row == n:
+                print(board)
+                result.append([''.join(row) for row in board])
+                return
+            for col in range(n):
+                d1 = row+col
+                d2 = row-col
+                if row not in rows and col not in cols and d1 not in d1s and d2 not in d2s:
+                    d1s.append(d1)
+                    d2s.append(d2)
+                    rows.append(row)
+                    cols.append(col)
+                    board[row][col] = 'Q'
+                    b(row+1, rows, cols, d1s, d2s, board)
+                    
+                    board[row][col]='.'
+                    rows.pop()
+                    d1s.pop()
+                    d2s.pop()
+                    cols.pop()
+
+        b(0, rows, cols, d1s, d2s, board)        
+        return result
+```
 
 ### [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/description/?envType=featured-list&envId=top-100-liked-questions)
 **BFS can be used to find level-order**. To perform a level order traversal of a binary tree, you can use the Breadth-First Search (BFS) algorithm with the help of a queue. Here's an algorithm to achieve the level order traversal:
