@@ -588,4 +588,84 @@ from collections import deque
 ```
 TO: `O(n)`, where n is the number of nodes in the binary tree.
 
+### [347. Top K Frequent Elements](https://chat.openai.com/c/f3b09ef9-8fa0-4551-9b01-fc77f586c96a)
+**Hashmap solution:**Just remember how to sort the hashmap
+`hp_sorted = dict(sorted(hp.items(), key=lambda x: x[1], reverse=True))`
 
+```
+        hp = {}
+        ans = []
+        for num in nums:
+            if num in hp:
+                hp[num] += 1
+            else:
+                hp[num] = 1
+        hp_sorted = dict(sorted(hp.items(), key=lambda x: x[1], reverse=True))
+        loop = 1
+        for key in hp_sorted:
+            ans.append(key)
+            if loop == k:
+                break
+            loop+=1
+        
+        return ans
+```
+TO: `O(n log n)`, Python `sorted()` function uses `Tim sort` which has a complexity of `O(n log n)`
+
+**Heap and hashmap combine solution:**Using `counter` class`
+For a min-heap, the heap property states that for any node i, the value of the parent node is less than or equal to the values of its child nodes. In a max-heap, the property is the opposite, where the value of the parent node is greater than or equal to the values of its child nodes.
+By using `heapq.heapify(heap)`, the elements in the list are rearranged so that the heap property is satisfied. **By default, Python's heapq module creates a min-heap, so we invert the sign of the frequency to achieve the effect of a max-heap.**
+
+```
+import heapq
+from collections import Counter
+    # Count the frequency of each element in nums
+    counter = Counter(nums)
+    
+    # By default, Python's heapq module creates a min-heap, so we invert the sign of the frequency to achieve the effect of a max-heap.
+    # Create a heap of (-frequency, element) pairs, I have used negation, so that if I sort those using `heapq` then the element with top freq will be in 1st position
+    heap = [(-freq, num) for num, freq in counter.items()]
+    
+    # Convert the heap into a priority queue
+    heapq.heapify(heap)
+    
+    # Get the top k elements from the priority queue
+    top_k = [heapq.heappop(heap)[1] for _ in range(k)]
+    
+    return top_k
+```
+TO:`O(n log k)`, where n is the length of the input array nums and k is the desired number of most frequent elements. 
+    Counting the frequency of each element using Counter(nums): This step takes O(n) time complexity as it iterates through the input array nums once to count the frequency of each element.
+    Creating the heap: Creating the heap of (-frequency, element) pairs takes O(n) time complexity since it iterates through the counter items, which has a maximum length of n.
+    Converting the heap into a priority queue using heapify(heap): This operation takes O(k) time complexity as it only needs to heapify the first k elements of the heap.
+    Extracting the top k elements from the priority queue: Extracting the top k elements using heappop() takes O(k log k) time complexity. Since the heap contains at most k elements, extracting each element takes O(log k) time complexity, and we perform this operation k times.
+
+### [169. Majority Element](https://leetcode.com/problems/majority-element/description/?envType=featured-list&envId=top-100-liked-questions)
+**Hashmap solution:**Just sort the array and get the 1st element
+```
+        hp = {}
+        for num in nums:
+            if num in hp:
+                hp[num] += 1
+            else:
+                hp[num] = 1
+        hp_sorted = dict(sorted(hp.items(), key=lambda x: x[1], reverse=True))
+        first_key = next(iter(hp_sorted))
+
+        return first_key
+```
+TO: `O(n log n)`, Sorting a dictionary of hashmap takes `O(n log n)` time complexity.
+
+**Boyer-Moore Voting Algorithm:**The algorithm finds the majority element in a single pass over the array and works under the assumption that the majority element will always exist.
+```
+        count = 0
+        candidate = None
+
+        for num in nums:
+            if count == 0:
+                candidate = num
+            count += 1 if num == candidate else -1
+
+        return candidate
+```
+TO: `O(n)`
