@@ -641,7 +641,7 @@ TO:`O(n log k)`, where n is the length of the input array nums and k is the desi
     Extracting the top k elements from the priority queue: Extracting the top k elements using heappop() takes O(k log k) time complexity. Since the heap contains at most k elements, extracting each element takes O(log k) time complexity, and we perform this operation k times.
 
 ### [169. Majority Element](https://leetcode.com/problems/majority-element/description/?envType=featured-list&envId=top-100-liked-questions)
-**Hashmap solution:**Just sort the array and get the 1st element
+**Hashmap solution:** Just sort the array and get the 1st element
 ```
         hp = {}
         for num in nums:
@@ -656,7 +656,7 @@ TO:`O(n log k)`, where n is the length of the input array nums and k is the desi
 ```
 TO: `O(n log n)`, Sorting a dictionary of hashmap takes `O(n log n)` time complexity.
 
-**Boyer-Moore Voting Algorithm:**The algorithm finds the majority element in a single pass over the array and works under the assumption that the majority element will always exist.
+**Boyer-Moore Voting Algorithm:** The algorithm finds the majority element in a single pass over the array and works under the assumption that the majority element will always exist.
 ```
         count = 0
         candidate = None
