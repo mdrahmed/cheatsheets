@@ -588,7 +588,7 @@ from collections import deque
 ```
 TO: `O(n)`, where n is the number of nodes in the binary tree.
 
-### [347. Top K Frequent Elements](https://chat.openai.com/c/f3b09ef9-8fa0-4551-9b01-fc77f586c96a)
+### [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 **Hashmap solution:**Just remember how to sort the hashmap
 `hp_sorted = dict(sorted(hp.items(), key=lambda x: x[1], reverse=True))`
 
