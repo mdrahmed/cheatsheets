@@ -612,7 +612,7 @@ TO: `O(n)`, where n is the number of nodes in the binary tree.
 ```
 TO: `O(n log n)`, Python `sorted()` function uses `Tim sort` which has a complexity of `O(n log n)`
 
-**Heap and hashmap combine solution:**Using `counter` class`
+**Heap and hashmap combine solution:** Using `counter` class`
 For a min-heap, the heap property states that for any node i, the value of the parent node is less than or equal to the values of its child nodes. In a max-heap, the property is the opposite, where the value of the parent node is greater than or equal to the values of its child nodes.
 By using `heapq.heapify(heap)`, the elements in the list are rearranged so that the heap property is satisfied. **By default, Python's heapq module creates a min-heap, so we invert the sign of the frequency to achieve the effect of a max-heap.**
 
