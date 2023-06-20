@@ -435,6 +435,9 @@ Given an array of integers temperatures represents the daily temperatures, retur
 
 **stack-based approach: This solution iterates through the temperatures array once, maintaining a stack of indices. For each temperature, it checks if it is greater than the temperature corresponding to the top index in the stack. If so, it updates the answer for that index and continues this process until a warmer temperature is found or the stack is empty.**
 
+ 1. `stack` er modde ek ekta index add korte thakbo, 
+ 2. jkn e ager ta theke boro pabo tkn e `stack` theke pop kora suru ar `ans` e bortoman `i` theke `prev_ind` bad dia add korte hobe  
+ 3. eita colte thakbe until stack khali na hoy or, `stack` er value bortoman value theke boro na hoy
 ```
         stack = []
         ans = [0] * len(temperatures)
@@ -447,6 +450,7 @@ Given an array of integers temperatures represents the daily temperatures, retur
 
         return ans
 ```
+TO: O(n)
 
 ### [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/description/?envType=featured-list&envId=top-100-liked-questions)
 **Use backtracking**
