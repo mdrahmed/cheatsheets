@@ -592,7 +592,7 @@ from collections import deque
 ```
 TO: `O(n)`, where n is the number of nodes in the binary tree.
 
-### [347. Top K Frequent Elements](https://chat.openai.com/c/f3b09ef9-8fa0-4551-9b01-fc77f586c96a)
+### [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 **Hashmap solution:**Just remember how to sort the hashmap
 `hp_sorted = dict(sorted(hp.items(), key=lambda x: x[1], reverse=True))`
 
@@ -616,7 +616,7 @@ TO: `O(n)`, where n is the number of nodes in the binary tree.
 ```
 TO: `O(n log n)`, Python `sorted()` function uses `Tim sort` which has a complexity of `O(n log n)`
 
-**Heap and hashmap combine solution:**Using `counter` class`
+**Heap and hashmap combine solution:** Using `counter` class`
 For a min-heap, the heap property states that for any node i, the value of the parent node is less than or equal to the values of its child nodes. In a max-heap, the property is the opposite, where the value of the parent node is greater than or equal to the values of its child nodes.
 By using `heapq.heapify(heap)`, the elements in the list are rearranged so that the heap property is satisfied. **By default, Python's heapq module creates a min-heap, so we invert the sign of the frequency to achieve the effect of a max-heap.**
 
@@ -645,7 +645,7 @@ TO:`O(n log k)`, where n is the length of the input array nums and k is the desi
     Extracting the top k elements from the priority queue: Extracting the top k elements using heappop() takes O(k log k) time complexity. Since the heap contains at most k elements, extracting each element takes O(log k) time complexity, and we perform this operation k times.
 
 ### [169. Majority Element](https://leetcode.com/problems/majority-element/description/?envType=featured-list&envId=top-100-liked-questions)
-**Hashmap solution:**Just sort the array and get the 1st element
+**Hashmap solution:** Just sort the array and get the 1st element
 ```
         hp = {}
         for num in nums:
@@ -660,7 +660,7 @@ TO:`O(n log k)`, where n is the length of the input array nums and k is the desi
 ```
 TO: `O(n log n)`, Sorting a dictionary of hashmap takes `O(n log n)` time complexity.
 
-**Boyer-Moore Voting Algorithm:**The algorithm finds the majority element in a single pass over the array and works under the assumption that the majority element will always exist.
+**Boyer-Moore Voting Algorithm:** The algorithm finds the majority element in a single pass over the array and works under the assumption that the majority element will always exist.
 ```
         count = 0
         candidate = None
