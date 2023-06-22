@@ -8,6 +8,10 @@
 * [All interview question Leetcode](https://leetcode.com/discuss/interview-question?currentPage=1&orderBy=hot&query=)
 * [Here is all google OA questions](https://leetcode.com/discuss/interview-question?currentPage=1&orderBy=most_relevant&query=google)
 
+# One-line DS
+1. `queue` is First-come-first-serve => Bus line
+2. `stack` is Last-come-first-serve => pancakes
+
 # Leet 100 like questions solutions
 
 ### [763. Partition Labels](https://leetcode.com/problems/partition-labels/)
