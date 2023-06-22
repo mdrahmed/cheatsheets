@@ -1,5 +1,6 @@
 # Description of the tmux-old and tmux-new
 `tmux-new` is cheatsheet while working with the new `.tmux.conf` file.
+
 `tmux-old` is the built-in tmux configuration cheatsheet
 
 ## In general, tmux requried shortcuts
