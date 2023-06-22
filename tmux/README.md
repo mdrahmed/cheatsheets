@@ -3,6 +3,8 @@
 
 `tmux-old` is the built-in tmux configuration cheatsheet
 
+
+# This file has shortcuts for new conf - bind-key `ctrl+z` instead of `ctrl+b`
 ### Kill session
 `tmux kill-session -a` to kill the current session<br/>
 `tmux list-sessions` to list all sessions<br/>
@@ -15,23 +17,23 @@
 
 ### Kill windows
 `ctrl+d` to kill window with new conf<br/>
-`ctrl+b x` to kill window<br/>
-`ctrl+bf` Find window<br/>
-`ctrl+b,` Name window<br/>
-`ctrl+b&` Kill window<br/>
-`ctrl+d` to exit tmux <br/>
+`ctrl+z x` to kill window<br/>
+`ctrl+zf` Find window<br/>
+`ctrl+z,` Name window<br/>
+`ctrl+z&` Kill window<br/>
+`ctrl+z` to exit tmux <br/>
 
 ## In general, tmux requried shortcuts
 
 1. `tmux` search up
 ```
-ctrl+b+[
+ctrl+z+[
 ctrl+r
 ```
 To quit press `q` or `Esc`
 2. `tmux` swap window
 ```
-ctrl+b
+ctrl+z
 swap-window -s 1 -t 2
 ```
 
