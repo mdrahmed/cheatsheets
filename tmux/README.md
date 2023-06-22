@@ -11,5 +11,9 @@ ctrl+b+[
 ctrl+r
 ```
 To quit press `q` or `Esc`
+2. `tmux` swap window
+```
+ctrl+b
+swap-window -s 1 -t 2
+```
 
-2. 
