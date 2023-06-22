@@ -2,7 +2,10 @@
 `tmux` Start new session from prompt<br/>
 
 ## prefix
-Ctrl-z<br/>
+`Ctrl-z<br/>`
+
+## Kill windows
+`ctrl+d` to kill window with new conf<br/>
 
 ## Set easier window split keys
 `Ctrl+zv` Vertical split<br/>
