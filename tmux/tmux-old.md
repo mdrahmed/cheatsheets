@@ -10,10 +10,10 @@
 `ctrl+b: new` New session<br/>
 
 ## Kill session
-`tmux kill-session -a` to kill the current session
-`tmux list-sessions` to list all sessions
-`tmux kill-session -t 1` to kill session 1
-`tmux kill-server` to kill all session
+`tmux kill-session -a` to kill the current session<br/>
+`tmux list-sessions` to list all sessions<br/>
+`tmux kill-session -t 1` to kill session 1<br/>
+`tmux kill-server` to kill all session<br/>
 
 ## Windows I
 `ctrl+bc` Create window<br/>
