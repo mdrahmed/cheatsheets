@@ -4,7 +4,7 @@
 `tmux-old` is the built-in tmux configuration cheatsheet
 
 
-# This file has shortcuts for new conf - bind-key `ctrl+z` instead of `ctrl+b`
+# This file has shortcuts for new conf => bind-key `ctrl+z` instead of `ctrl+b`
 ### Kill session
 `tmux kill-session -a` to kill the current session<br/>
 `tmux list-sessions` to list all sessions<br/>
