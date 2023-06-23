@@ -1,8 +1,8 @@
 ## Open another file in vim,
 
 ### General shortcuts
-`5k` to move cursor 5 lines up
-`5j` to move cursor 5 lines down
+`5k` to move cursor 5 lines up<br/>
+`5j` to move cursor 5 lines down<br/>
 
 ### Vertical split
 `vsp name_of_file` will open a new file vertically <br/>
