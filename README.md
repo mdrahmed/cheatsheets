@@ -4,7 +4,7 @@ If there is any difficult piece of code then draw a **TRACE TABLE**
 
 `tmux` notes are present in the tmux folder 
 
-`vim` notes are present in the vim.md
+`vim` notes are present in the vim folder
 
 ## General guidelines
 
