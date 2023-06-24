@@ -10,7 +10,9 @@
 
 # One-line DS
 1. `queue` is First-come-first-serve => Bus line
+![queue](pics/queue.gif)
 2. `stack` is Last-come-first-serve => pancakes
+![stack](pics/stack.gif)
 
 # Leet 100 like questions solutions
 
