@@ -28,6 +28,7 @@ The code is finding the lengths of contiguous substrings in s that contain uniqu
                 st = i+1
         return ans
 ```
+TC = `O(n)`
 
 ### [46. Permutations](https://leetcode.com/problems/permutations/description/)
 The code uses the backtracking technique to generate all possible permutations of the given nums array. It starts with an empty path and gradually adds elements to it, ensuring that each element is unique within the current path. When the path length reaches the length of nums, it adds a copy of the path to the result list. By recursively exploring all possible choices at each step, it generates all permutations. Looping is used to iterate over the elements of nums and check if an element is already present in the path before adding it.
@@ -50,6 +51,8 @@ The code uses the backtracking technique to generate all possible permutations o
         backtrack(nums, [], result)
         return result
 ```
+TC=`O(n^n)`
+
 Alternative:
 ```
         ans = []
@@ -68,6 +71,7 @@ Alternative:
         get_permute([])
         return ans
 ```
+TC=`O(n!)`
 
 ### [78. Subsets](https://leetcode.com/problems/subsets/)
 The code generates all possible subsets of the given nums array using the iterative approach. It initializes subsets with an empty subset and then iteratively generates new subsets by adding the current number to each existing subset. By utilizing list comprehension, it creates new subsets by appending the current number to each existing subset, and then extends the subsets list with these new subsets.
@@ -87,6 +91,7 @@ The code generates all possible subsets of the given nums array using the iterat
         result = find_subsets(nums)
         return result
 ```
+TC=O(n * 2^k), where n is the length of the input list nums and k is the length of the longest subset.
 
 ### [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
 __left, right = right, left__
@@ -101,6 +106,7 @@ __left, right = right, left__
 
         return root
 ```
+TC=`O(n)`
 
 ### [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 **left then right, max+1**
@@ -113,6 +119,7 @@ __left, right = right, left__
 
         return max(leftDepth, rightDepth) + 1
 ```
+TC=`O(n)`
 
 Alternative:
 ```
@@ -120,6 +127,7 @@ Alternative:
             return 0
         return 1+max(self.maxDepth(root.left),self.maxDepth(root.right))
 ```
+TC=`O(n)`
 
 ### [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)
 __left,root,right__
@@ -135,6 +143,8 @@ __left,root,right__
 
         return ans
 ```
+TC=`O(n)`
+
 
 ### [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 **backtrack, open then close; it's not append and pop**
@@ -154,6 +164,7 @@ __left,root,right__
         backtrack(result, "", 0, 0)  # Start the backtracking process
         return result
 ```
+TC=`O(2^n)`
 
 ### [48. Rotate Image](https://leetcode.com/problems/rotate-image/)
 __i,j to j,i and then rotate [i][::-1]__
@@ -167,6 +178,7 @@ __i,j to j,i and then rotate [i][::-1]__
         for i in range(n):
             matrix[i] = matrix[i][::-1]
 ```
+TC=`O(n^2)`
 
 ### [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/description/)
 __[i-1][j-1] + [i-1][j]__
@@ -183,6 +195,8 @@ __[i-1][j-1] + [i-1][j]__
             
         return triangle
 ```
+TC=`O(n^2)`
+
 #### Similar question to `118. Pascal's Triangle`
 -[119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/description/)
 **Done by me**
@@ -198,6 +212,7 @@ __[i-1][j-1] + [i-1][j]__
             triangle.append(row)
         return row
 ```
+TC=`O(n^2)`
 *1 More*
 
 
@@ -209,6 +224,8 @@ __[i-1][j-1] + [i-1][j]__
             result ^= num
         return result
 ```
+TC=`O(n)`
+
 #### Similar questions to `136. Single Number`
 
 -[137. Single Number II](https://leetcode.com/problems/single-number-ii/description/)
@@ -227,6 +244,8 @@ __[i-1][j-1] + [i-1][j]__
         
         return ans
 ```
+TC=`O(n)`
+
 -[260. Single Number III](https://leetcode.com/problems/single-number-iii/description/)
 **Done by me**
 ```
@@ -242,6 +261,7 @@ __[i-1][j-1] + [i-1][j]__
                 ans.append(k)
         return ans
 ```
+TC=`O(n)`
 -[268. Missing Number](https://leetcode.com/problems/missing-number/description/)
 **Done by me**
 ```
@@ -254,6 +274,8 @@ __[i-1][j-1] + [i-1][j]__
         print(missing_sum)
         return summ-missing_sum
 ```
+TC=`O(n)`
+
 -[287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/)
 **Done by me**
 ```
@@ -268,6 +290,7 @@ __[i-1][j-1] + [i-1][j]__
             if hp[key] > 1:
                 return key
 ```
+TC=`O(n)`
 _1 more_
 
 ### [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)
@@ -292,6 +315,7 @@ _1 more_
 
 [Note: In here, I am using `self.count` and `self.result` because I am trying to modify this within another function. And as it is a local variable and not a mutable object like list, dict, set, bytearrays. If it's a mutable object then I could use it e.g., if it was a list then I will only be accessing and appending the values into it, so, at that time it's possible to call it without making it nonlocal or `self`. I can't modify it without making it nonlocal. I can make it nonlocal using the keyword `nonlocal count, result` inside `inorder` function or just simply use the `self` to access and modify this]
 ```
+TC=`O(n)`
 
 ### [39. Combination Sum](https://leetcode.com/problems/combination-sum/description/)
 **backtrack => determine base case, append and pop**
@@ -432,6 +456,7 @@ import random
         # Call quickselect to find the k-th largest element
         return quickselect(0, len(nums) - 1, k_smallest)
 ```
+TC=`O(n)`
 
 
 ### [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/description/)
@@ -454,7 +479,7 @@ Given an array of integers temperatures represents the daily temperatures, retur
 
         return ans
 ```
-TO: O(n)
+TC: O(n)
 
 ### [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/description/?envType=featured-list&envId=top-100-liked-questions)
 **Use backtracking**
@@ -480,6 +505,7 @@ TO: O(n)
         backtrack(0)
         return result
 ```
+TC=`O(2^n)`
 
 ### [51. N-Queens](https://leetcode.com/problems/n-queens/?envType=featured-list&envId=top-100-liked-questions)
 **Backtrack:** This code uses a recursive backtracking algorithm to explore all possible placements of queens on the chessboard. The backtrack function is called recursively for each row, and it checks if a queen can be placed in a particular column. It also maintains sets of occupied columns, diagonals, and anti-diagonals to ensure that no two queens attack each other.
@@ -519,7 +545,7 @@ TO: O(n)
         
         return result
 ```
-TO: `O(N!)`, where N represents the size of the chessboard.
+TC: `O(N!)`, where N represents the size of the chessboard.
 Since each row has N choices (columns) to place a queen, and for each row, we need to check if the position is under attack, the number of recursive calls made by the backtracking algorithm is on the order of N * N-1 * N-2 * ... * 1, which is N!.
 
 **Done by me**
@@ -594,7 +620,7 @@ from collections import deque
         
         return result
 ```
-TO: `O(n)`, where n is the number of nodes in the binary tree.
+TC: `O(n)`, where n is the number of nodes in the binary tree.
 
 ### [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 **Hashmap solution:**Just remember how to sort the hashmap
@@ -618,7 +644,7 @@ TO: `O(n)`, where n is the number of nodes in the binary tree.
         
         return ans
 ```
-TO: `O(n log n)`, Python `sorted()` function uses `Tim sort` which has a complexity of `O(n log n)`
+TC: `O(n log n)`, Python `sorted()` function uses `Tim sort` which has a complexity of `O(n log n)`
 
 **Heap and hashmap combine solution:** Using `counter` class`
 For a min-heap, the heap property states that for any node i, the value of the parent node is less than or equal to the values of its child nodes. In a max-heap, the property is the opposite, where the value of the parent node is greater than or equal to the values of its child nodes.
@@ -642,7 +668,7 @@ from collections import Counter
     
     return top_k
 ```
-TO:`O(n log k)`, where n is the length of the input array nums and k is the desired number of most frequent elements. 
+TC:`O(n log k)`, where n is the length of the input array nums and k is the desired number of most frequent elements. 
     Counting the frequency of each element using Counter(nums): This step takes O(n) time complexity as it iterates through the input array nums once to count the frequency of each element.
     Creating the heap: Creating the heap of (-frequency, element) pairs takes O(n) time complexity since it iterates through the counter items, which has a maximum length of n.
     Converting the heap into a priority queue using heapify(heap): This operation takes O(k) time complexity as it only needs to heapify the first k elements of the heap.
@@ -662,7 +688,7 @@ TO:`O(n log k)`, where n is the length of the input array nums and k is the desi
 
         return first_key
 ```
-TO: `O(n log n)`, Sorting a dictionary of hashmap takes `O(n log n)` time complexity.
+TC: `O(n log n)`, Sorting a dictionary of hashmap takes `O(n log n)` time complexity.
 
 **Boyer-Moore Voting Algorithm:** The algorithm finds the majority element in a single pass over the array and works under the assumption that the majority element will always exist.
 ```
@@ -676,4 +702,66 @@ TO: `O(n log n)`, Sorting a dictionary of hashmap takes `O(n log n)` time comple
 
         return candidate
 ```
-TO: `O(n)`
+TC: `O(n)`
+
+### 208. Implement Trie (Prefix Tree)(https://leetcode.com/problems/implement-trie-prefix-tree/description/?envType=featured-list&envId=top-100-liked-questions)
+A Trie, also known as a prefix tree, is a tree-based data structure used for efficient retrieval and storage of strings. It is commonly used in applications involving words, such as autocomplete, spell checking, and dictionary implementations. The Trie organizes the strings in a tree-like structure, where each node represents a character and the edges represent the possible characters that can follow.
+
+```
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.is_end_of_word = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, word: str) -> None:
+        node = self.root
+        for char in word:
+            if char not in node.children:
+                node.children[char] = TrieNode()
+            node = node.children[char]
+        node.is_end_of_word = True
+
+    def search(self, word: str) -> bool:
+        node = self.root
+        for char in word:
+            if char not in node.children:
+                return False
+            node = node.children[char]
+        return node.is_end_of_word
+
+    def startsWith(self, prefix: str) -> bool:
+        node = self.root
+        for char in prefix:
+            if char not in node.children:
+                return False
+            node = node.children[char]
+        return True
+```
+TC: `O(m)`, where m is the length of the word being inserted.
+
+### 62. Unique Paths(https://leetcode.com/problems/unique-paths/description/?envType=featured-list&envId=top-100-liked-questions)
+
+```
+	def uniquePaths(self, m: int, n: int) -> int:
+        # Create a grid of size m x n
+        dp = [[0] * n for _ in range(m)]
+
+        # Fill the first row and first column with 1
+        for i in range(m):
+            dp[i][0] = 1
+        for j in range(n):
+            dp[0][j] = 1
+
+        # Calculate the number of unique paths for each cell
+        for i in range(1, m):
+            for j in range(1, n):
+                dp[i][j] = dp[i-1][j] + dp[i][j-1]
+
+        # Return the number of unique paths for the bottom-right corner
+        return dp[m-1][n-1]
+```
+TC: `O(m * n)` because we iterate through all the cells of the grid once.
