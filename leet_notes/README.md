@@ -706,7 +706,7 @@ TC: `O(n log n)`, Sorting a dictionary of hashmap takes `O(n log n)` time comple
 ```
 TC: `O(n)`
 
-### 208. Implement Trie (Prefix Tree)(https://leetcode.com/problems/implement-trie-prefix-tree/description/?envType=featured-list&envId=top-100-liked-questions)
+### [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/description/?envType=featured-list&envId=top-100-liked-questions)
 A Trie, also known as a prefix tree, is a tree-based data structure used for efficient retrieval and storage of strings. It is commonly used in applications involving words, such as autocomplete, spell checking, and dictionary implementations. The Trie organizes the strings in a tree-like structure, where each node represents a character and the edges represent the possible characters that can follow.
 
 ```
@@ -745,7 +745,7 @@ class Trie:
 ```
 TC: `O(m)`, where m is the length of the word being inserted.
 
-### 62. Unique Paths(https://leetcode.com/problems/unique-paths/description/?envType=featured-list&envId=top-100-liked-questions)
+### [62. Unique Paths](https://leetcode.com/problems/unique-paths/description/?envType=featured-list&envId=top-100-liked-questions)
 
 ```
 	def uniquePaths(self, m: int, n: int) -> int:
