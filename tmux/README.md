@@ -30,7 +30,7 @@
 ctrl+z+[
 ctrl+r
 ```
-To quit press `q` or `Esc` or `ctrl+d`
+To quit press `q` or `Esc` or `ctrl+d` or `ctrl+shift+w`
 2. `tmux` swap window
 ```
 ctrl+z
