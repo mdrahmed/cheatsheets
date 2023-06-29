@@ -7,6 +7,7 @@
 `<F3>+ctrl+shift+v` to paste from clipboard inside tmux<br/>
 `ctrl+shift+v` to paste from clipboard outside tmux<br/>
 `shift+<select text>` to copy in vim inside tmux<br/>
+`<select text>` to copy in vim outside tmux<br/>
 `shift+v` to select whole line, copy it with `y` and paste it with `p`<br/>
 
 
