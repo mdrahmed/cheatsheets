@@ -20,7 +20,7 @@
 `ctrl+z x` to kill window<br/>
 `ctrl+zf` Find window<br/>
 `ctrl+z,` Name window<br/>
-`ctrl+z&` Kill window<br/>
+`ctrl+z&` Kill window, for simplicity use `ctrl+d`<br/>
 `ctrl+z` to exit tmux <br/>
 
 ## In general, tmux requried shortcuts
@@ -30,7 +30,7 @@
 ctrl+z+[
 ctrl+r
 ```
-To quit press `q` or `Esc`
+To quit press `q` or `Esc` or `ctrl+d`
 2. `tmux` swap window
 ```
 ctrl+z
