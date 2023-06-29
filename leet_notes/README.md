@@ -10,8 +10,10 @@
 
 # One-line DS
 1. `queue` is First-come-first-serve => Bus line<br/>
+[Queue Problem: 102. Binary Tree Level Order Traversal](https://github.com/mdrahmed/cheatsheets/tree/main/leet_notes#102-binary-tree-level-order-traversal)<br/>
 ![queue](pics/queue.gif)
 2. `stack` is Last-come-first-serve => pancakes<br/>
+[Stack Problem: 739. Daily Temperatures](https://github.com/mdrahmed/cheatsheets/tree/main/leet_notes#739-daily-temperatures)<br/>
 ![stack](pics/stack.gif)
 
 # Leet 100 like questions solutions
