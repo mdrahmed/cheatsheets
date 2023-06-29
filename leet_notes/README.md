@@ -769,3 +769,49 @@ TC: `O(m)`, where m is the length of the word being inserted.
         return dp[m-1][n-1]
 ```
 TC: `O(m * n)` because we iterate through all the cells of the grid once.
+
+### [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/?envType=featured-list&envId=top-100-liked-questions)
+1. Iterate over list1 and list2, `while list1 and list2` - `and` bcz 1 of the lists should have value
+2. compare the value and add the smaller one
+3. Append the following code inside the `curr` list
+```
+        # Create a dummy node as the head of the merged list
+        dummy = ListNode()
+        curr = dummy
+
+        # Iterate until both lists are exhausted
+        while list1 and list2:
+            if list1.val <= list2.val:
+                # Append the smaller value from list1
+                curr.next = list1
+                list1 = list1.next# Definition for singly-linked list.
+            else:
+                # Append the smaller value from list2
+                curr.next = list2
+                list2 = list2.next
+            curr = curr.next
+        # Append the remaining nodes from list1 or list2 (if any)
+        curr.next = list1 if list1 else list2
+
+        # Return the head of the merged list (excluding the dummy node)
+        return dummy.next
+```
+TC: `O(m + n)`, where m and n are the lengths of the two input lists.
+SC: `O(m + n)`, where m and n are the lengths of the two input lists.
+
+### [24. Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/description/?envType=featured-list&envId=top-100-liked-questions)
+Given a linked list, swap every two adjacent nodes 
+```
+        # Base case: empty list or single node
+        if not head or not head.next:
+            return head
+        
+        # Swap the first two nodes
+        new_head = head.next
+        head.next = self.swapPairs(new_head.next)
+        new_head.next = head
+
+        return new_head
+```
+TC: `O(n)`
+SC: `O(n)
