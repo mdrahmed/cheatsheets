@@ -24,7 +24,6 @@
 `ctrl+z` to exit tmux <br/>
 
 ## In general, tmux requried shortcuts
-
 1. `tmux` search up
 ```
 ctrl+z+[
@@ -33,7 +32,12 @@ ctrl+r
 To quit press `q` or `Esc` or `ctrl+d` or `ctrl+shift+w`
 2. `tmux` swap window
 ```
-ctrl+z
+ctrl+z :
 swap-window -s 1 -t 2
 ```
-
+3. Rename window & session
+```
+ctrl+z :rename_window my_window # to rename window
+ctrt+z, # shortcut to rename window
+ctrl+x$ # to rename session
+```

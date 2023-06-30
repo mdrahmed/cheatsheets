@@ -34,6 +34,11 @@ sudo ln -s /usr/local/bin/cmake /usr/bin/cmake
 ```
 
 ### Useful cmd's
+**Deleted files of ubuntu with `rm -rf` is present in following dir,**
+```
+/.local/share/Trash/files
+```
+
 **Vim hangs or stops**
 ```
 ps auxw | grep vim
