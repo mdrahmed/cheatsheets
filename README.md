@@ -34,6 +34,13 @@ sudo ln -s /usr/local/bin/cmake /usr/bin/cmake
 ```
 
 ### Useful cmd's
+**Copy folder using `scp`**
+```
+scp -r CPS-VVI-LOGS-DATA/ raihan@callisto.cs.utah.edu:/home/raihan  # to copy folder to a server
+scp ROBOPro@x.x.x.x:~/C-Program/<file-name.txt> . # to copy a file from another server
+```
+
+
 **Deleted files of ubuntu with `rm -rf` is present in following dir,**
 ```
 /.local/share/Trash/files
