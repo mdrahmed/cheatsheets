@@ -5,6 +5,12 @@
 
 
 # This file has shortcuts for new conf => bind-key `ctrl+z` instead of `ctrl+b`
+
+### Sessions I
+`ctrl+zs` List sessions<br/>
+`ctrl+z$` Name session<br/>
+`ctrl+z: new` New session<br/>
+
 ### Kill session
 `tmux kill-session -a` to kill the current session<br/>
 `tmux list-sessions` to list all sessions<br/>
@@ -14,6 +20,12 @@
 ### Attach session
 `tmux attach-session -t <session no>`<br/>
 `tmux attach-session` # if only 1 session<br/>
+
+### Windows I
+`ctrl+bc` Create window<br/>
+`ctrl+bw` List windows<br/>
+`ctrl+bn` Next window<br/>
+`ctrl+bp` Previous window<br/>
 
 ### Kill windows
 `ctrl+d` to kill window with new conf<br/>
