@@ -1,4 +1,18 @@
 
+### To remove large files from git commit 
+If the large file was added in the most recent commit, you can just run:
+
+1. `git rm --cached <filename>` to remove the large file, then
+2. `git commit --amend -C HEAD` to edit the commit
+
+If the large file was added in an earlier commit, I recommend running an interactive rebase. That means you need to:
+
+1. Run `git log` to find the commit hash of the last commit before you added the large file
+2. Then run `git rebase -i <commit hash>`. This will open up an editor where you want to replace pick with edit on the commit where the large file was added.
+3. Once you save and close the editor, you’ll be in essentially the same position as if you had added the file in the most recent commit—all you need to do is `git rm --cached <filename>` and `git commit --amend -C HEAD` (same as the “most recent commit” steps)
+    Then to finish up, run `git rebase --continue`
+
+
 ### To push large files(>100 mb) inside a repo, use git lfs
 
 ```
@@ -38,4 +52,6 @@ git mv <submodule path> <submodule-path>-backup
 git mv All-new-logs/Analysis All-new-logs/Analysis_backup
 ```
 Now, add the repo with `ssh`.
+
+
 

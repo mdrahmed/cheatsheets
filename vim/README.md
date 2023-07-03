@@ -4,7 +4,7 @@
 `5k` to move cursor 5 lines up<br/>
 `5j` to move cursor 5 lines down<br/>
 ##### Copying shortcuts
-`<F3>+ctrl+shift+v` to paste from clipboard inside tmux<br/>
+`<F3>+ctrl+shift+v` to paste from clipboard inside tmux # need to go to insert mode before pasting with <F3>.<br/>
 `ctrl+shift+v` to paste from clipboard outside tmux<br/>
 `shift+<select text>` to copy in vim inside tmux<br/>
 `<select text>` to copy in vim outside tmux<br/>
