@@ -22,10 +22,10 @@
 `tmux attach-session` # if only 1 session<br/>
 
 ### Windows I
-`ctrl+bc` Create window<br/>
-`ctrl+bw` List windows<br/>
-`ctrl+bn` Next window<br/>
-`ctrl+bp` Previous window<br/>
+`ctrl+zc` Create window<br/>
+`ctrl+zw` List windows<br/>
+`ctrl+zn` Next window<br/>
+`ctrl+zp` Previous window<br/>
 
 ### Kill windows
 `ctrl+d` to kill window with new conf<br/>
