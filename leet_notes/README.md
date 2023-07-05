@@ -852,6 +852,7 @@ SC:O(m*n) because we create a 2D dynamic programming table
 
 [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/?envType=featured-list&envId=top-100-liked-questions)
 Given the root of a binary tree, flatten the tree into a "linked list" as a pre-order traversal.
+
 **Pre-order traversal: root, leftsubtree, rightsubtree**
 ```
 if not root:
