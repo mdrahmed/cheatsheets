@@ -5,7 +5,7 @@
 ## Set up passwordless ssh login
 To avoid entering passwords everytime to log into a remote system, use public key authentication.
 ```
-ssh-keygen # if already the public key is not present
+ssh-keygen # if the public key is not create already
 ssh-copy-id username@remote_host
 ```
 
