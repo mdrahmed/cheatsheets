@@ -815,3 +815,70 @@ Given a linked list, swap every two adjacent nodes
 ```
 TC: `O(n)`
 SC: `O(n)
+
+[64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/description/?envType=featured-list&envId=top-100-liked-questions)
+Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.
+
+```
+if not grid:
+            return 0
+        
+        rows = len(grid)
+        cols = len(grid[0])
+        
+        # Create a 2D dynamic programming table
+        dp = [[0] * cols for _ in range(rows)]
+        
+        # Initialize the first cell with its value
+        dp[0][0] = grid[0][0]
+        
+        # Initialize the first column with cumulative sums
+        for i in range(1, rows):
+            dp[i][0] = dp[i-1][0] + grid[i][0]
+        
+        # Initialize the first row with cumulative sums
+        for j in range(1, cols):
+            dp[0][j] = dp[0][j-1] + grid[0][j]
+        
+        # Calculate the minimum sum path for each cell
+        for i in range(1, rows):
+            for j in range(1, cols):
+                dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
+        
+        return dp[rows-1][cols-1]
+```
+TC:O(m*n), where m is the number of rows and n is the number of columns in the grid.
+SC:O(m*n) because we create a 2D dynamic programming table 
+
+[114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/?envType=featured-list&envId=top-100-liked-questions)
+Given the root of a binary tree, flatten the tree into a "linked list" as a pre-order traversal.
+**Pre-order traversal: root, leftsubtree, rightsubtree**
+```
+if not root:
+            return
+        
+        # Flatten the left subtree
+        self.flatten(root.left)
+        
+        # Flatten the right subtree
+        self.flatten(root.right)
+        
+        # Store the right subtree for later reconnection
+        right_subtree = root.right
+        
+        # Make the left subtree the new right subtree
+        root.right = root.left
+        root.left = None
+        
+        # Find the end of the new right subtree
+        end_of_right_subtree = root
+        while end_of_right_subtree.right:
+            end_of_right_subtree = end_of_right_subtree.right
+        
+        # Connect the end of the right subtree to the original right subtree
+        end_of_right_subtree.right = right_subtree
+```
+TC:O(n), where n is the number of nodes
+SC:O(h), where h is the height of the binary tree
+
+
