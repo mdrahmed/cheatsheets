@@ -3,6 +3,8 @@
 
 `tmux-old` is the built-in tmux configuration cheatsheet
 
+# To reload new conf of tmux, 
+`ctrl+zr` This will reload the new changes made to the `.tmux.conf`
 
 # This file has shortcuts for new conf => bind-key `ctrl+z` instead of `ctrl+b`
 
