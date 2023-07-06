@@ -1,4 +1,4 @@
-`Conda` can be used to run projects in different environments, which will help use the same executables I am running in that environment.
+`Conda` can be used to run projects need to use different `python` versions or `tensorflow` versions in different environments, which will help use the same executables I am running in that environment.
 
 ### To install `conda`
 1. Go to this site [Anaconda user guide](https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html) to see how it works and click on [Anaconda installer for Linux.](https://www.anaconda.com/download/).
