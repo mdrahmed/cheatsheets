@@ -1,4 +1,6 @@
 set tabstop=4
+"set noexpandtab
+set shiftwidth=4 expandtab ""Python indentation fault is fixed with this.
 
 " While pasting inside vim inside tmux, I have to set paste with following code after entering into tmux, vim,
 " `:set paste` 
