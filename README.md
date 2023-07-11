@@ -1,11 +1,11 @@
 # My cheatsheets
 If there is any difficult piece of code then draw a **TRACE TABLE**
 
+1. `tmux` notes are present in the tmux folder 
 
-`tmux` notes are present in the tmux folder 
+2. `vim` notes are present in the vim folder
 
-`vim` notes are present in the vim folder
-
+3. Use `zsh` ubuntu to configure the shell
 
 ## General cmd's
 **Copy folder using `scp`**
