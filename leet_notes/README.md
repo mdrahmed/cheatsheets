@@ -816,7 +816,7 @@ Given a linked list, swap every two adjacent nodes
 TC: `O(n)`
 SC: `O(n)
 
-[64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/description/?envType=featured-list&envId=top-100-liked-questions)
+### [64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/description/?envType=featured-list&envId=top-100-liked-questions)
 Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.
 
 ```
@@ -850,7 +850,7 @@ if not grid:
 TC:O(m*n), where m is the number of rows and n is the number of columns in the grid.
 SC:O(m*n) because we create a 2D dynamic programming table 
 
-[114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/?envType=featured-list&envId=top-100-liked-questions)
+### [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/?envType=featured-list&envId=top-100-liked-questions)
 Given the root of a binary tree, flatten the tree into a "linked list" as a pre-order traversal.
 
 **Pre-order traversal: root, leftsubtree, rightsubtree**
@@ -882,4 +882,94 @@ if not root:
 TC:O(n), where n is the number of nodes
 SC:O(h), where h is the height of the binary tree
 
+### [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/?envType=featured-list&envId=top-100-liked-questions)
+Given pre-order and inorder of a tree, construct the binary tree.
+```
+        # Create a dictionary to store the index of each element in the inorder list
+        inorder_map = {}
+        for i, val in enumerate(inorder):
+            inorder_map[val] = i
+
+        # Define a recursive helper function to build the tree
+        def helper(preorder_start, preorder_end, inorder_start, inorder_end):
+            # Base case: if the subtree is empty, return None
+            if preorder_start > preorder_end:
+                return None
+
+            # Get the root value from the preorder list
+            root_val = preorder[preorder_start]
+            # Create a new TreeNode with the root value
+            root = TreeNode(root_val)
+
+            # Find the index of the root value in the inorder list
+            inorder_index = inorder_map[root_val]
+
+            # Calculate the number of nodes in the left subtree
+            left_size = inorder_index - inorder_start
+
+            # Recursively build the left subtree
+            root.left = helper(preorder_start + 1, preorder_start + left_size, inorder_start, inorder_index - 1)
+
+            # Recursively build the right subtree
+            root.right = helper(preorder_start + left_size + 1, preorder_end, inorder_index + 1, inorder_end)
+
+            return root
+
+        # Call the helper function with the initial parameters
+        return helper(0, len(preorder) - 1, 0, len(inorder) - 1)
+```
+TC: `O(n)`, where n is the number of nodes in the binary tree.
+SC: `O(n)`, where n is the number of nodes in the binary tree.
+
+
+### [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/?envType=featured-list&envId=top-100-liked-questions)
+Return right-side of the binary tree.
+```
+        if not root:
+            return []
+
+        result = []
+        queue = [(root, 0)]
+
+        while queue:
+            node, level = queue.pop(0)
+
+            if level == len(result):
+                result.append(node.val)
+            else:
+                result[level] = node.val
+
+            if node.left:
+                queue.append((node.left, level + 1))
+                queue.append((node.right, level + 1))
+
+        return result
+
+#TC:  O(n), because the code visits each node of the binary tree exactly once
+#SC: O(n), where n is the number of nodes in the binary tree.
+```
+
+### [283. Move Zeroes](https://leetcode.com/problems/move-zeroes/?envType=featured-list&envId=top-100-liked-questions)
+Move all zeros to the end.
+```
+        # two-pointer approach
+        # Initialize two pointers
+        left = 0
+        right = 0
+
+        # Move non-zero elements to the left side of the array
+        while right < len(nums):
+            if nums[right] != 0:
+                nums[left] = nums[right]
+                left += 1
+            right += 1
+
+        # Fill the remaining elements with zeros
+        while left < len(nums):
+            nums[left] = 0
+            left += 1
+
+#TC: O(n), n is the length of the input array
+#SC: O(1)
+```
 
