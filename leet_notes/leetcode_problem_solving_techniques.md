@@ -1,6 +1,6 @@
 # Top 100 liked questions
 
-## Python tricky & important codes,
+## Python tricky & important codes and DS
 
 #### Hashmap
 Get the keys,
