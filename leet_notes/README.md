@@ -973,3 +973,80 @@ Move all zeros to the end.
 #SC: O(1)
 ```
 
+### [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/?envType=featured-list&envId=top-100-liked-questions)
+Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+```
+        n = len(height)
+        left = 0
+        right = n - 1
+        left_max = 0
+        right_max = 0
+        total_water = 0
+
+        while left < right:
+            if height[left] < height[right]:
+                if height[left] >= left_max:
+                    left_max = height[left]
+                else:
+                    total_water += left_max - height[left]
+                left += 1
+            else:
+                if height[right] >= right_max:
+                    right_max = height[right]
+                else:
+                    total_water += right_max - height[right]
+                right -= 1
+
+        return total_water
+#TC: O(n), where n is the length of the height array. 
+#SC: O(1) since we are using a fixed amount of extra space 
+```
+
+###[236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/?envType=featured-list&envId=top-100-liked-questions)
+Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+```
+        # Base case: if the root is None or equal to p or q, return the root
+        if root is None or root == p or root == q:
+            return root
+        
+        # Recursively find the LCA in the left and right subtrees
+        left_lca = self.lowestCommonAncestor(root.left, p, q)
+        right_lca = self.lowestCommonAncestor(root.right, p, q)
+        
+        # If both left_lca and right_lca are not None, it means p and q are in different subtrees,
+        # so the root is the LCA
+        if left_lca and right_lca:
+            return root
+        
+        # If either left_lca or right_lca is None, it means p and q are in the same subtree,
+        # so the LCA is the non-None node among left_lca and right_lca
+        return left_lca if left_lca else right_lca
+#TC: O(N), where N is the number of nodes in the binary tree.
+#SC: O(H), where H is the height of the tree. 
+```
+
+### [75. Sort Colors](https://leetcode.com/problems/sort-colors/?envType=featured-list&envId=top-100-liked-questions)
+Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+```
+        # Initialize three pointers: low for red, mid for white, high for blue
+        low = mid = 0
+        high = len(nums) - 1
+        
+        # Perform the partitioning
+        while mid <= high:
+            if nums[mid] == 0:
+                # Swap with the element at the low pointer
+                nums[mid], nums[low] = nums[low], nums[mid]
+                low += 1
+                mid += 1
+            elif nums[mid] == 1:
+                # Move to the next element
+                mid += 1
+            else:
+                # Swap with the element at the high pointer
+                nums[mid], nums[high] = nums[high], nums[mid]
+                high -= 1
+#TC: O(n), where n is the number of elements in the array. 
+#SC: O(1) since the algorithm operates in-place without using any additional data structures
+```
+
