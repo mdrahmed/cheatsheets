@@ -66,12 +66,13 @@ gem install bundler
 ruby -v
 gem -v
 ```
-
+![jekyll-error.png](pics/jekyll-error.png)
 Now, navigate to the working directory and run,
 ```
 bundle install
 npm run start # If not installed, install it sudo apt install npm
 # It will show the addess of localhost it is running the website, probably this is the address: http://127.0.0.1:4000/
 ```
+![profile-1.png](pics/profile-1.png)
 
 
