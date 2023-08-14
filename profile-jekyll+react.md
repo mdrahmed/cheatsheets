@@ -113,7 +113,7 @@ jekyll -v
 jekyll new myblog
 ```
  - Change into your new directory.
-``
+```
 cd myblog
 ```
  - Build the site and make it available on a local server.
