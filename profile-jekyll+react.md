@@ -57,8 +57,13 @@ curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 # run the terminal again with source initializing rvm
 source ~/.rvm/scripts/rvm
 
-# Install 2.6.0
-rvm install 2.6.0
+# Install 3.1.0, bcz sass-embedded requires Ruby version >= 3.0.0. 
+rvm install 3.1.0
+
+#hacker:~$ gem install jekyll 
+#ERROR:  Error installing jekyll:
+#	The last version of sass-embedded (~> 1.54) to support your Ruby & RubyGems was 1.63.6. Try installing it with `gem install sass-embedded -v 1.63.6` and then #running the current command again
+#	sass-embedded requires Ruby version >= 3.0.0. The current ruby version is 2.7.0.0.
 
 # install bundle
 gem install bundler
@@ -76,4 +81,24 @@ npm run start # If not installed, install it sudo apt install npm
 ```
 ![profile-1](pics/profile-1.png)
 
+### To install jekyll
+`gem install jekyll`
 
+But as I installed `ruby-2.6.0` at the beginning, so, I have to install the `ruby-3.1.0` for `jekyll`
+```
+rvm install 3.1.0
+```
+
+But `ruby-2.6.0` was global and added to path, so, I did following,
+```
+export PATH="$PATH:$HOME/.rvm/gems/ruby-3.1.0/bin"
+source ~/.bashrc
+```
+If still it doesn't work, then do this,
+```
+rvm use 3.1.0
+rvm get stable --auto-dotfiles
+ruby -v
+gem install jeykyll
+jekyll -v
+```
