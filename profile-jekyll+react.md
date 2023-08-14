@@ -44,6 +44,7 @@ Traceback (most recent call last):
 ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux-gnu]
 ```
 
+## Just do the following from `gpg` cmd to install ruby 2.6.0
 **SOLVED:** So, do following to solve this issue,
 ```
 # set the key
