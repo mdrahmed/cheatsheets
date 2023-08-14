@@ -96,6 +96,8 @@ source ~/.bashrc
 ```
 If still it doesn't work, then do this,
 ```
+source $HOME/.rvm/scripts/rvm
+rvm use 3.1.0
 rvm use 3.1.0
 rvm get stable --auto-dotfiles
 ruby -v
