@@ -106,7 +106,6 @@ jekyll -v
 ```
 
 
-
 ### Now, use jekyll to make websites
  - Create a new Jekyll site at ./myblog.
 ```
@@ -121,3 +120,29 @@ cd myblog
 bundle exec jekyll serve
 ```
 Browse to [http://localhost:4000](http://localhost:4000)
+
+
+## To use `npm` I need my bundle listen to > 3.2.1
+Do this,
+```
+bundle update
+```
+If getting this error,
+```
+$ bundle install
+Fetching gem metadata from https://rubygems.org/...........
+Your bundle is locked to listen (3.2.1) from rubygems repository
+https://rubygems.org/ or installed locally, but that version can no longer be
+found in that source. That means the author of listen (3.2.1) has removed it.
+You'll need to update your bundle to a version other than listen (3.2.1) that
+hasn't been removed in order to install.
+```
+Soln: [https://stackoverflow.com/a/56431490/9263661](https://stackoverflow.com/a/56431490/9263661)
+
+
+## sometimes the general push will not work, so for that push it with bin/deploy
+Copy the bin dir inside the project directory, then do following,
+```
+bin/deploy --user
+```
+
