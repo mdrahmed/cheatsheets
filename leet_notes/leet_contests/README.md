@@ -1,3 +1,50 @@
+## Weekly Contest 356
+### [2799. Count Complete Subarrays in an Array](https://leetcode.com/contest/weekly-contest-356/problems/count-complete-subarrays-in-an-array/)
+Total number of subarrays in an array = `N*(N+1)//2`
+[Two-pointer Approach](https://mocowcow.github.io/leetcode-2799-count-complete-subarrays-in-an-array/)
+```
+    def countCompleteSubarrays(self, nums: List[int]) -> int:
+        N=len(nums)
+        tot=N*(N+1)//2
+        dis=len(set(nums))
+        
+        ans=0
+        left=0
+        d=Counter()
+        for right,x in enumerate(nums):
+            d[x]+=1
+            while len(d)==dis:
+                d[nums[left]]-=1
+                if d[nums[left]]==0:
+                    del d[nums[left]]
+                left+=1
+            ans+=right-left+1
+                
+        return tot-ans
+```
+TC: O(N)
+SC: O(m), m is the number of unique elements present
+
+
+Simple Soln:
+```
+    def countCompleteSubarrays(self, nums: List[int]) -> int:
+        unique_nums_n = len(set(nums))
+        n = len(nums)
+        ans = 0
+        for start in range(n):
+            s = set()
+            for end in range(start, n):
+                s.add(nums[end])
+                if len(s) == unique_nums_n:
+                    ans += 1
+        return ans
+```
+TC: O(n)^3
+SC: O(m), m is the number of unique elements present
+
+
+---
 ## Weekly Contest 353
 ### [2769. Find the Maximum Achievable Number](https://leetcode.com/contest/weekly-contest-353/problems/find-the-maximum-achievable-number/)
 ```

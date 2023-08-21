@@ -1,3 +1,4 @@
+# Building websites with jekyll
 Jekyll is a great tool to quickly create modern static websites. To include some more interactive pieces on our websites, we can use Node modules using npm packages manager and combine them using [webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/) to “compile” the website.
 
 Here I listed some problems I faced while using `npm` and `jekyll` to build my website.
@@ -44,6 +45,7 @@ Traceback (most recent call last):
 ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux-gnu]
 ```
 
+## Just do the following from `gpg` cmd to install ruby 2.6.0
 **SOLVED:** So, do following to solve this issue,
 ```
 # set the key
@@ -56,8 +58,13 @@ curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 # run the terminal again with source initializing rvm
 source ~/.rvm/scripts/rvm
 
-# Install 2.6.0
-rvm install 2.6.0
+# Install 3.1.0, bcz sass-embedded requires Ruby version >= 3.0.0. 
+rvm install 3.1.0
+
+#hacker:~$ gem install jekyll 
+#ERROR:  Error installing jekyll:
+#	The last version of sass-embedded (~> 1.54) to support your Ruby & RubyGems was 1.63.6. Try installing it with `gem install sass-embedded -v 1.63.6` and then #running the current command again
+#	sass-embedded requires Ruby version >= 3.0.0. The current ruby version is 2.7.0.0.
 
 # install bundle
 gem install bundler
@@ -75,4 +82,68 @@ npm run start # If not installed, install it sudo apt install npm
 ```
 ![profile-1](pics/profile-1.png)
 
+### To install jekyll
+`gem install jekyll`
+
+But as I installed `ruby-2.6.0` at the beginning, so, I have to install the `ruby-3.1.0` for `jekyll`
+```
+rvm install 3.1.0
+```
+
+But `ruby-2.6.0` was global and added to path, so, I did following,
+```
+export PATH="$PATH:$HOME/.rvm/gems/ruby-3.1.0/bin"
+source ~/.bashrc
+```
+If still it doesn't work, then do this,
+```
+source $HOME/.rvm/scripts/rvm
+rvm use 3.1.0
+rvm use 3.1.0
+rvm get stable --auto-dotfiles
+ruby -v
+gem install jeykyll
+jekyll -v
+```
+
+
+### Now, use jekyll to make websites
+ - Create a new Jekyll site at ./myblog.
+```
+jekyll new myblog
+```
+ - Change into your new directory.
+```
+cd myblog
+```
+ - Build the site and make it available on a local server.
+```
+bundle exec jekyll serve
+```
+Browse to [http://localhost:4000](http://localhost:4000)
+
+
+## To use `npm` I need my bundle listen to > 3.2.1
+Do this,
+```
+bundle update
+```
+If getting this error,
+```
+$ bundle install
+Fetching gem metadata from https://rubygems.org/...........
+Your bundle is locked to listen (3.2.1) from rubygems repository
+https://rubygems.org/ or installed locally, but that version can no longer be
+found in that source. That means the author of listen (3.2.1) has removed it.
+You'll need to update your bundle to a version other than listen (3.2.1) that
+hasn't been removed in order to install.
+```
+Soln: [https://stackoverflow.com/a/56431490/9263661](https://stackoverflow.com/a/56431490/9263661)
+
+
+## sometimes the general push will not work, so for that push it with bin/deploy
+Copy the bin dir inside the project directory, then do following,
+```
+bin/deploy --user
+```
 
