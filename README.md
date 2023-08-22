@@ -157,3 +157,16 @@ The ovpn file requires openvpn version greater than 2.5. And ubuntu-18 installs 
 So, download it from the official site: [https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/)
 And install this `lzo` with some other deps: `sudo apt install cmake libssl-dev liblzo2-dev libpam0g-dev`
 Now, follow readme of that file.
+
+After running this line `sudo openvpn /path-to-file/file-name.ovpn`,
+I will see following,
+```
+...
+...
+2023-08-21 18:03:13 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+2023-08-21 18:03:13 Initialization Sequence Completed
+```
+Now, goto this page [https://tryhackme.com/access](https://tryhackme.com/access). If connection is done properly then there will be a tick beside the network info/openvpn access details.
+Now, start the machine here: [https://tryhackme.com/room/openvpn](https://tryhackme.com/room/openvpn), then you will see the ip. [This machine is for openvpn connection only, for other room, I should start that machine]
+
+
