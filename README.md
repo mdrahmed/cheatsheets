@@ -151,3 +151,9 @@ sudo make install
 And don't forget to run the `make` and `make install` for grpc after installing the protobuf. The protobuf will also need the grpc to install.
 **The `arm-toolchain.cmake` is the file that is required for arm64 bit compilation, it uses the toolchain that comes with the testbed.** 
 
+
+## Tryhackme opnevpn
+The ovpn file requires openvpn version greater than 2.5. And ubuntu-18 installs openvpn 2.4.4 by default.
+So, download it from the official site: [https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/)
+And install this `lzo` with some other deps: `sudo apt install cmake libssl-dev liblzo2-dev libpam0g-dev`
+Now, follow readme of that file.
