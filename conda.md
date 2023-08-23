@@ -48,3 +48,7 @@ pip3 install pydot
 ```
 Check if those pkgs are installed or not like this `python3 -c "import pygraphviz"`
 
+### To remove conda env
+```
+conda remove --name ENV_NAME --all
+```
