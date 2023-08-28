@@ -169,4 +169,9 @@ I will see following,
 Now, goto this page [https://tryhackme.com/access](https://tryhackme.com/access). If connection is done properly then there will be a tick beside the network info/openvpn access details.
 Now, start the machine here: [https://tryhackme.com/room/openvpn](https://tryhackme.com/room/openvpn), then you will see the ip. [This machine is for openvpn connection only, for other room, I should start that machine]
 
-
+**Install gobuster**
+If I run `go install` then it will install inside the home directory but if I export the GOBIN to my desired directory then I can install any executables in my desired directory,
+```
+export GOBIN=$HOME/.local/bin
+# probably need to move the go folder from home directory.
+```
