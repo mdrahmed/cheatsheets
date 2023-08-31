@@ -9,4 +9,8 @@
 
 ## While writing paper
 1. Write the introduction first
+2. Then motivation
+3. Design - what we need and why we need. Little bit of exp
+4. implementation - Explanation of software/product in more detail.
+5. 
 
