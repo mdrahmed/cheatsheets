@@ -1,3 +1,17 @@
+# Research tools
+1. IDAPro
+- [Download the free version from here](https://hex-rays.com/ida-free/)
+- If in server, install it following this [repo](https://github.com/AngelKitty/IDA7.0/tree/master)
+    - to install from source, if having dependency issues
+    ```
+        git clone https://github.com/AngelKitty/IDA7.0.git
+        cd IDA7.0/
+        chmod +x idafree70_linux.run
+        ./idafree70_linux.run
+    ```
+    - The ida64 will be present inside ida<version> of home dir `~/ida<version>`
+    - Now, link it `sudo ln -s /opt/idafree-7.0/ida64 /usr/bin`
+
 # My cheatsheets
 If there is any difficult piece of code then draw a **TRACE TABLE**
 
