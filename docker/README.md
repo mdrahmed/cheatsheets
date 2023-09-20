@@ -36,7 +36,14 @@ balenalib/armv7hf-debian-dotnet                                                 
 ```
 docker pull balenalib/armv7hf-debian
 ```
-3. Now, as my system is of `x86-64` bit architechture, so, the platform `amd64` will not be compatible with this. So, I will need to run this on `/arm/v7` platform,
+3. Now, as my system is of `x86-64` bit architechture, so, the platform `amd64` will not be compatible with this. So, I will need to run this on qemu
+ - Install qemu
+```
+sudo apt-get install qemu qemu-user-static binfmt-support
+sudo update-binfmts --enable qemu-arm # It should be enabled already
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+```
+ - Now, run it on platform `linux/arm/v7`
 ```
 docker run --platform linux/arm/v7 -it balenalib/armv7hf-debian /bin/bash
 ```
