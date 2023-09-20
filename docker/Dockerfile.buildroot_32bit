@@ -1,0 +1,8 @@
+FROM busybox
+ARG TARGETPLATFORM
+ARG TARGETARCH
+ARG TARGETVARIANT
+RUN printf "I'm building for TARGETPLATFORM=linux/arm/v7, TARGETARCH=arm, TARGETVARIANT=v7"\
+    && printf "With uname -s : Linux "\
+    && printf "and  uname -m : armv7l" 
+

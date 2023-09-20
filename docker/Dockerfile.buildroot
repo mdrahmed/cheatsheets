@@ -1,0 +1,14 @@
+# It will create 64 bit x86-64 image
+FROM debian:bullseye
+
+# Install necessary packages
+RUN apt-get update && \
+    apt-get install -y build-essential wget unzip rsync cpio
+
+# Download and extract Buildroot
+WORKDIR /buildroot
+RUN wget https://buildroot.org/downloads/buildroot-2021.08.1.tar.gz && \
+    tar -xzf buildroot-2021.08.1.tar.gz
+
+WORKDIR /buildroot/buildroot-2021.08.1
+
