@@ -1,4 +1,4 @@
-# Create 32 bit arm docker image with qemu
+# Create 31 bit arm docker image with qemu
 1. At first, you can search the docker images to find the `armv7hf`(I need armv7 32 bit image) docker images. Here is what I got,
 ```
 (base) ┌─[raihan@raihan-XPS-8940]─[~/docker]
