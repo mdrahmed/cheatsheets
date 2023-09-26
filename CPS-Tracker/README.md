@@ -1,5 +1,11 @@
 # CPS-Tracker
 
+## To search for strings in dot files, do following,
+```
+grep -r -E "fetch|store" *.dot
+```
+This command will search 2 different strings `fetch` or, `store`
+
 ## Questions from the ics paper
 1. How will I define the critical actions and communications?
 " More concretely, given an
