@@ -3,5 +3,6 @@
 2. Then go deeper
 
 ![osdev.png](/pics/osdev.png)
+
 Look for more details: [https://wiki.osdev.org/Main_Page](https://wiki.osdev.org/Main_Page)
 
