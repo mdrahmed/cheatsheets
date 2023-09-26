@@ -22,6 +22,10 @@ Check if installed with `conda init`
 rm -rf ~/anaconda3
 rm -rf ~/.condarc ~/.conda ~/.continuum
 ```
+Also, I will not need this, but if needed I can run this to stop `conda` running at start-up,
+```
+conda config --set auto_activate_base false
+```
 
 ### Using `cpsenv` for CPS proj
 1. To create the environment,
@@ -47,6 +51,11 @@ pip3 install pygraphviz
 pip3 install pydot
 ```
 Check if those pkgs are installed or not like this `python3 -c "import pygraphviz"`
+
+If again running into problems saying that `graphviz` is not found, do this,
+```
+pip3 install graphviz
+```
 
 ### To remove conda env
 ```
