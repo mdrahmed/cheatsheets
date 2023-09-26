@@ -13,7 +13,7 @@ ICS, we first carry out static program analysis on individual
 controller programs to discover critical actions and commu-
 nications, their conditions as well as state spaces"
 
-#System level logs
+# System level logs
 ## Using sysdig
 Trying to use sysdig for the system level logs.
 ### To cross-compile 
