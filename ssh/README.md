@@ -23,7 +23,7 @@ Lab machine,
 ```
 ssh raihan@155.98.68.164
 ```
-Lab server,
+Lab server(sslabc),
 ```
 ssh raihan@callisto.cs.utah.edu
 ```
