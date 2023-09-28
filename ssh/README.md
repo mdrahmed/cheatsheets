@@ -14,4 +14,10 @@ Try using `ssh`,
 ssh username@remote_host
 ```
 
+## SSH to cade machine
+```
+ssh uid@lab1-19.eng.utah.edu
+```
+
+
 
