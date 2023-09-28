@@ -19,5 +19,12 @@ ssh username@remote_host
 ssh uid@lab1-19.eng.utah.edu
 ```
 
-
+Lab machine,
+```
+ssh raihan@155.98.68.164
+```
+Lab server,
+```
+ssh raihan@callisto.cs.utah.edu
+```
 
