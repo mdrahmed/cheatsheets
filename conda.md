@@ -22,9 +22,14 @@ Check if installed with `conda init`
 rm -rf ~/anaconda3
 rm -rf ~/.condarc ~/.conda ~/.continuum
 ```
-Also, I will not need this, but if needed I can run this to stop `conda` running at start-up,
+**Also, I will not need this, but if needed I can run this to stop `conda` running at start-up**
 ```
 conda config --set auto_activate_base false
+```
+
+**Only to get the bash shell, run following**
+```
+conda deactivate
 ```
 
 ### Using `cpsenv` for CPS proj
