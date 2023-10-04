@@ -1,5 +1,6 @@
 # gSpan-mining to find subgraphs from graph
 
+## Installation
 Using `gspan-mining` to make the graph smaller: https://pypi.org/project/gspan-mining/
 Data: https://github.com/betterenvi/gSpan/blob/master/graphdata/graph.data
 
@@ -83,4 +84,10 @@ In this command `python3 -m gspan_mining -s 5000 -p True test.data` ,
 With 400 similar patterns, I got a good graph,
 ```
 python3 -m gspan_mining -s 400 -p True data/hbw.data
+```
+
+## Generate subgraphs
+Goto this folder `~/Graphs-all/Graphs/backwardTracking` adn run following for the `comb-gpan.data` file - __For me, it should be in the bash shell - outside conda__,
+```
+python3 -m gspan_mining -s 5000 -d True -p True comb-gpan.data
 ```
