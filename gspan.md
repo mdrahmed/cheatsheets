@@ -91,3 +91,4 @@ Goto this folder `~/Graphs-all/Graphs/backwardTracking` adn run following for th
 ```
 python3 -m gspan_mining -s 5000 -d True -p True comb-gpan.data
 ```
+~[gspan-subgraph](pics/gspan-subgraphs.png)
