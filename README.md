@@ -105,16 +105,19 @@ git grep "pattern" -- ':!*.pdf'
 ```
 git grep "t #*" -- ':!*.pdf' ':!*.dot' ':!*.png'
 ```
-4.
 
 ## grep
 1. grep a range of numbers from a file
 ```
 cat out | grep -E "([6-9][0-9]|100)" 
 ```
-2. The grep another string
+2. Then grep another string
 ```
 cat out | grep -E "([6-9][0-9]|100)" | grep "v"
+```
+3. grep from 60-150 and see if there is another string
+```
+cat out | grep -E "([6-9][0-9]$|1[0-4][0-9]|150$)" | grep "v"
 ```
 
 ## Install grpc
