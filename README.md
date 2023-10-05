@@ -105,7 +105,17 @@ git grep "pattern" -- ':!*.pdf'
 ```
 git grep "t #*" -- ':!*.pdf' ':!*.dot' ':!*.png'
 ```
-4. 
+4.
+
+## grep
+1. grep a range of numbers from a file
+```
+cat out | grep -E "([6-9][0-9]|100)" 
+```
+2. The grep another string
+```
+cat out | grep -E "([6-9][0-9]|100)" | grep "v"
+```
 
 ## Install grpc
 **Install python3 version > 3.7**

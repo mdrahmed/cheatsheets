@@ -53,15 +53,15 @@ for graph in list_of_600_graphs:
 ```
 gvpack -u graph1.dot graph2.dot graph3.dot > merged_graph.dot
 ```
-
+**Make sure you understand the purpose of using `-s`.**
 running this for hbw.data,
 ```
-python3 -m gspan_mining -s 5000 -d True -p True hbw.data
+python3 -m gspan_mining -s 10 -d True -p True hbw.data
 ```
 
 This cmd for vgr and hbw to run gspan with the code,
 ```
-python3 -m gspan_mining -s 5000 -d True -p True vgr.data
+python3 -m gspan_mining -s 10 -d True -p True vgr.data
 ```
 ![image](https://github.com/mdrahmed/cheatsheets/assets/26908164/37300f3a-607f-4283-ab22-27a5b8f5ec24)
 
