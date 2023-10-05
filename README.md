@@ -92,6 +92,21 @@ I installed it and copied it inside the `/usr/local/bin` dir but then figured th
 sudo ln -s /usr/local/bin/cmake /usr/bin/cmake
 ```
 
+## git grep
+1. To search only within a file or, include only 1 file
+```
+git grep "pattern" -- ':*.py' # :"*.py" also works
+```
+2. To exclude a file
+```
+git grep "pattern" -- ':!*.pdf'
+```
+3. To exclude multiple files
+```
+git grep "t #*" -- ':!*.pdf' ':!*.dot' ':!*.png'
+```
+4. 
+
 ## Install grpc
 **Install python3 version > 3.7**
 In ubuntu 18.04, tried to install python 3.9 but didn't find the pkg, so, tried using this `ppa`,
