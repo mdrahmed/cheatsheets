@@ -65,7 +65,7 @@ Then the `netfilterqueue` will be installed,
 pip3 install netfilterqueue
 ```
 
-## General guidelines
+# General guidelines
 
 ### Git readme
 Create a collapsible section
@@ -217,3 +217,21 @@ If I run `go install` then it will install inside the home directory but if I ex
 export GOBIN=$HOME/.local/bin
 # probably need to move the go folder from home directory.
 ```
+
+
+## Cross-compile auditd for arm32
+
+```
+export PATH=export PATH=~/Downloads/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabihf/bin:$PATH
+export CC=arm-linux-gnueabihf-gcc
+git clone git@github.com:linux-audit/audit-userspace.git
+cd audit-userspace
+./autogen.sh
+./configure --host=arm-linux-gnueabihf --with-python3=yes --enable-gssapi-krb5=yes --with-arm --with-aarch64 --with-libcap-ng=yes --without-golang --with-io_uring
+make
+
+# now copy the files to auditd
+scp -r <compiled_files> user@arm32_device_ip:/path/on/device
+```
+
+
