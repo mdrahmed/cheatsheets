@@ -259,7 +259,7 @@ AM_INIT_AUTOMAKE([subdir-objects]){ pkgs ? import <nixpkgs> {} }:
 
 
 ## Nix configuration for cross-compiling
-shell.nix
+shell.nix for cross-compilation
 ```
 { pkgs ? import <nixpkgs> {} }:
   pkgs.pkgsCross.aarch64-multiplatform.mkShell {
@@ -268,9 +268,6 @@ shell.nix
     LADP = "${pkgs.openldap}";
 }
 ```
-
-
-
 
 shell.nix
 ```
