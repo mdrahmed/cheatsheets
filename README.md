@@ -234,4 +234,52 @@ make
 scp -r <compiled_files> user@arm32_device_ip:/path/on/device
 ```
 
+If getting the `subdir-objects` error,
+```
+auparse/Makefile.am:576: but option 'subdir-objects' is disabled
+bindings/python/python3/Makefile.am:30: warning: source file '$(top_srcdir)/bindings/python/auparse_python.c' is in a subdirectory,
+bindings/python/python3/Makefile.am:30: but option 'subdir-objects' is disabled  #### This problem will be solved
+bindings/swig/src/Makefile.am:25: warning: variable 'SWIG_SOURCES' is defined but no program or
+bindings/swig/src/Makefile.am:25: library has 'SWIG' as canonical name (possible typo)
+lib/Makefile.am:243: warning: gen_ftypetabs_h_SOURCES multiply defined in condition TRUE ...
+lib/Makefile.am:163: ... 'gen_ftypetabs_h_SOURCES' previously defined here
+lib/Makefile.am:244: warning: gen_ftypetabs_h_CFLAGS multiply defined in condition TRUE ...
+lib/Makefile.am:164: ... 'gen_ftypetabs_h_CFLAGS' previously defined here
+autoreconf: automake failed with exit status: 1
+```
+In the `condifugre.ac` file, add following,
+```
+AM_INIT_AUTOMAKE([subdir-objects]){ pkgs ? import <nixpkgs> {} }:
+  pkgs.mkShell {
+    # nativeBuildInputs is usually what you want -- tools you need to run
+    nativeBuildInputs = with pkgs; [ ripgrep neovim git ];
+}
+
+```
+
+
+## Nix configuration for cross-compiling
+shell.nix
+```
+{ pkgs ? import <nixpkgs> {} }:
+  pkgs.pkgsCross.aarch64-multiplatform.mkShell {
+    # nativeBuildInputs is usually what you want -- tools you need to run
+    nativeBuildInputs = with pkgs; [ ripgrep neovim git gcc autoconf automake libtool gnumake go python3 swig openldap ];
+    LADP = "${pkgs.openldap}";
+}
+```
+
+
+
+
+shell.nix
+```
+{ pkgs ? import <nixpkgs> {} }:
+  pkgs.mkShell {
+    # nativeBuildInputs is usually what you want -- tools you need to run
+    nativeBuildInputs = with pkgs; [ ripgrep neovim git ];
+}
+```
+
+
 
