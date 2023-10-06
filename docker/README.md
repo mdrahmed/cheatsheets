@@ -68,7 +68,7 @@ ARG TARGETVARIANT
 RUN printf "I'm building for TARGETPLATFORM=linux/arm/v7, TARGETARCH=arm, TARGETVARIANT=v7"\
     && printf "With uname -s : Linux "\
     && printf "and  uname -m : armv7l"
-
+```
 2. Build this img
 ```
 docker build -t arm-test -f Dockerfile.buildroot_32bit .
