@@ -52,7 +52,7 @@ Now, trying for `aarch64` linux,
 ```
 nix build .#pkgsCross.aarch64-multiplatform.hello # It worked fine
 ```
-![nix-aarch64-build-fast](pics/nix-aarch64-build)
+![nix-aarch64-build-fast](../pics/nix-aarch64-build)
 
 Just use `-L` to see the logs,
 ```
