@@ -52,7 +52,7 @@ Now, trying for `aarch64` linux,
 ```
 nix build .#pkgsCross.aarch64-multiplatform.hello # It worked fine
 ```
-![nix-aarch64-build-fast](../pics/nix-aarch64-build)
+![nix-aarch64-build-fast](pics/nix-aarch64-build.png)
 
 Just use `-L` to see the logs,
 ```
@@ -74,9 +74,9 @@ nix build -L .#pkgsCross.aarch64-multiplatform.pkgsStatic.hello # run it inside 
 # I can rebuild it but rebuild didn't work for me
 nix build -L .#pkgsCross.aarch64-multiplatform.pkgsStatic.hello --rebuild
 ```
-![nix-static1](pics/nix-static1)
+![nix-static1](pics/nix-static1.png)
 ...
-![nix-static2](pics/nix-static2)
+![nix-static2](pics/nix-static2.png)
 
 Now, this file is statically linked,
 ```
@@ -95,4 +95,4 @@ hello: ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), statically link
 
 [nix-shell:/nixpkgs/result/bin]# 
 ```
-![nix-aarch64-static](pics/nix-aarch64-static)
+![nix-aarch64-static](pics/nix-aarch64-static.png)
