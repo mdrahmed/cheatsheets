@@ -259,17 +259,7 @@ AM_INIT_AUTOMAKE([subdir-objects]){ pkgs ? import <nixpkgs> {} }:
 
 
 ## Nix configuration for cross-compiling
-shell.nix for cross-compilation
-```
-{ pkgs ? import <nixpkgs> {} }:
-  pkgs.pkgsCross.aarch64-multiplatform.mkShell {
-    # nativeBuildInputs is usually what you want -- tools you need to run
-    nativeBuildInputs = with pkgs; [ ripgrep neovim git gcc autoconf automake libtool gnumake go python3 swig openldap ];
-    LADP = "${pkgs.openldap}";
-}
-```
-
-shell.nix
+simple shell.nix
 ```
 { pkgs ? import <nixpkgs> {} }:
   pkgs.mkShell {
@@ -278,5 +268,26 @@ shell.nix
 }
 ```
 
+**shell.nix for cross-compilation**
+```
+{ pkgs ? import <nixpkgs> {} }:
+  pkgs.pkgsCross.aarch64-multiplatform.mkShell {
+    # nativeBuildInputs is usually what you want -- tools you need to run
+    nativeBuildInputs = with pkgs; [ ripgrep neovim git gcc autoconf automake libtool gnumake go python3 swig openldap ];
+    LADP = "${pkgs.openldap}";
+}
+```
+To configure auditd,
+1. Clone the audit-userspace
+2. run `autogen.sh`
+3. run `./configure --host=aarch64-linux-gnu --with-python3=yes --enable-gssapi-krb5=yes --with-libcap-ng=yes --without-golang --with-io_uring`
+
+
+Now, at this error,
+```
+checking for lber.h... no
+checking for ber_free in -llber... no
+configure: error: zos remote support was requested but the openldap library was not found
+```
 
 
