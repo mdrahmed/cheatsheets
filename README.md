@@ -273,9 +273,10 @@ simple shell.nix
 { pkgs ? import <nixpkgs> {} }:
   pkgs.pkgsCross.aarch64-multiplatform.mkShell {
     # nativeBuildInputs is usually what you want -- tools you need to run
-    nativeBuildInputs = with pkgs; [ ripgrep neovim git gcc autoconf automake libtool gnumake go python3 swig openldap ];
-    LADP = "${pkgs.openldap}";
+    nativeBuildInputs = with pkgs; [ ripgrep neovim git gcc autoconf automake libtool gnumake go python3 swig ];
+    LDAP = pkgs.openldap;  # Corrected typo: changed LADP to LDAP
 }
+
 ```
 To configure auditd,
 1. Clone the audit-userspace
