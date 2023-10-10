@@ -17,8 +17,8 @@ experimental-features = nix-command flakes
 ```
 Install `git` if not present `nix-shell -p git`.
 
-
-## Now, We can start with Cross-compilation
+## Cross-Compilation for aarch64
+### Now, We can start with Cross-compilation aarch64.hello
 After downloading the nix pkgs, I should do following inside `nixpkgs` folder. But following code and TAB is not working for some reason. But this can be done.
 ```
 nix build .#pkgsCross. # hit TAB to see every possible nixpkgs
@@ -47,7 +47,7 @@ error: builder for '/nix/store/fjkcpz3wbkxwzs1ldlqymhwmygycg4k1-hello-arm-none-e
        For full logs, run 'nix log /nix/store/fjkcpz3wbkxwzs1ldlqymhwmygycg4k1-hello-arm-none-eabihf-2.12.1.drv'.
 ```
 
-## Different platform
+### Different platform than testbed - aarch64
 Now, trying for `aarch64` linux,
 ```
 nix build .#pkgsCross.aarch64-multiplatform.hello # It worked fine
@@ -96,3 +96,30 @@ hello: ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), statically link
 [nix-shell:/nixpkgs/result/bin]# 
 ```
 ![nix-aarch64-static](pics/nix-aarch64-static.png)
+
+
+## Cross-compilating audit for armhf(testbed executable)
+[Follow this tutorial](https://nix.dev/tutorials/cross-compilation#determining-the-host-platform-config)
+Using `nix repl` to explore host platforms,
+```
+nix repl '<nixpkgs>' -I nixpkgs=channel:nixos-22.11
+```
+When the `nix repl` shell appears, do following to see the list of packages,
+```
+nix-repl> pkgsCross.<TAB>
+```
+
+In my case, it should be `armv7l-hf-multiplatform`. Now, do following to retrieve the platform string,
+```
+nix-repl> pkgsCross.armv7l-hf-multiplatform.stdenv.hostPlatform.config
+"armv7l-unknown-linux-gnueabihf"
+```
+
+Let's check. if audit is present there, don't forget to hit the tab.
+```
+nix-repl> pkgsCross.armv7l-hf-multiplatform.audit<TAB>
+pkgsCross.armv7l-hf-multiplatform.audit          pkgsCross.armv7l-hf-multiplatform.auditwheel
+pkgsCross.armv7l-hf-multiplatform.auditBlasHook
+nix-repl> pkgsCross.armv7l-hf-multiplatform.audit
+```
+
