@@ -12,7 +12,7 @@ nix --version # check version if it the updated one e.g., more than 2.4
 ```
 Use flake
 ```
-vim nix /etc/nix/nix.conf # check if there is flake otherwise put the following at the end of nix.conf
+vim /etc/nix/nix.conf # check if there is flake otherwise put the following at the end of nix.conf
 experimental-features = nix-command flakes
 ```
 Install `git` if not present `nix-shell -p git`.
@@ -21,6 +21,7 @@ Install `git` if not present `nix-shell -p git`.
 ### Now, We can start with Cross-compilation - tried armhf-embedded.hello
 After downloading the nix pkgs, I should do following inside `nixpkgs` folder. But following code and TAB is not working for some reason. But this can be done.
 ```
+# Do it inside the nixpkgs directory
 nix build .#pkgsCross. # hit TAB to see every possible nixpkgs
 ```
 
@@ -123,6 +124,12 @@ pkgsCross.armv7l-hf-multiplatform.auditBlasHook
 nix-repl> pkgsCross.armv7l-hf-multiplatform.audit
 ```
 
-Now, exit `nix-repl>` with `:q`.
+Now, exit `nix-repl>` with `:q` and do following,
+```
+nix-env -i vim
+nix --version # check version if it the updated one e.g., more than 2.4
+vim /etc/nix/nix.conf # check if there is flake otherwise put the following at the end of nix.conf
+experimental-features = nix-command flakes
 
-
+git clone https://github.com/NixOS/nixpkgs.git
+```
