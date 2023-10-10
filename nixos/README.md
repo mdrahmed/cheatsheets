@@ -18,7 +18,7 @@ experimental-features = nix-command flakes
 Install `git` if not present `nix-shell -p git`.
 
 ## Cross-Compilation for aarch64
-### Now, We can start with Cross-compilation - tried arm.hello
+### Now, We can start with Cross-compilation - tried armhf-embedded.hello
 After downloading the nix pkgs, I should do following inside `nixpkgs` folder. But following code and TAB is not working for some reason. But this can be done.
 ```
 nix build .#pkgsCross. # hit TAB to see every possible nixpkgs
@@ -122,4 +122,7 @@ pkgsCross.armv7l-hf-multiplatform.audit          pkgsCross.armv7l-hf-multiplatfo
 pkgsCross.armv7l-hf-multiplatform.auditBlasHook
 nix-repl> pkgsCross.armv7l-hf-multiplatform.audit
 ```
+
+Now, exit `nix-repl>` with `:q`.
+
 
