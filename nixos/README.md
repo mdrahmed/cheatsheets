@@ -133,3 +133,17 @@ experimental-features = nix-command flakes
 
 git clone https://github.com/NixOS/nixpkgs.git
 ```
+
+Now, following command will create the dynamically linked auditd,
+```
+bash-5.2# nix build -L .#pkgsCross.armv7l-hf-multiplatform.audit
+```
+![auditd-arm32-dyn.png](pics/auditd-arm32-dyn.png)
+
+To create a static auditd, do following,
+```
+bash-5.2# nix build -L .#pkgsCross.armv7l-hf-multiplatform.pkgsStatic.audit
+```
+![audit-arm32-static1](pics/audit-arm32-static1.png)
+...
+![audit-arm32-static2](pics/audit-arm32-static2.png)
