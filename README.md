@@ -28,11 +28,39 @@ scp -r CPS-VVI-LOGS-DATA/ raihan@callisto.cs.utah.edu:/home/raihan  # to copy fo
 scp ROBOPro@x.x.x.x:~/C-Program/<file-name.txt> . # to copy a file from another server
 ```
 
+**ip address**
+ubuntu
+```
+ip a # get the ip from inet
+# a stands for address
+```
+If ip not found then install route2 - `sudo apt install iproute2`
+![ip a](pics/ipa.png)
+
+Or, use `ifconfig`, if it's not found then install net-tools - `sudo install net-tools`
+![ifconfig](pics/ifconfig.png)
+
+Or, see the hosts file,
+```
+cat /etc/hosts
+```
+![ip](pics/ip.png)
+
+mac
+```
+ifconfig 
+```
 
 **Deleted files of ubuntu with `rm -rf` is present in following dir,**
 ```
 /.local/share/Trash/files
 ```
+
+**Search a pkg in ubuntu**
+```
+apt search ripgrep
+```
+
 
 **Vim hangs or stops**
 ```
