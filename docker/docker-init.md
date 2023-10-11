@@ -93,7 +93,7 @@ RUN apt install -y vim net-tools iproute2
 ```
 ![docker-build1](pictures/docker-build1.png)
 ...
-![docker-build22(pictures/docker-build2.png)
+![docker-build2](pictures/docker-build2.png)
 
 Now, run this,
 ```
