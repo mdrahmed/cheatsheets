@@ -91,15 +91,18 @@ RUN apt update; apt dist-upgrade -y
 # install pkgs
 RUN apt install -y vim net-tools iproute2
 ```
-![docker-build1](pictures/docker-build1.png)
-...
-![docker-build2](pictures/docker-build2.png)
-
 Now, run this,
 ```
 docker build -t raihan/ubuntu-test:1.1 .
 # -t is to set a tag
 ```
+
+![docker-build1](pictures/docker-build1.png)
+
+...
+
+![docker-build2](pictures/docker-build2.png)
+
 This will build the ubuntu-test of version 1.1. In the picture, you can see that the image has `vim, ifconfig, ip a` command. 
 ![docker-build-ubuntu-test-1.1](pictures/docker-build3.png)]
 
