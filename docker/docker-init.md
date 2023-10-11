@@ -1,5 +1,6 @@
 ### Installing docker
 **Mac**
+
 [Download it from the docker site](https://www.docker.com/products/docker-desktop/) and then install it.
 Keep it running to use docker on terminal
 
@@ -79,7 +80,7 @@ docker run -it raihan/ubuntu-test:1.0 # the installed pkgs will still be present
 **REMEMBER TO COMMIT AFTER EACH AND EVERY CHANGE BECAUSE THAT WILL BE LOST IF NOT COMMITTED. COMMIT WITH A DIFFERENT VERSION SO THAT IT'S EASIER TO TRACE.**
 
 ### Build images from Dockerfile
-To automate the process of creating an image explained in step [Creating images](), do the following.
+To automate the process of creating an image explained in step [Creating images](https://github.com/mdrahmed/cheatsheets/blob/main/docker/docker-init.md#creating-images), do the following.
 1. Create a Dockerfile and paste following,
 ```
 FROM ubuntu
