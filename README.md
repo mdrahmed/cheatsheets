@@ -61,7 +61,6 @@ ifconfig
 apt search ripgrep
 ```
 
-
 **Vim hangs or stops**
 ```
 ps auxw | grep vim
@@ -73,9 +72,6 @@ pkill -9 vim
 du -sh grpc/
 ```
 ![Screenshot from 2023-05-24 15-10-24](https://github.com/mdrahmed/cheatsheets/assets/26908164/d8bd9244-6af4-44fc-a26d-d0d20dd99bd8)
-
-**Search to see if this pkg is present in ubuntu repo**
-`apt search python3`
 
 **Find a file in a dir and it's sub-dirs**
 ```
@@ -91,6 +87,16 @@ sudo apt-get install libpython3.7-dev
 Then the `netfilterqueue` will be installed,
 ```
 pip3 install netfilterqueue
+```
+
+#### nmap scan networks
+```
+nmap <ip> # it will show the port and it's status
+nmap -sV <ip> # it will show the port with service and version
+nmap -A <ip> # this -A option stands for 'Arrange' will give the os info also
+nmap <ip/subnet> # scans the subnet also 
+time nmap <ip> # this will show the time
+time nmap -T5 <ip> # this will make the scan faster. "T0 - T5" are the timing modes of nmap and T5 is fastest
 ```
 
 # General guidelines
