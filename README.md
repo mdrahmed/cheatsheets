@@ -22,6 +22,22 @@ If there is any difficult piece of code then draw a **TRACE TABLE**
 3. Use `zsh` ubuntu to configure the shell
 
 ## General cmd's
+**Memory and swap usuage**
+```
+# usused ram is wasted ram. If something is in memory, it can be retrieved faster than it could be retrieved from the disk. That's why, a linux system cache as much as possible so that it can be retrieved faster. 
+
+free -m # It will show how many free space do I have. 
+# -m shows the result in megabytes
+
+# under available field, the memory is available but it's used whenever a process needs it.
+# swap is emergency memory. If you ended up using all your memory then memory will be used from swap. It's kind of like car insurance. 
+
+# swappiness should be 60, it's the happy median
+$ sysctl vm.swappiness
+vm.swappiness = 60
+```
+![free-memory](pics/free-memory.png)
+
 **Copy folder using `scp`**
 ```
 scp -r CPS-VVI-LOGS-DATA/ raihan@callisto.cs.utah.edu:/home/raihan  # to copy folder to a server
