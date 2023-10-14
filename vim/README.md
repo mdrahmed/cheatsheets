@@ -1,3 +1,46 @@
+## Fastest Vimmer
+### Horizontal Movements
+```
+underscore (_) # goes to the beginning
+Doller sign ($) # goes to the end
+Zero (0) # goes to the beginning 0th character
+I # goes to the beginning of the line but in insert mode
+A # goes to the end of the line but in insert mode
+O # goes above 1 line and also moves to insert mode
+
+f<char> # f goes forward to the character you say
+t<char> # t goes upto but not on the character
+## To repeat the f<char> or t<char>
+semi-colon (;) # semi-colon (;) goes forward
+comma (,) # comma (,) goes backward
+
+F<char> # F jumps back to the character
+T<char> # T jumps back upto but not on the character
+## To repeat the F<char> and T<char>, it will be opposite
+semi-colon (;) # now, semi-colon will go backward
+comma (,) # now, command will go forward
+
+
+## TRY TO USE THE f,t,F,T IN COMBINATION WITH y(yank),d(delete), v(visual)
+##### might need c which is delete and put into insert mode right after
+
+# 'yt(' this will yank upto the first bracket but not including first bracket.
+# 'dt(' this will delete upto the first bracket but not including the first bracket
+# 'yf=' this will yank all the chars including equal sign.
+# 'yF=' this will also yank all the chars including equal sign but to the left i.e., going backward
+# 'y2(' will yank all the chars upto 2nd first bracket and also include that.
+
+```
+
+### General Movements
+```
+gg # goes to the beginning of the file
+[[ # similar to 'gg', it goes to the beginning of the line
+G # goes to the end of the line
+]] # similar to 'G', it goes to the end of the line
+```
+
+
 ## Open another file in vim,
 
 ### General shortcuts
