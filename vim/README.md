@@ -3,6 +3,7 @@
 ```
 underscore (_) # goes to the beginning
 Doller sign ($) # goes to the end
+Hyphen (-) # goes to the beginning of the previous line
 Zero (0) # goes to the beginning 0th character
 I # goes to the beginning of the line but in insert mode
 A # goes to the end of the line but in insert mode
@@ -38,6 +39,11 @@ gg # goes to the beginning of the file
 [[ # similar to 'gg', it goes to the beginning of the line
 G # goes to the end of the line
 ]] # similar to 'G', it goes to the end of the line
+
+j # moves 1 line down
+k # moves 1 line up
+h # moves 1 char right side
+l # moves 1 char left side
 ```
 
 
