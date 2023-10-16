@@ -100,6 +100,7 @@ docker login # Will need only once
 docker push new-repo:tagname
 ```
 Each and everytime, I will need to commit to a tag first(to keep the changes) and then push it.
+![docker-push.png](pictures/docker-push.png)
 
 
 **REMEMBER TO COMMIT AFTER EACH AND EVERY CHANGE BECAUSE THAT WILL BE LOST IF NOT COMMITTED. COMMIT WITH A DIFFERENT VERSION SO THAT IT'S EASIER TO TRACE.**
