@@ -138,5 +138,5 @@ docker cp 31bd726ba380:/nixpkgs/result/bin/hello .
 ```
 
 After copying the statically linked `hello` file it worked. 
-
+![hello-worked.png](pictures/hello-worked.png)
 
