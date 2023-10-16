@@ -147,6 +147,11 @@ docker rmi <container_id>
 ```
 ![docker-rmi](pictures/docker-rmi.png)
 
+Remove all the exited containers with following,
+```
+docker rm $(docker ps --filter status=exited -q)
+```
+
 ### nginx - not required
 ```
 docker run -it -d -p 8080:80 nginx # -p port
