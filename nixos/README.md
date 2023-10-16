@@ -130,6 +130,7 @@ nix-env -i vim
 nix --version # check version if it the updated one e.g., more than 2.4
 vim /etc/nix/nix.conf # check if there is flake otherwise put the following at the end of nix.conf
 experimental-features = nix-command flakes
+# exit vim
 
 git clone https://github.com/NixOS/nixpkgs.git
 ```
