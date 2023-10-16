@@ -128,3 +128,15 @@ ip a # if ip not found then install iproute2 with sudo apt install iproute2
 # now goto the <ip>:8080
 ```
 
+#### docker copy
+```
+docker cp <container_id_or_name>:/path/to/file/on/container /path/on/host
+```
+E.g.,
+```
+docker cp 31bd726ba380:/nixpkgs/result/bin/hello .
+```
+
+After copying the statically linked `hello` file it worked. 
+
+
