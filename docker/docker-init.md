@@ -89,7 +89,7 @@ docker images # check the new image is present
 docker stop 69
 ```
 
-**PUSH**
+------**PUSH**------
 
 Do this to push to docker hub,
 ```
