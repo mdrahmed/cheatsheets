@@ -88,7 +88,9 @@ docker images # check the new image is present
 # now stop the container because we have an image now
 docker stop 69
 ```
+
 **PUSH**
+
 Do this to push to docker hub,
 ```
 ## COMMIT FIRST
