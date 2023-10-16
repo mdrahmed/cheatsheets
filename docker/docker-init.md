@@ -91,10 +91,15 @@ docker stop 69
 **PUSH**
 Do this to push to docker hub,
 ```
+## COMMIT FIRST
+# docker commit <container id> <name/image_name(colon)version>
+# docker commit c8d r/nix:1.2
 docker tag local-image:tagname new-repo:tagname
-docker login
+# docker tag r/nix:1.2 raihan019/nix-cross-compile23:v1.2
+docker login # Will need only once
 docker push new-repo:tagname
 ```
+Each and everytime, I will need to commit to a tag first(to keep the changes) and then push it.
 
 
 **REMEMBER TO COMMIT AFTER EACH AND EVERY CHANGE BECAUSE THAT WILL BE LOST IF NOT COMMITTED. COMMIT WITH A DIFFERENT VERSION SO THAT IT'S EASIER TO TRACE.**
