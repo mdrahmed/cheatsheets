@@ -77,6 +77,26 @@ docker run -it raihan/ubuntu-test:1.0 # the installed pkgs will still be present
 ```
 ![image-creates](pictures/creating-images.png)
 
+### Pushing to hub
+After committing the images e.g., after following step,
+[Note: If I do not commit then the docker container will not persist meaning the changes will be lost]
+```
+#docker commit <container id> <raihan/image_name(colon)version_no> # to create an image
+docker commit 69 raihan/ubuntu-test:1.0
+docker images # check the new image is present
+
+# now stop the container because we have an image now
+docker stop 69
+```
+**PUSH**
+Do this to push to docker hub,
+```
+docker tag local-image:tagname new-repo:tagname
+docker login
+docker push new-repo:tagname
+```
+
+
 **REMEMBER TO COMMIT AFTER EACH AND EVERY CHANGE BECAUSE THAT WILL BE LOST IF NOT COMMITTED. COMMIT WITH A DIFFERENT VERSION SO THAT IT'S EASIER TO TRACE.**
 
 ### Build images from Dockerfile
