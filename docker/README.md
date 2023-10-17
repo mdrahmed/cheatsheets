@@ -50,7 +50,7 @@ docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 docker run --platform linux/arm/v7 -it balenalib/armv7hf-debian /bin/bash
 ```
 -- You got your shell --
-![qemu-balenalib/armhf](pictures/qemu-balenalib)
+![qemu-balenalib/armhf](pictures/qemu-balenalib.png)
 
 **Generally if I run this `docker run balenalib/armv7hf-debian`. Then I will get the following error**
 ```
