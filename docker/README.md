@@ -37,7 +37,9 @@ balenalib/armv7hf-debian-dotnet                                                 
 docker pull balenalib/armv7hf-debian
 ```
 3. Now, as my system is of `x86-64` bit architechture, so, the platform `amd64` will not be compatible with this. So, I will need to run this on qemu
- - Install qemu
+
+## Use QEMU
+Install qemu
 ```
 sudo apt-get install qemu qemu-user-static binfmt-support
 sudo update-binfmts --enable qemu-arm # It should be enabled already
@@ -48,7 +50,7 @@ docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 docker run --platform linux/arm/v7 -it balenalib/armv7hf-debian /bin/bash
 ```
 -- You got your shell --
-
+![qemu-balenalib/armhf](pictures/qemu-balenalib)
 
 **Generally if I run this `docker run balenalib/armv7hf-debian`. Then I will get the following error**
 ```
@@ -98,6 +100,28 @@ ls: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, 
 
 ```
 
+
+# 32bit/ubuntu image
+Following is the link for 32 bit images for ubuntu,
+[https://hub.docker.com/r/32bit/ubuntu/tags](https://hub.docker.com/r/32bit/ubuntu/tags)
+
+### armhf image
+Download this image,
+```
+docker pull 32bit/ubuntu:16.04-armhf
+```
+But this will not run in my intel machine.
+
+### Intel image
+I pulled the intel image,
+```
+docker pull 32bit/ubuntu:16.04
+```
+Then I have to run it by specifying the shell `/bin/bash`,
+```
+docker run -it 32bit/ubuntu:16.04 /bin/bash
+```
+![intel-32bit-ubuntu](pictures/intel-32bit-ubuntu.png)
 
 
 # Create x86-64 arch 64 bit docker image
