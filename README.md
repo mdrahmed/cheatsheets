@@ -76,6 +76,11 @@ ifconfig
 ```
 apt search ripgrep
 ```
+Or, search in the cache,
+```
+apt-cache search ripgrep
+```
+
 
 **Vim hangs or stops**
 ```

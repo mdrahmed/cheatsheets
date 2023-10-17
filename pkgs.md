@@ -13,5 +13,10 @@
 # It will create a Makefile
 make # run make
 ```
+![debian-pkg1](pics/debian-pkg1.png)
+![debian-pkg2](pics/debian-pkg2.png)
+![debian-pkg3](pics/debian-pkg3.png)
+![debian-pkg4](pics/debian-pkg4.png)
+
 
 **Do it on Nixos**
