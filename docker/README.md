@@ -111,7 +111,7 @@ Download this image,
 docker pull 32bit/ubuntu:16.04-armhf
 ```
 But this will not run in my intel machine. 
-![arm-does not run on-intel](pictures/arm-doesnotrun-intel.png)
+![arm-does not run on-intel](pictures/arm-intel.png)
 If I installed `qemu` as shown [above](https://github.com/mdrahmed/cheatsheets/blob/main/docker/README.md#use-qemu). If it is installed then the `qemu-user-static` will be present in the images of docker,
 ![qemu-user-static](pictures/qemu-user-static.png)
 
@@ -133,7 +133,7 @@ OR,
 ```
 docker run -it 32bit/ubuntu:16.04-armhf /bin/bash
 ```
-![arm-32bit/ubuntu running on intel](pictures/arm-32bit/ubuntu.png)
+![arm-32bit/ubuntu running on intel](pictures/arm-32bit-ubuntu.png)
 
 
 ### Intel image
