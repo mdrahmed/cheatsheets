@@ -110,31 +110,7 @@ Download this image,
 ```
 docker pull 32bit/ubuntu:16.04-armhf
 ```
-But this will not run in my intel machine. 
-![arm-does not run on-intel](pictures/arm-doesnotrun-intel.png)
-If I installed `qemu` as shown [above](https://github.com/mdrahmed/cheatsheets/blob/main/docker/README.md#use-qemu). If it is installed then the `qemu-user-static` will be present in the images of docker,
-![qemu-user-static](pictures/qemu-user-static.png)
-
-Now, run this to enable `qemu-user-static` image,
-```
-docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
-```
-
-Now, run any of the following to get the `arm` shell,
-```
-# might need to specify the platform in some case and I can specify v7 if i want but it's not required
-docker run --platform linux/arm/v7 -it 32bit/ubuntu:16.04-armhf /bin/bash
-```
-OR,
-```
-docker  run --platform linux/arm -it 32bit/ubuntu:16.04-armhf /bin/bash
-```
-OR,
-```
-docker run -it 32bit/ubuntu:16.04-armhf /bin/bash
-```
-![arm-32bit/ubuntu running on intel](pictures/arm-32bit/ubuntu.png)
-
+But this will not run in my intel machine.
 
 ### Intel image
 I pulled the intel image,
