@@ -112,3 +112,16 @@ Follow this tutorial to [install.](https://github.com/draios/sysdig/wiki/How-to-
 [Automatic Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-automatic-installation)
 [Manual Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-manual-installation)
 
+Sometimes while building the `sysdig` for a different architecture. I might need to build the probe-builder specifically for that architechture. 
+
+[Follow this to build the probe-builder](https://github.com/draios/probe-builder)
+
+The only problem is the [kernel headers requirement](https://github.com/draios/probe-builder#downloading-kernel-packages). For arm32 bit, i might need to build the kernel headers.
+Other options,
+1. Running my arm32 image and install auditd
+2. This auditd will not change anything at system-level. So, copy the following files in the target controller and then it will create audit logs,
+    i. /etc/aud*
+    ii. /sbin/aud*
+    iii. /var/log/audit/
+
+
