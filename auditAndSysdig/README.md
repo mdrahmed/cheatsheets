@@ -114,3 +114,4 @@ Follow this tutorial to [install.](https://github.com/draios/sysdig/wiki/How-to-
 
 [Manual Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-manual-installation)
 
+[Build from Source](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-from-the-Source-Code)
