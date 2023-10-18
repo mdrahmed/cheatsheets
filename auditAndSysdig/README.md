@@ -109,6 +109,8 @@ sudo apt install sysdig
 ```
 
 Follow this tutorial to [install.](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux)
+
 [Automatic Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-automatic-installation)
+
 [Manual Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-manual-installation)
 
