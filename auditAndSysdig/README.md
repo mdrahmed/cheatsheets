@@ -8,7 +8,8 @@ Install `sysdig`,
 sudo apt update
 sudo apt install software-properties-common # this should be present. It is required for add-apt-repository
 
-sudo add-apt-repository -y ppa:devel-k/sysdig
+# sudo add-apt-repository -y ppa:devel-k/sysdig # this or following one
+sudo add-apt-repository ppa:eugenesan/ppa
 sudo apt install sysdig
 sysdig --version
 ```
