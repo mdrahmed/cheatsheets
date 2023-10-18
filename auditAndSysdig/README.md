@@ -85,3 +85,30 @@ root@8606a815d985:/lib/modules# ls
 4.4.0-210-generic
 root@8606a815d985:/lib/modules# 
 ```
+
+
+### Start sysdig inside host machine
+#### with docker
+```
+sudo docker run --rm -i -t --privileged --net=host \
+    -v /var/run/docker.sock:/host/var/run/docker.sock \
+    -v /dev:/host/dev \
+    -v /proc:/host/proc:ro \
+    -v /boot:/host/boot:ro \
+    -v /src:/src \
+    -v /lib/modules:/host/lib/modules:ro \
+    -v /usr:/host/usr:ro \
+    -v /etc:/host/etc:ro \
+    docker.io/sysdig/sysdig
+```
+
+The above command will start a container with sysdig. Now, do following to follow the commands,
+```
+sudo apt update
+sudo apt install sysdig
+```
+
+Follow this tutorial to [install.](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux)
+[Automatic Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-automatic-installation)
+[Manual Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-manual-installation)
+
