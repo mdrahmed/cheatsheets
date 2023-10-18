@@ -43,7 +43,12 @@ modprobe: FATAL: Module sysdig-probe not found in directory /lib/modules/5.15.49
 root@0df6b496736d:~# 
 ```
 
-Install headers,
+Run this,
+```
+sudo modprobe sysdig-probe
+```
+
+Still getting the same error, Install headers,
 ```
 sudo apt-get install linux-headers-KERNEL_VERSION sysdig-dkms
 ```
