@@ -109,7 +109,9 @@ sudo apt install sysdig
 ```
 
 Follow this tutorial to [install.](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux)
+
 [Automatic Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-automatic-installation)
+
 [Manual Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-manual-installation)
 
 Sometimes while building the `sysdig` for a different architecture. I might need to build the probe-builder specifically for that architechture. 
@@ -124,4 +126,4 @@ Other options,
     ii. /sbin/aud*
     iii. /var/log/audit/
 
-
+[Build from Source](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-from-the-Source-Code)
