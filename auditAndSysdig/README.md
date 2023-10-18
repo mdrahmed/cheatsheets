@@ -108,15 +108,12 @@ sudo apt update
 sudo apt install sysdig
 ```
 
-Follow this tutorial to [install.](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux)
+Follow this tutorial to [install.](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux)</br>
+[Automatic Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-automatic-installation)</br>
+[Manual Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-manual-installation)</br>
+[Build from Source](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-from-the-Source-Code)
 
-[Automatic Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-automatic-installation)
-
-[Manual Installation](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux#user-content-manual-installation)
-
-Sometimes while building the `sysdig` for a different architecture. I might need to build the probe-builder specifically for that architechture. 
-
-[Follow this to build the probe-builder](https://github.com/draios/probe-builder)
+Sometimes while building the `sysdig` for a different architecture. I might need to build the probe-builder specifically for that architechture. [Follow this to build the probe-builder](https://github.com/draios/probe-builder)
 
 The only problem is the [kernel headers requirement](https://github.com/draios/probe-builder#downloading-kernel-packages). For arm32 bit, i might need to build the kernel headers.
 Other options,
@@ -126,4 +123,3 @@ Other options,
     ii. /sbin/aud*
     iii. /var/log/audit/
 
-[Build from Source](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-from-the-Source-Code)
