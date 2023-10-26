@@ -12,6 +12,9 @@
     - The ida64 will be present inside ida<version> of home dir `~/ida<version>`
     - Now, link it `sudo ln -s /opt/idafree-7.0/ida64 /usr/bin`
 
+# Resources
+Follow this post: [https://www.linkedin.com/posts/dr-faheem-ullah_10-free-mit-courses-%3F-%3F%3F%3F%3F%3F%3F%3F%3F%3F%3F%3F%3F-activity-7118167435253346304-YFgk?utm_source=share&utm_medium=member_desktop](https://www.linkedin.com/posts/dr-faheem-ullah_10-free-mit-courses-%3F-%3F%3F%3F%3F%3F%3F%3F%3F%3F%3F%3F%3F-activity-7118167435253346304-YFgk?utm_source=share&utm_medium=member_desktop)
+
 # My cheatsheets
 If there is any difficult piece of code then draw a **TRACE TABLE**
 
