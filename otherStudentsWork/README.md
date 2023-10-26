@@ -14,4 +14,11 @@ Working with decompilation. Used ghidra/idapro for decompilation
 Test: Try using the intel pin and see if it can rewrite the binary
 
 #### Jun's student - tall guy
-Learn how to implement GUI server
+Learn how to implement GUI server - DONE (explanation present inside the research folder)
+
+**Fuzzing to find bugs**
+1. Fuzzing the browsers can be done with `libfuzzer`.
+2. Follow the website [fuzzer101](https://github.com/antonio-morales/Fuzzing101) to see some examples.
+
+
+
