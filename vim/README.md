@@ -1,4 +1,10 @@
 ## Fastest Vimmer
+### All important notes
+`vim` typically looks for its configuration files in certain locations and `.vimrc` is the default configuration file. This file is expected to be located in the home directory e.g., `/home/username/.vimrc/`. But if I want to keep everything to a different location like inside `.config` directory then tell vim to look for the conf `.vimrc` inside that directory **by creating a symbolic link.**
+```
+ln -s ~/.config/vim/.vimrc ~/.vimrc
+```
+
 ### Horizontal Movements
 ```
 underscore (_) # goes to the beginning
