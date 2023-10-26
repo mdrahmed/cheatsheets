@@ -37,12 +37,11 @@ sudo chmod a+x /usr/bin/light-locker
 ```
 2. Install the [Microsoft Remote Desktop](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12)
 3. Add a new desktop
+    - <pc name> should be the ip or the part after `@`
+    - give a name to the <user account>.
+    - give username which is part before the `@` and also give the password
 
 ![new desktop](pics/remoteDesktop-1.png)
-
-	- <PC name> should be the ip or the part after `@`
-	- Give a name to the <User account>.
-	- Give username which is part before the `@` and also give the password
 
 ![addUser1](pics/addUser1.png)
 
