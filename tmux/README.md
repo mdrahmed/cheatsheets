@@ -8,6 +8,9 @@
 
 # This file has shortcuts for new conf => bind-key `ctrl+z` instead of `ctrl+b`
 
+## Important notes
+If I change the location of the `.tmux.conf` file to `.config` dir then tmux will be able to find the configuration file inside `.config`. So, like `vim`, I don't need to create a symbolic link.
+
 ### Sessions I
 `ctrl+zs` List sessions<br/>
 `ctrl+z$` Name session<br/>
