@@ -88,11 +88,11 @@ apt-cache search ripgrep
 ```
 find ./sysdig/ -type f -exec stat --format="%Y %n" {} \; | sort -n 
 ```
-
+##### TRY TO AVOID THE `PKILL` COMMAND AS MUCH AS POSSIBLE. RAN INTO PROBLEMS AFTER EXECUTING IT COUPLE OF TIMES.
 **Vim hangs or stops**
 ```
 ps auxw | grep vim
-pkill -9 vim
+pkill -9 vim ## TRY TO AVOID THIS COMMAND AS MUCH AS POSSIBLE. RAN INTO PROBLEMS AFTER EXECUTING IT COUPLE OF TIMES.
 ```
 
 **To find size of a dir, do this `du -sh <folder name>`**
