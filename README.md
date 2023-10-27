@@ -88,7 +88,7 @@ apt-cache search ripgrep
 ```
 find ./sysdig/ -type f -exec stat --format="%Y %n" {} \; | sort -n 
 ```
-##### TRY TO AVOID THE `PKILL` COMMAND AS MUCH AS POSSIBLE. RAN INTO PROBLEMS AFTER EXECUTING IT COUPLE OF TIMES.
+#### TRY TO AVOID THE `PKILL` COMMAND AS MUCH AS POSSIBLE. RAN INTO PROBLEMS AFTER EXECUTING IT COUPLE OF TIMES.
 **Vim hangs or stops**
 ```
 ps auxw | grep vim
