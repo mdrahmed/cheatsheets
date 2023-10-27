@@ -34,6 +34,7 @@
 `ctrl+bo` Swap panes<br/>
 `ctrl+bq` Show pane numbers<br/>
 `ctrl+bx` Kill pane<br/>
+`ctrl+b<Arrow-keys>` Switch panes
 
 ## Panes II
 `ctrl+b` Toggle between layouts (space)<br/>
