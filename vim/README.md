@@ -5,7 +5,7 @@
 ln -s ~/.config/vim/.vimrc ~/.vimrc
 ```
 
-### Horizontal Movements
+## Horizontal Movements
 ```
 underscore (_) # goes to the beginning
 Doller sign ($) # goes to the end
@@ -37,6 +37,12 @@ comma (,) # now, command will go forward
 # 'yF=' this will also yank all the chars including equal sign but to the left i.e., going backward
 # 'y2(' will yank all the chars upto 2nd first bracket and also include that.
 
+```
+
+## Horizontal Movements
+```
+ctrl+d # this will move cursor half page down
+ctrl+u # this will move cursor half page up
 ```
 
 ### General Movements
