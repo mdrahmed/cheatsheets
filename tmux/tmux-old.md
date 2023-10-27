@@ -20,6 +20,7 @@
 `ctrl+bw` List windows<br/>
 `ctrl+bn` Next window<br/>
 `ctrl+bp` Previous window<br/>
+`ctrl+n` Switch window
 
 ## Windows II
 `ctrl+b x` to kill window<br/>
