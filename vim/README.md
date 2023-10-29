@@ -39,7 +39,7 @@ comma (,) # now, command will go forward
 
 ```
 
-## Horizontal Movements
+## Vertical  Movements
 ```
 ctrl+d # this will move cursor half page down
 ctrl+u # this will move cursor half page up
@@ -60,6 +60,17 @@ l # moves 1 char left side
 
 
 ## Open another file in vim,
+
+### Append another file
+```
+vim <file1> # open file1
+# take cursor to the place when you want to insert. If wanna append then goto the end
+:r <file2> # goto command mode and read the file using the 'r' or read command
+
+# Now, ':w' will write the original file
+:w <new filename> # this will create a new file
+:q! # now, exit without writing anything to the file
+```
 
 ### General shortcuts
 `5k` to move cursor 5 lines up<br/>
