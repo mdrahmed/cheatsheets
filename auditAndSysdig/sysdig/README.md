@@ -43,12 +43,59 @@ sudo docker run --rm -i -t --privileged --net=host \
 
 Now, just run `sysdig` or `csysdig`. 
 Currently, the file `docker-sysdig/sysdig5.2` contains the writes to the file.
-![sysdig1](pics/sysdig1.png)
+![sysdig1](pics/sysdig1)
 
 This file is present inside this folder `/home/raihan/sysdig-logs/docker-sysdig/sysdig5.2`
 
-## Created sysdig docker image
+## Created sysdig docker image - not working
 Now, run the sysdig docker image with `--privileged`, like following,
 ```
 sudo docker run -it --privileged --cap-add=SYS_ADMIN --cap-add=SYS_MODULE r/sysdig:1.0
+```
+
+## Result after running the docker
+After running `sysdig` with permission.
+```
+(base) ┌─[raihan@raihan-XPS-8940]─[~/host-txt_training_factory/host-hbw]
+└──╼ $g++ changeData.cpp -o changeData -I ~/vcpkg/installed/x64-linux/include/
+(base) ┌─[raihan@raihan-XPS-8940]─[~/host-txt_training_factory/host-hbw]
+└──╼ $ls
+a.out       changeData.cpp  hbw-exe     Makefile  README.md                         TxtHighBayWarehouse.cpp  TxtHighBayWarehouseRun.cpp      TxtHighBayWarehouseStorage.h
+changeData  Data            hbw-output  pics      TxtHighBayWarehouseCalibData.cpp  TxtHighBayWarehouse.h    TxtHighBayWarehouseStorage.cpp
+(base) ┌─[raihan@raihan-XPS-8940]─[~/host-txt_training_factory/host-hbw]
+└──╼ $./changeData
+JSON file updated.
+(base) ┌─[raihan@raihan-XPS-8940]─[~/host-txt_training_factory/host-hbw]
+└──╼ $vim Data/Config.HBW.Storage.json
+```
+
+I got this,
+
+![sysdig2](pics/sysdig2.png)
+
+```
+## Using the openat system call, it opens the file `Config.HBW.Storage.json` with the file descriptor relative to working directory `dirfd=-100(AT_FDCWD)`
+591167 20:40:01.543178060 6 changeData (9207) > openat dirfd=-100(AT_FDCWD) name=Data/Config.HBW.Storage.json(/home/raihan/host-txt_training_factory/host-hbw/Data/Config.HBW.Storage.json) flags=1(O_RDONLY) mode=0
+
+## This is specifying a specific file descriptor
+591171 20:40:01.543193761 6 changeData (9207) < openat fd=3(<f>/home/raihan/host-txt_training_factory/host-hbw/Data/Config.HBW.Storage.json) dirfd=-100(AT_FDCWD) name=Data/Config.HBW.Storage.json(/home/raihan/host-txt_training_factory/host-hbw/Data/Config.HBW.Storage.json) flags=1(O_RDONLY) mode=0 dev=802 ino=29002365
+
+## This part is reading the data with file descriptor 3 and closing the data
+591181 20:40:01.543241030 6 changeData (9207) > read fd=3(<f>/home/raihan/host-txt_training_factory/host-hbw/Data/Config.HBW.Storage.json) size=8191
+591186 20:40:01.543258706 6 changeData (9207) < read res=761 data={. "Storage" : . {.  "A1" : .  {.   "state" : 0,.   "tag_uid" : "043470a2186580"
+591246 20:40:01.543569002 6 changeData (9207) > close fd=3(<f>/home/raihan/host-txt_training_factory/host-hbw/Data/Config.HBW.Storage.json)
+591247 20:40:01.543570845 6 changeData (9207) < close res=0
+
+## Opening the data and also setting the file descriptor to 3
+591254 20:40:01.543601685 6 changeData (9207) > openat dirfd=-100(AT_FDCWD) name=Data/Config.HBW.Storage.json(/home/raihan/host-txt_training_factory/host-hbw/Data/Config.HBW.Storage.json) flags=262(O_TRUNC|O_CREAT|O_WRONLY) mode=0666
+591269 20:40:01.543675782 6 changeData (9207) < openat fd=3(<f>/home/raihan/host-txt_training_factory/host-hbw/Data/Config.HBW.Storage.json) dirfd=-100(AT_FDCWD) name=Data/Config.HBW.Storage.json(/home/raihan/host-txt_training_factory/host-hbw/Data/Config.HBW.Storage.json) flags=262(O_TRUNC|O_CREAT|O_WRONLY) mode=0666 dev=802 ino=29002365
+
+## writing the data to the file
+591288 20:40:01.543773793 6 changeData (9207) > write fd=3(<f>/home/raihan/host-txt_training_factory/host-hbw/Data/Config.HBW.Storage.json) size=1048
+## We can also see the data written to the file
+591293 20:40:01.543796467 6 changeData (9207) < write res=1048 data={.    "Storage": {.        "A1": {.            "state": 0,.            "tag_uid"
+
+## closing the file
+591295 20:40:01.543799720 6 changeData (9207) > close fd=3(<f>/home/raihan/host-txt_training_factory/host-hbw/Data/Config.HBW.Storage.json)
+591296 20:40:01.543800733 6 changeData (9207) < close res=0
 ```
