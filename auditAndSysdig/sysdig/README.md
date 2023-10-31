@@ -43,7 +43,7 @@ sudo docker run --rm -i -t --privileged --net=host \
 
 Now, just run `sysdig` or `csysdig`. 
 Currently, the file `docker-sysdig/sysdig5.2` contains the writes to the file.
-![sysdig1](pics/sysdig1)
+![sysdig1](pics/sysdig1.png)
 
 This file is present inside this folder `/home/raihan/sysdig-logs/docker-sysdig/sysdig5.2`
 
