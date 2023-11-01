@@ -69,6 +69,7 @@ JSON file updated.
 └──╼ $vim Data/Config.HBW.Storage.json
 ```
 
+### With `changeData.cpp` file
 I got this,
 
 ![sysdig2](pics/sysdig2.png)
@@ -99,3 +100,24 @@ I got this,
 591295 20:40:01.543799720 6 changeData (9207) > close fd=3(<f>/home/raihan/host-txt_training_factory/host-hbw/Data/Config.HBW.Storage.json)
 591296 20:40:01.543800733 6 changeData (9207) < close res=0
 ```
+
+### After running mqtt
+At first, while loading, I sent a random data.
+
+[sysdig3-mqtt-random](pics/sysdig3-mqtt1.png)
+
+After that, I sent mqtt command to call `fetchContainer` function and eventually change the data.
+
+[sysdig3-mqtt-published-data](pics/sysdig3-mqtt4pub.png)
+
+Then the storage was read again.
+
+[sysdig3-mqtt-file-read](pics/sysdig3-mqtt2read.png)
+
+Then, the file was changed.
+
+[sysdig3-mqtt-file-written](pics/sysdig3-mqtt3write.png)
+
+
+#### Done again
+[update with new pics]
