@@ -93,10 +93,6 @@ find ./sysdig/ -type f -exec stat --format="%Y %n" {} \; | sort -n
 ```
 ps auxw | grep vim
 pkill -9 vim ## TRY TO AVOID THIS COMMAND AS MUCH AS POSSIBLE. RAN INTO PROBLEMS AFTER EXECUTING IT COUPLE OF TIMES.
-# if pkill doesn't work, then just use kill. It will work
-kill -9 <vim id>
-# raihan   11602  5.1 10.2 1693448 1647268 pts/1 D+   15:12   0:08 vim subPatternsFound
-# in here, the id is 11602
 ```
 
 **To find size of a dir, do this `du -sh <folder name>`**
