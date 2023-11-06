@@ -25,6 +25,12 @@ If there is any difficult piece of code then draw a **TRACE TABLE**
 3. Use `zsh` ubuntu to configure the shell
 
 ## General cmd's
+#### Ubuntu start up problems
+Goto command line by this,
+```
+Ctrl+Alt+F1
+```
+
 **Memory and swap usuage**
 ```
 # usused ram is wasted ram. If something is in memory, it can be retrieved faster than it could be retrieved from the disk. That's why, a linux system cache memory as much as possible so that it can be retrieved faster. 
