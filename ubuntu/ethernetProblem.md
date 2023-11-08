@@ -7,7 +7,7 @@ Now, follow along,
 1. First check if any ethernet port is up with this `lshw -c network`
 Check if the eth is enabled or disabled. At first, the 2nd network which is enabled in the pic was disabled. 
 
-![enableOrDisable](pics/enOrDis.png)
+![enableOrDisable](pics/enOrdis.png)
 
 2. Then I turned this up with this `sudo ifup enp4s0`
 This command `sudo ip enp4s0 up` didn't work.
@@ -29,6 +29,7 @@ Went through each and every solution and checked if it is present in my case and
  ![10-ubuntu-fan](pics/10-ubuntu-fan.png)
 
  - [This was already present](https://askubuntu.com/a/1094406/1700007)
+
  ![xxxyaml](pics/xxxyaml.png)
 
  - Didn't need to create this `sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf` as [shown in this answer](https://askubuntu.com/a/1043244/1700007)
