@@ -9,3 +9,7 @@ sudo apt-get install --reinstall ubuntu-desktop
 But if the network is also gone and if i need to get the wifi connection from terminal then follow this link.
 [connect-to-wifi-with-nmcli](https://www.makeuseof.com/connect-to-wifi-with-nmcli/)
 
+
+## Lab ethernet
+Config of `/etc/network/interfaces/`
+![network-info](pics/lab-ethernet.png)
