@@ -25,6 +25,13 @@ If there is any difficult piece of code then draw a **TRACE TABLE**
 3. Use `zsh` ubuntu to configure the shell
 
 ## General cmd's
+### iptables blocked
+```
+sudo iptables -LV
+sudo iptables -L
+sudo iptables -F
+```
+
 #### Ubuntu start up problems
 Goto command line by this,
 ```
