@@ -1,0 +1,4 @@
+
+Bandit level 5 finished, do following to access the bandit 5,
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+pass: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
