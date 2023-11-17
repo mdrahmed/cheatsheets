@@ -1,4 +1,14 @@
 
-Bandit level 5 finished, do following to access the bandit 5,
+ - Bandit level 5 finished, do following to access the bandit 5,
 ssh bandit5@bandit.labs.overthewire.org -p 2220
 pass: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+ - Bandit level 6, goto 6,
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+pass: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+use this `find . -type f -size 1033c` 
+    - `c` indicates that the size is in bytes. 
+    - `-type f` tells it to search regular files
+
+Bandit level 7 pass is stored inside `/var/lib..`. Search using following,
+`find / -user bandit7 -type f | grep "bandit"`
