@@ -82,6 +82,11 @@ vim <file1> # open file1
 `<select text>` to copy in vim outside tmux<br/>
 `shift+v` to select whole line, copy it with `y` and paste it with `p`<br/>
 
+#### vim replace
+```
+# use `gc` to confirm before replacing, `g` will not ask
+:s/article/tutorial/gc 
+```
 
 
 ### Vertical split
