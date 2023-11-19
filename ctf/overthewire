@@ -12,3 +12,24 @@ use this `find . -type f -size 1033c`
 
 Bandit level 7 pass is stored inside `/var/lib..`. Search using following,
 `find / -user bandit7 -type f | grep "bandit"`
+pass: z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+
+Bandit level 8 pass: TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+
+Level 9 pass: EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+sort data.txt | uniq -u
+
+Level 10 pass: G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+Just opened in 'vi' and searched for "==" signs
+Can also be done by doing this `strings data.txt | grep "="`
+
+Level 11 pass: 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+```
+cat data.txt | base64 --decode
+The password is 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+```
+
+Level 12 pass: JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+```
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
