@@ -1,3 +1,7 @@
+## Things to make sure
+Make sure that the implementation is well written.
+ - show the functions arguments and values were collected.
+
 ## Writing paper guidelines
 1. At first, work on the Motivation part,
     
