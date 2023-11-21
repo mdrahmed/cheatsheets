@@ -8,5 +8,5 @@
 
 [MSF-ADV](https://github.com/ASGuard-UCI/MSF-ADV/tree/master)
 
-
-
+Soln:
+[Object detection & adversarial attack](https://colab.research.google.com/drive/1CRQl8TLSqGnOXuEzKB0LW5MttUx4dDdP?authuser=1#scrollTo=VcLoIWgszPXI)
