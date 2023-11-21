@@ -10,3 +10,6 @@
 
 Soln:
 [Object detection & adversarial attack](https://colab.research.google.com/drive/1CRQl8TLSqGnOXuEzKB0LW5MttUx4dDdP?authuser=1#scrollTo=VcLoIWgszPXI)
+
+Adversarial attackis an input to a machine learning model that is purposely designed to cause a model to make a mistake is an input to a machine learning model that is purposely designed to cause a model to make a mistake.
+[read this doc](https://viso.ai/deep-learning/adversarial-machine-learning/#:~:text=An%20adversarial%20attack%20is%20a,valid%20input%20to%20a%20human)
