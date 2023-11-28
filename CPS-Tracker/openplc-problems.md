@@ -43,3 +43,8 @@ To check parent process do this,
 ```
 ps -f <pid>
 ```
+
+Check the process tree,
+```
+ps auxf
+```
