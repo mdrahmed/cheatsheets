@@ -1,5 +1,7 @@
 
 ## port 8080 is already in use
+### Solution
+**Open `start_openplc.sh` file and comment the last line which is executing the `webserver.py`. Then kill the `webserver.py` process - check if the if with `ps auxf`**
 The port is used automatically by `start_openplc.sh` file. The reason behind this can be I stopped the process with `ctrl+z` but it should be stopped with `ctrl+c` bcz the process will run in background if stop it with `ctrl+z`.
 If this problem is not solved, try commenting the last line which is the last command in the `start_openplc.sh` file. Bcz that's the command running while we ran this script. Now, kill the process and its parent process.
 
