@@ -6,6 +6,12 @@ Read this book: [https://www.fuzzingbook.org/](https://www.fuzzingbook.org/)
 llvm-config --prefix
 /usr/lib/llvm-6.0
 ```
+If `llvm-config` not found then search for it by this `find / -name "llvm-config"
+It should be present in this directory,
+```
+$which llvm-config
+/usr/bin/llvm-config
+```
 
 ## Change llvm default path
 ```
