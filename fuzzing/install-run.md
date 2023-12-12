@@ -24,4 +24,11 @@ Now, goto AFLplusplus folder and fuzz it,
 ./afl-fuzz -i seeds_dir -o output_dir -- program
 ```
 
+Add `-D` to tell afl++ to mutate on its own.
+```
+./afl-fuzz -i seeds_dir -o output_dir -D -- program
+
+# E.g.,
+./afl-fuzz -i ~/afl++-test/armstrong-c/input/ -o out/ -D -- ~/afl++-test/armstrong-c/a.out
+```
 

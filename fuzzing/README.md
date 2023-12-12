@@ -18,3 +18,20 @@ $which llvm-config
 $ sudo update-alternatives --install         /usr/bin/llvm-config       llvm-config      /usr/bin/llvm-config-14  200
 update-alternatives: using /usr/bin/llvm-config-14 to provide /usr/bin/llvm-config (llvm-config) in auto mode
 ```
+
+## Fuzzing steps - yun
+1. Use `afl-fuzz` to fuzz and find crashes
+2. Then check if those crashes are false positives using the `address sanitizer`.
+    [sanitizers](https://github.com/google/sanitizers/wiki/AddressSanitizer)
+3. Then check if those crashes are already found.
+    check [bugcrowd](https://www.bugcrowd.com/) or, [bugzilla](https://www.bugcrowd.com/)
+4. If those are not predefined then these are the bugs not predefined.
+
+
+
+
+
+
+
+
+
