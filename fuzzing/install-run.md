@@ -32,3 +32,10 @@ Add `-D` to tell afl++ to mutate on its own.
 ./afl-fuzz -i ~/afl++-test/armstrong-c/input/ -o out/ -D -- ~/afl++-test/armstrong-c/a.out
 ```
 
+## Target program is not compiled in AFL using `afl-cc`
+Then run it in qemu-mode, use `-Q`,
+```
+./afl-fuzz -i ~/host-txt_training_factory/host-hbw/input/ -o outputs/out-txt/ -D -Q -- ~/host-txt_training_factory/host-hbw/hbw-exe
+```
+
+![fuzzing hbw in host/ubuntu_x86-64 machine](pics/fuzzing-hbw-host.png)
