@@ -45,12 +45,13 @@ ctrl+d # this will move cursor half page down
 ctrl+u # this will move cursor half page up
 ```
 
-### General Movements
+## General Movements
 ```
 gg # goes to the beginning of the file
 [[ # similar to 'gg', it goes to the beginning of the line
 G # goes to the end of the line
 ]] # similar to 'G', it goes to the end of the line
+% # goes to the starting or ending parenthesis
 
 j # moves 1 line down
 k # moves 1 line up
@@ -58,6 +59,13 @@ h # moves 1 char right side
 l # moves 1 char left side
 ```
 
+**Create tabs inside vim**
+```
+<leader>tn # it will open :tabedit and then write the filename to open file in new tab
+:tabedit <filename>
+gt # type gt to move to next tab
+gT # type gT to move to previous tab
+```
 
 ## Open another file in vim,
 
