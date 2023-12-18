@@ -6,3 +6,5 @@
 [chris machine nvim](https://github.com/ChristianChiarulli/nvim)
 
 [chris-keymaps](https://www.chiarulli.me/Neovim-2/02-keymaps/)
+
+[jessarcher-keymaps](https://github.com/jessarcher/dotfiles/blob/master/nvim/lua/user/keymaps.lua)
