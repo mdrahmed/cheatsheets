@@ -65,6 +65,15 @@ l # moves 1 char left side
 :tabedit <filename>
 gt # type gt to move to next tab
 gT # type gT to move to previous tab
+
+# to open multiple files from terminal, this command will open multiple files in separate tabs
+vim -p <file1> <file2> <file3>
+```
+
+**create session in vim**
+```
+mksession <filename.vim>
+vim -S <filename.vim>
 ```
 
 ## Open another file in vim,
