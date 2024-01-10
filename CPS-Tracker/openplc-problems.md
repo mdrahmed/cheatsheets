@@ -5,6 +5,17 @@
 The port is used automatically by `start_openplc.sh` file. The reason behind this can be I stopped the process with `ctrl+z` but it should be stopped with `ctrl+c` bcz the process will run in background if stop it with `ctrl+z`.
 If this problem is not solved, try commenting the last line which is the last command in the `start_openplc.sh` file. Bcz that's the command running while we ran this script. Now, kill the process and its parent process.
 
+```
+(base) ┌─[✗]─[raihan@raihan-XPS-8940]─[~/OpenPLC_v3]
+└──╼ $ps auxf | grep webserver
+root      2185  0.0  0.2 202656 37028 ?        S    Jan08   0:31  \_ /home/raihan/OpenPLC_v3/.venv/bin/python3 webserver.py
+raihan   22750  0.0  0.0  14432  1116 pts/2    S+   13:22   0:00  |   |   \_ grep --color=auto webserver
+(base) ┌─[raihan@raihan-XPS-8940]─[~/OpenPLC_v3]
+└──╼ $sudo kill -9 2185
+[sudo] password for raihan:
+# Now, uncomment the last line of start_openPLC_v3 and start it
+```
+
 ## Other ways to kills a process and it's parent process
 ```
  * Serving Flask app 'webserver' (lazy loading)
