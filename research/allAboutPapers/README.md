@@ -38,7 +38,7 @@ Link to try Paperpal for free - [https://bit.ly/3ICvXKR](https://bit.ly/3ICvXKR)
 
 ## Paper Reading
 I follow only 2 tools for paper reading -
-1. [scholarchy](https://article-summarizer.scholarcy.com/summarizer) and 
+1. [scholarchy](https://article-summarizer.scholarcy.com/summarizer)
 2. [read.enago.one](https://read.enago.one/)
 
 ## Manuscript Evaluation
