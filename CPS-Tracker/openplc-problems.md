@@ -1,4 +1,12 @@
 
+## Start openplc to get the traces/logs
+Run `./openplc` inside `~/OpenPLC_v3/webserver/core`. Or, simply execute the following line,
+```
+~/OpenPLC_v3/webserver/core/openplc
+```
+
+![check-instrumentation](pics/check-if-instrumented.png)
+
 ## port 8080 is already in use
 ### Solution
 **Open `start_openplc.sh` file and comment the last line which is executing the `webserver.py`. Then kill the `webserver.py` process - check if the if with `ps auxf`**

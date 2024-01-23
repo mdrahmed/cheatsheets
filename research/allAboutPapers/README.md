@@ -37,7 +37,9 @@ Please check the attached video tutorial.
 Link to try Paperpal for free - [https://bit.ly/3ICvXKR](https://bit.ly/3ICvXKR)
 
 ## Paper Reading
-I follow only 2 tools for paper reading - [scholarchy](https://article-summarizer.scholarcy.com/summarizer) and [read.enago.one](https://read.enago.one/)
+I follow only 2 tools for paper reading -
+1. [scholarchy](https://article-summarizer.scholarcy.com/summarizer) and 
+2. [read.enago.one](https://read.enago.one/)
 
 ## Manuscript Evaluation
 See this [post](https://www.linkedin.com/posts/dr-faheem-ullah_phd-students-do-you-want-your-manuscript-activity-7104772654506672130-zTYs?utm_source=share&utm_medium=member_desktop)
