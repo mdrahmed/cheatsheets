@@ -28,8 +28,13 @@ update-alternatives: using /usr/bin/llvm-config-14 to provide /usr/bin/llvm-conf
 4. If those are not predefined then these are the bugs not predefined.
 
 
+## Check input provided by the fuzzer
+```
+# cat ./<out_dir>/default/.cur_input
+cat ./out/default/.cur_input
+```
 
-
+![cur_input](pics/cur_input.png)
 
 
 
