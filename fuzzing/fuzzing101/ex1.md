@@ -41,3 +41,7 @@ Options:
  - @@ is the placeholder target's command line that AFL will substitute with each input file name.
 
 ![fuzzing101-ex1](../pics/fuzzing-xpdf-4.04.png)
+
+
+I surprisingly found crashes in the latest `xpdf-4.04`,
+![crashes](../pics/got_crashes.png)
