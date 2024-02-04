@@ -7,7 +7,8 @@ tar -xvzf <xpdf..>
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=. ..
-make make install
+make
+make install
 ```
 
 Download the pdfs, use the `xpdf` directory in place of `fuzzing_xpdf`,
