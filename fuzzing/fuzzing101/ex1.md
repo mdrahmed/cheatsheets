@@ -46,3 +46,10 @@ Options:
 
 I surprisingly found crashes in the latest `xpdf-4.04`,
 ![crashes](../pics/got_crashes.png)
+
+
+Check if any of the inputs are giving seg faults.
+```
+./build/bin/pdftotext out/default/crashes/id\:00....
+```
+![seg-fault](../pics/seg_faults.png)
