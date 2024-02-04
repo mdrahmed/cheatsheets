@@ -19,7 +19,7 @@ wget http://www.africau.edu/images/default/sample.pdf
 wget https://www.melbpc.org.au/wp-content/uploads/2017/10/small-example-pdf-file.pdf
 ```
 Now, run this command inside this directory `../build/bin/pdfinfo -box -meta helloword.pdf` to get a output like following,
-![xpdf](pics/xpdf-4.04.png)
+![xpdf](../pics/xpdf-4.04.png)
 
 #### Instrument it with `afl-clang-fast++`
 
@@ -40,4 +40,4 @@ Options:
  - -s indicates the static random seed to use.
  - @@ is the placeholder target's command line that AFL will substitute with each input file name.
 
-![fuzzing101-ex1](pics/fuzzing-xpdf-4.04.png)
+![fuzzing101-ex1](../pics/fuzzing-xpdf-4.04.png)
