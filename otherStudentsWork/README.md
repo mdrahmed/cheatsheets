@@ -6,7 +6,7 @@ He uses grayc for transformation, [check this file](https://github.com/srg-imper
 Test: Try to run the same and get the transformation file
 
 #### Yaseen (Stefan's student)
-Working with instrumentation like mine
+Working with afl
 
 #### Tong (Jun's student)
 Working with decompilation. Used ghidra/idapro for decompilation
