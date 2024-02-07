@@ -411,3 +411,9 @@ But this will not have `libSDLWidgetsLib`,
 /usr/bin/ld: cannot find -lSDLWidgetsLib
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
+
+#### set path in redhat
+```
+setenv PATH ${PATH}:/path/to/dir
+```
+
