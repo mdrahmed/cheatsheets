@@ -1,3 +1,15 @@
+# Current paper issues
+
+## Introduction
+1. "This is primarily because operating system-level objects and de-
+pendencies fail to accurately represent application-level semantics,
+such as picking up a workpiece using a vaccum gripper or retrieving
+inventory from a high-bay warehouse."
+ - Generally by OS people will think that its just a computer. How they will relate the "VGR" with usual office computers?
+
+
+
+# Paper Writing guidelines
 ## Things to make sure
 Make sure that the implementation is well written.
  - show the functions arguments and values were collected.

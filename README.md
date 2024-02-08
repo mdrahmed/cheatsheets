@@ -336,6 +336,41 @@ AM_INIT_AUTOMAKE([subdir-objects]){ pkgs ? import <nixpkgs> {} }:
 
 ```
 
+## cross-compilation for arm64 and arm32
+#### arm64 
+```
+sudo apt-get install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
+# Now, add target with clang - CHECK Log-NewPasses Makefile at final dir
+clang++-14 --target=aarch64-linux-gnu <options>
+```
+
+#### arm32
+Install these pkgs
+```
+sudo apt install gcc-arm-linux-gnueabihf
+sudo apt install gcc-multilib-arm-linux-gnueabihf
+sudo apt install binutils-arm-linux-gnueabihf
+sudo apt install libgcc1-armhf-cross
+sudo apt install libsfgcc1-armhf-cross
+sudo apt install libstdc++6-armhf-cross
+sudo apt install libstdc++6-dev-armhf-cross # but this was not installed
+# got this error while installing libstdc++6-dev
+Reading state information... Done
+E: Unable to locate package libstdc++6-dev-armhf-cross
+E: Couldn't find any package by regex 'libstdc++6-dev-armhf-cross'
+
+#Then installed this one,
+sudo apt install libstdc++-7-dev-armhf-cross
+
+# also, install the multilibs
+sudo apt-get install gcc-multilib
+sudo apt-get install g++-multilib
+```
+Now, compile any file like following,
+```
+clang++-14 --target=arm-linux-gnueabihf gcd.cpp -o gcd_arm32
+```
+
 
 ## Nix configuration for cross-compiling
 simple shell.nix
