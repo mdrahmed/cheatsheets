@@ -1,4 +1,11 @@
 
+### Add all files except one or more
+```
+git add -- . :!path/to/file1 :!path/to/file2 :!path/to/folder1/*
+# or,
+git add --all -- :!path/to/file1 :!path/to/file2 :!path/to/folder1/*
+```
+
 ### To remove large files from git commit 
 If the large file was added in the most recent commit, you can just run:
 
