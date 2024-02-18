@@ -3,6 +3,7 @@
 If the large file was added in the most recent commit, you can just run:
 
 1. `git rm --cached <filename>` to remove the large file, then
+    - suppose, you can run `git rm --cached .gitignore` to untrack this file.
 2. `git commit --amend -C HEAD` to edit the commit
 
 If the large file was added in an earlier commit, I recommend running an interactive rebase. That means you need to:
