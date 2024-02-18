@@ -1,9 +1,13 @@
 
 ### Add all files except one or more
 ```
-git add -- . :!path/to/file1 :!path/to/file2 :!path/to/folder1/*
+git add -- . ':!path/to/file1' ':!path/to/file2' ':!path/to/folder1/*'
 # or,
-git add --all -- :!path/to/file1 :!path/to/file2 :!path/to/folder1/*
+git add --all -- ':!path/to/file1' ':!path/to/file2' ':!path/to/folder1/*'
+
+# example
+git add -- . ':!.gitignore'
+git add --all -- ':!.gitignore'
 ```
 
 ### To remove large files from git commit 
