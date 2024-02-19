@@ -10,4 +10,6 @@
 [Use winafl to fuzz windows binaries](https://github.com/googleprojectzero/winafl?tab=readme-ov-file#known-cves)
 [Find programs from adobe, msrc](https://www.microsoft.com/en-us/msrc/bounty)
 
+[Set a new project with OSS-fuzzer](https://google.github.io/oss-fuzz/getting-started/new-project-guide/)
+[See Integration](https://google.github.io/oss-fuzz/getting-started/integration-rewards/)
 
