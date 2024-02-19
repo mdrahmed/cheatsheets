@@ -26,3 +26,27 @@ rg function -g "!*.cpp"
 # Case insensative search
 rg -S search ripgrep.md
 ```
+
+## Advanced search
+Search for all the function calls inside a repo,
+```
+rg '\b(int|void|char)\s+[a-zA-Z_]\w*\s*\([^)]*\)'
+# or,
+rg '\b(int|void|char)[^(]*\([^)]*\)'
+
+# To find just char functions,
+rg 'char[^(]*\([^)]*\)'
+```
+Desc:
+- `\b`: Adds boundary to match a whole word
+- `(int|void|char)`: Matches one of the word
+
+To match function name and opening, closing parenthesis,
+- `\s+`: Matches white spaces
+- `[a-zA-Z_]`: Matches the 1st char of the function name
+or,
+- `[^(]*`: Matches any space of char that is not a opening parenthesis
+- `\)`: Matches the opening parenthesis
+- `[^)]*`: Matches any spaces of char that is not a closing parenthesis
+- `\)`: Matches closing parenthesis
+
