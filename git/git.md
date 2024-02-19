@@ -8,6 +8,7 @@ git add --all -- ':!path/to/file1' ':!path/to/file2' ':!path/to/folder1/*'
 # example
 git add -- . ':!.gitignore'
 git add --all -- ':!.gitignore'
+git add . '!.gitignore' # also works
 ```
 
 ### To remove large files from git commit 
