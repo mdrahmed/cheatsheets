@@ -69,3 +69,21 @@ Check the process tree,
 ```
 ps auxf
 ```
+
+## Permission related errors
+It can't open because it is permission related issue,
+```
+error: unable to open output file 'Res0.o': 'Operation not permitted'
+1 error generated.
+Error compiling C files
+Compilation finished with errors!
+```
+or,
+```
+error: unable to open output file 'Config0.o': 'Operation not permitted'
+1 error generated.
+Error compiling C files
+Compilation finished with errors!
+```
+
+Just use during compilation and while running it, `sudo install.sh linux` and `sudo ./start_openplc.sh`
