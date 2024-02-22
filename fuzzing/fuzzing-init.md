@@ -13,3 +13,12 @@
 [Set a new project with OSS-fuzzer](https://google.github.io/oss-fuzz/getting-started/new-project-guide/)
 [See Integration](https://google.github.io/oss-fuzz/getting-started/integration-rewards/)
 [Google git](https://chromium.googlesource.com/)
+
+## Custom mutator ideas
+Mutator is generating valid inputs and feeding it to `afl-fuzz`. Write a mutator that will provide valid inputs to the functions.
+[Custom-mutator](https://aflplus.plus/docs/custom_mutators/)
+[example.c mutator](https://github.com/AFLplusplus/AFLplusplus/blob/stable/custom_mutators/examples/example.c#L51)
+[Grammer-mutator](https://github.com/AFLplusplus/Grammar-Mutator)
+[fuzzbook mutatorfuzzer](https://www.fuzzingbook.org/beta/html/MutationFuzzer.html)
+
+
