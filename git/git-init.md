@@ -110,4 +110,24 @@ git mergetool
     - [Set it up as mergetool](https://sourcegear.com/diffmerge/webhelp/sec__git__linux.html)
     - [Another usage guide](https://medium.com/@vitorhsb/how-to-set-diffmerge-as-git-merge-and-diff-tool-unix-40df346c11c4)
 
+#### To see changes after Commiting 
+Check all the changes made,
+```
+git show
+```
+
+Check just the files,
+```
+git show --name-only
+```
+
+See the names of the files without the diff,
+```
+git show --name-only -1
+```
+
+See the changes in a more condensed format,
+```
+git show --compact-summary
+```
 
