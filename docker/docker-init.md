@@ -162,6 +162,7 @@ ip a # if ip not found then install iproute2 with sudo apt install iproute2
 ```
 
 #### docker copy
+Copy from docker to host,
 ```
 docker cp <container_id_or_name>:/path/to/file/on/container /path/on/host
 ```
@@ -170,6 +171,13 @@ E.g.,
 docker cp 31bd726ba380:/nixpkgs/result/bin/hello .
 ```
 
+
 After copying the statically linked `hello` file it worked. 
 ![hello-worked.png](pictures/hello-worked.png)
+
+Copy from host to docker, 
+```
+#docker cp <file or, folder name> <container_id>:<path>
+docker cp deps da:/root/libarchive/ # copying deps dir to docker
+```
 
