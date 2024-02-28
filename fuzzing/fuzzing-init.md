@@ -14,6 +14,9 @@
 [See Integration](https://google.github.io/oss-fuzz/getting-started/integration-rewards/)
 [Google git](https://chromium.googlesource.com/)
 
+## Look for softwares to fuzz
+[oss-fuzz chromium](https://bugs.chromium.org/p/oss-fuzz/issues/list?q=&can=1)
+
 ## Custom mutator ideas
 Mutator is generating valid inputs and feeding it to `afl-fuzz`. Write a mutator that will provide valid inputs to the functions.
 [Custom-mutator](https://aflplus.plus/docs/custom_mutators/)
