@@ -96,7 +96,7 @@ git mergetool
 **After solving the issue, it might create multiple similar files. So, remove those files properly.** If it requires to pull and tells you to commit your changes like following, then just commit using 'git commit' and then pull.
 ![git-pics/merge pull error](git-pics/merge-error.png)
 
-##### Merge Conflicts
+#### Merge Conflicts details
 **`git merge --abort` and `git rebase --abort` will take you back to the previous state and all of the changes will be gone.**
 `merge` is combining the changes and `rebase` is moving the changes from one branch to another branch.
 
