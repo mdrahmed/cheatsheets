@@ -1,6 +1,6 @@
 
 ## Fuzzing latest xpdf
-Install `xpdf-4.04`
+Install `xpdf-4.05` or `xpdf-<any version>`
 ```
 https://dl.xpdfreader.com/xpdf-4.04.tar.gz
 tar -xvzf <xpdf..>
@@ -35,7 +35,7 @@ make install
 
 Now, run the fuzzer with the following command,
 ```
-afl-fuzz -i ./pdf_examples -o out -s 123 -- ./build/bin/pdftotext @@ output
+afl-fuzz -i ./pdf_examples -o out -s 123 -- ./build/bin/pdftotext @@
 ```
 Options:
  - -s indicates the static random seed to use.
