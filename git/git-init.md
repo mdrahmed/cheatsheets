@@ -81,6 +81,21 @@ git push --set-upstream origin test
 In the forked repo, git will ask you if you want to create a pull request or not - "Compare and pull request"
 5. Now, the maintainer of the repo will then be notified and they can review and if possible integrate the changes.
 
+### Merge Conflict
+#### Set `mergetool`
+Just do following to set `vimdiff` as mergetool,
+```
+git config --global merge.tool vimdiff
+```
+
+Now, run following and solve the issue,
+```
+git mergetool
+```
+
+**After solving the issue, it might create multiple similar files. So, remove those files properly.** If it requires to pull and tells you to commit your changes like following, then just commit using 'git commit' and then pull.
+![git-pics/merge pull error](git-pics/merge-error.png)
+
 ##### Merge Conflicts
 **`git merge --abort` and `git rebase --abort` will take you back to the previous state and all of the changes will be gone.**
 `merge` is combining the changes and `rebase` is moving the changes from one branch to another branch.
