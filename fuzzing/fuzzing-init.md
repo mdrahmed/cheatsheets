@@ -7,15 +7,25 @@
 [Ekoparty](https://github.com/antonio-morales/EkoParty_Advanced_Fuzzing_Workshop)
 
 ## Hands-on practice
+### Fuzz windows programs
 [Use winafl to fuzz windows binaries](https://github.com/googleprojectzero/winafl?tab=readme-ov-file#known-cves)
 [Find programs from adobe, msrc](https://www.microsoft.com/en-us/msrc/bounty)
 
+### Use oss-fuzz
 [Set a new project with OSS-fuzzer](https://google.github.io/oss-fuzz/getting-started/new-project-guide/)
 [See Integration](https://google.github.io/oss-fuzz/getting-started/integration-rewards/)
 [Google git](https://chromium.googlesource.com/)
 
-## Look for softwares to fuzz
+### Look for softwares to fuzz in oss-fuzz
 [oss-fuzz chromium](https://bugs.chromium.org/p/oss-fuzz/issues/list?q=&can=1)
+
+### Fuzz android programs
+Most of the programs in bugcrowd or hackerone are web-apps, android apps or ios apps. So, need to [learn android fuzzing](https://security.googleblog.com/2023/08/android-goes-all-in-on-fuzzing.html)
+Use following programs or [follow this answer](https://reverseengineering.stackexchange.com/a/20861)
+1. [Android-afl](https://github.com/ele7enxxh/android-afl)
+2. [Fuzzing with libFuzzer](https://source.android.com/docs/security/test/libfuzzer)
+3. [Droid: Android application fuzzing framework](https://github.com/ajinabraham/Droid-Application-Fuzz-Framework)
+4. [AFL++ with QEMU for native android fuzzing](https://alephsecurity.com/2021/11/16/fuzzing-qemu-android/)
 
 ## Custom mutator ideas
 Mutator is generating valid inputs and feeding it to `afl-fuzz`. Write a mutator that will provide valid inputs to the functions.
