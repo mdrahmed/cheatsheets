@@ -48,6 +48,21 @@ git remote -v
 ### Ignore any file
 To ignore a file, create a file `.gitignore`, and add filenames to the file.
 
+### Reset files added
+1. Use following commands to go back to previous stage,
+```
+git reset <file> # It will remove file that has been added
+```
+
+2. Use following command to reset but keep the changes,
+```
+git reset
+```
+
+3. Use following command to reset and remove the changes,
+```
+git reset --hard HEAD
+```
 
 ## Advanced Git
 ##### Add part of a file to the commit
