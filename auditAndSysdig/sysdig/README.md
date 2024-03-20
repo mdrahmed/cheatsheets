@@ -42,20 +42,14 @@ sudo docker run --rm -i -t --privileged --net=host \
     docker.io/sysdig/sysdig
 ```
 
-Now, just run `sysdig` or `csysdig`. 
+Now, just run `sysdig` or `csysdig`. And redirect it to a file like this `ssydig > sys_log`
 Currently, the file `docker-sysdig/sysdig5.2` contains the writes to the file.
 ![sysdig1](pics/sysdig1)
 
 This file is present inside this folder `/home/raihan/sysdig-logs/docker-sysdig/sysdig5.2`
 
-## Created sysdig docker image - not working
-Now, run the sysdig docker image with `--privileged`, like following,
-```
-sudo docker run -it --privileged --cap-add=SYS_ADMIN --cap-add=SYS_MODULE r/sysdig:1.0
-```
-
 ## Result after running the docker
-After running `sysdig` with permission.
+After running `sysdig` with permission. The `json` file should contain the data in `json` format.
 ```
 (base) ┌─[raihan@raihan-XPS-8940]─[~/host-txt_training_factory/host-hbw]
 └──╼ $g++ changeData.cpp -o changeData -I ~/vcpkg/installed/x64-linux/include/
@@ -68,6 +62,18 @@ changeData  Data            hbw-output  pics      TxtHighBayWarehouseCalibData.c
 JSON file updated.
 (base) ┌─[raihan@raihan-XPS-8940]─[~/host-txt_training_factory/host-hbw]
 └──╼ $vim Data/Config.HBW.Storage.json
+```
+
+Now, just copy the `sys_log` to host machine,
+```
+docker cp 2e:/root/sys_log1 /path/to/folder
+```
+Most of the logs are present in `host-txt_training_factory/host-hbw` or inside the `sysdig-logs/docker-sysdig`.
+
+## Created sysdig docker image - not working
+Now, run the sysdig docker image with `--privileged`, like following,
+```
+sudo docker run -it --privileged --cap-add=SYS_ADMIN --cap-add=SYS_MODULE r/sysdig:1.0
 ```
 
 ### With `changeData.cpp` file
