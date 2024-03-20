@@ -24,8 +24,9 @@ csysdig -r out.scap # to read the file
 sudo sysdig -A -w out.scap "fd.type=file and evt.type=write"
 sudo sysdig -A "evt.type=open or evt.type=write"
 ```
+**System Sysdig didn't work properly**
 
-# System Sysdig didn't work properly
+# Sysdig worked properly with docker
 After running it inside docker, I was able to see all the write to the `Config.HBW.Storage.json` file.
 Run it with [docker](https://github.com/draios/sysdig#getting-started)
 ```

@@ -87,8 +87,7 @@ root@8606a815d985:/lib/modules#
 ```
 
 
-### Start sysdig inside host machine
-#### with docker
+## Start sysdig inside host machine with docker
 ```
 sudo docker run --rm -i -t --privileged --net=host \
     -v /var/run/docker.sock:/host/var/run/docker.sock \
