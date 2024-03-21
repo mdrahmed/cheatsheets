@@ -1,5 +1,5 @@
 # Remote Desktop for Linux
-### Thinlinc
+### Thinlinc Installation
 Follow these instructions,
 
 #### Client part
@@ -28,3 +28,12 @@ If some of these are failed then just start it like following,
 ```
 sudo systemctl start vsmserver
 ```
+
+### Thinlinc Uninstallation
+
+#### Server part
+Just run this command,
+```
+sudo apt remove thinlinc-*
+```
+

@@ -21,7 +21,7 @@ ln -s ~/.config/tmux/.tmux.conf  ~/.tmux.conf
 `ctrl+z: new` New session<br/>
 
 ### Kill session
-`tmux kill-session -a` to kill the current session<br/>
+`tmux kill-session -a` to kill all other sessions<br/>
 `tmux list-sessions` to list all sessions<br/>
 `tmux kill-session -t 1` to kill session 1<br/>
 `tmux kill-server` to kill all session<br/>
@@ -62,3 +62,17 @@ ctrl+z :rename_window my_window # to rename window
 ctrt+z, # shortcut to rename window
 ctrl+x$ # to rename session
 ```
+
+
+### Attach to previous session
+If need a same session for any reason then [do this](https://stackoverflow.com/a/34778112/9263661). But if this is done then if new terminal is created then it will have the same output always.
+```
+tmux has-session -t development
+if [ $? != 0 ]
+then
+  tmux new-session -s development
+fi
+tmux attach -t development
+```
+
+Add the above text at the end of `.bashrc` file.
